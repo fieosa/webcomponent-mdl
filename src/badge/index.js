@@ -1,4 +1,4 @@
-class MaterialBadge extends HTMLElement {
+export default class MaterialBadge extends HTMLElement {
 
   constructor() {
     super();
@@ -51,5 +51,3 @@ class MaterialBadge extends HTMLElement {
   }
 
 }
-
-customElements.define('mdl-badge', MaterialBadge);

@@ -1,0 +1,30 @@
+{
+  "name": "webcomponent-mdl",
+  "version": "1.0.0",
+  "description": "Web component using material lite",
+  "main": "dist/webcomponent-mdl.min.js",
+  "scripts": {
+    "dev-server": "webpack-dev-server --inline --hot",
+    "lint": "eslint src scripts",
+    "build": "cross-env NODE_ENV=development webpack",
+    "build:production": "cross-env NODE_ENV=production webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bfwg/webcomponent-mdl.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bfwg/webcomponent-mdl/issues"
+  },
+  "homepage": "https://github.com/bfwg/webcomponent-mdl#readme",
+  "devDependencies": {
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "cross-env": "^3.1.3",
+    "eslint": "^3.8.0",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  }
+}

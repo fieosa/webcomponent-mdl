@@ -1,4 +1,4 @@
-class MaterialButton extends HTMLElement {
+export default class MaterialButton extends HTMLElement {
 
   constructor() {
     super();
@@ -88,5 +88,3 @@ class MaterialButton extends HTMLElement {
   }
 
 }
-
-customElements.define('mdl-button', MaterialButton);
