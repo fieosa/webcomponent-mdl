@@ -1,8 +1,12 @@
-export default class MaterialButton extends HTMLElement {
+export default class MaterialButton extends HTMLButtonElement {
 
   constructor() {
     super();
-    this.addEventListener('mousedown', this._onclick.bind(this));
+  }
+
+  connectedCallback() {
+    super.classList.add('mdl-button', 'mdl-js-button');
+    this.addEventListener('click', this._onclick.bind(this));
   }
 
   _onclick(e) {
@@ -10,8 +14,8 @@ export default class MaterialButton extends HTMLElement {
     var target = this.getAttribute('target');
     if (href) {
       window.open(href, target);
-      e.preventDefault();
     }
+    e.preventDefault();
   }
 
   static get observedAttributes() {
@@ -79,8 +83,6 @@ export default class MaterialButton extends HTMLElement {
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    this.classList.toggle('mdl-button');
-    this.classList.toggle('mdl-js-button');
     this.classList.toggle('mdl-js-ripple-effect', this.ripple);
     this.classList.toggle('mdl-button--raised', this.raised);
     this.classList.toggle('mdl-button--colored', this.colored);
