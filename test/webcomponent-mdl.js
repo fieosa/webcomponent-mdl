@@ -157,7 +157,6 @@
 	
 	    var _this = _possibleConstructorReturn(this, (MaterialButton.__proto__ || Object.getPrototypeOf(MaterialButton)).call(this));
 	
-	    _this.classList.add('mdl-button', 'mdl-js-button');
 	    _this.addEventListener('mousedown', _this._onclick.bind(_this));
 	    return _this;
 	  }
@@ -175,6 +174,8 @@
 	  }, {
 	    key: 'attributeChangedCallback',
 	    value: function attributeChangedCallback(attrName, oldVal, newVal) {
+	      this.classList.toggle('mdl-button');
+	      this.classList.toggle('mdl-js-button');
 	      this.classList.toggle('mdl-js-ripple-effect', this.ripple);
 	      this.classList.toggle('mdl-button--raised', this.raised);
 	      this.classList.toggle('mdl-button--colored', this.colored);
