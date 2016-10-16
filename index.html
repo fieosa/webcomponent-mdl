@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>&lt;hello-world&gt;</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.min.css">
+
+    <style>
+      .demo mdl-badge {
+        font-size: 28px;
+      }
+
+      .demo mdl-badge {
+        color: rgba(0, 0, 0, 0.24);
+      }
+    </style>
+
+
+</head>
+<body>
+
+  <div class="demo">
+
+    <mdl-icon>account_box</mdl-icon>
+
+    </br></br>
+
+    <mdl-badge text="4" overlap noBackground>
+      <mdl-icon>account_box</mdl-icon>
+    </mdl-badge>
+
+    </br></br>
+
+    <mdl-button onclick="console.log('click');" ripple raised primary>material button</mdl-button>
+    <mdl-button href="//google.ca" target="_self" ripple raised accent>material button _self</mdl-button>
+    <mdl-button href="//google.ca" target="_blank" ripple colored accent>material button _blank</mdl-button>
+
+    <a></a>
+
+  </div>
+
+  <!-- custom elements polyfill -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/document-register-element/1.1.1/document-register-element.js" ></script> -->
+  <!--  -->
+  <script src="src/palette/palette.js"></script>
+  <script src="src/shadow/shadow.js"></script>
+  <script src="src/icon/icon.js"></script>
+  <script src="src/badge/badge.js"></script>
+  <script src="src/button/button.js"></script>
+  <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+
+</body>
+</html>
