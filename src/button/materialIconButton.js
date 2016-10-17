@@ -28,6 +28,5 @@ export default class MaterialIconButton extends MaterialButton {
 
   attributeChangedCallback(attrName, oldVal, newVal) {
     super.attributeChangedCallback();
-    console.log(this.getAttribute('name'));
   }
 }
