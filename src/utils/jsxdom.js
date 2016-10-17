@@ -18,14 +18,20 @@ function jsxdom(tagName, attributes, ...children) {
     processChildren(ele, children);
     return ele;
   }
-  return mutateElement(tagName.tagName ? tagName : document.createElement(tagName));
+  if (tagName.tagName) {
+    if (children && children.length > 0) {
+      tagName.innerHTML = '';
+    }
+    return mutateElement(tagName);
+  } else {
+    return mutateElement(document.createElement(tagName));
+  }
 }
 
-jsxdom.Component = function(Constructor) {
+jsxdom.CustomElement = function(Constructor) {
   class NewConstructor extends Constructor {
     attributeChangedCallback() {
       if (super.attributeChangedCallback) {
-        this.innerHTML = '';
         return super.attributeChangedCallback.apply(this, arguments);
       }
     }

@@ -22,7 +22,7 @@ class MaterialTextfield extends HTMLElement {
 
 }
 
-export default jsxdom.Component(
+export default jsxdom.CustomElement(
   reflectPropertiesToAttributes(
     mdlUpgrade(MaterialTextfield),
     [
