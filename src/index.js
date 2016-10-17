@@ -12,3 +12,6 @@ customElements.define('mdl-icon-button', MaterialIconButton);
 
 import { default as MaterialIcon } from './icon';
 customElements.define('mdl-icon', MaterialIcon);
+
+import { default as MaterialTooltip } from './tooltip';
+customElements.define('mdl-tooltip', MaterialTooltip);
