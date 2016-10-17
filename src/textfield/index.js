@@ -26,17 +26,18 @@ export default jsxdom.Component(
   reflectPropertiesToAttributes(
     mdlUpgrade(MaterialTextfield),
     [
-    { propName: 'disabled' },
-    { propName: 'error', propType: String },
-    { propName: 'expandable' },
-    { propName: 'expandableIcon', propType: String },
-    { propName: 'floatingLabel' },
-    { propName: 'inputClassName', propType: String },
-    { propName: 'label', propType: String },
-    { propName: 'maxRows', propType: Number },
-    { propName: 'pattern', propType: String },
-    { propName: 'required' },
-    { propName: 'rows', propType: Number },
-    { propName: 'value', propType: String }
-  ]
-))
+      { propName: 'disabled' },
+      { propName: 'error', propType: String },
+      { propName: 'expandable' },
+      { propName: 'expandableIcon', propType: String },
+      { propName: 'floatingLabel' },
+      { propName: 'inputClassName', propType: String },
+      { propName: 'label', propType: String },
+      { propName: 'maxRows', propType: Number },
+      { propName: 'pattern', propType: String },
+      { propName: 'required' },
+      { propName: 'rows', propType: Number },
+      { propName: 'value', propType: String }
+    ]
+  )
+)
