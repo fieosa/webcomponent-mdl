@@ -1,20 +1,22 @@
 export default function mdlUpgrade(Constructor) {
-  const _connectedCallback = Constructor.prototype.connectedCallback;
-  const _disconnectedCallback = Constructor.prototype.disconnectedCallback;
 
-  Constructor.prototype.connectedCallback = function() {
-    window.componentHandler.upgradeElement(this);
-    if (_connectedCallback) {
-      return _connectedCallback.bind(this)();
-    }
-  };
+  class NewConstructor extends Constructor {
 
-  Constructor.prototype.disconnectedCallback = function() {
-    window.componentHandler.downgradeElements(this);
-    if (_disconnectedCallback) {
-      return _disconnectedCallback.bind(this)();
-    }
-  };
+    connectedCallback() {
+      window.componentHandler.upgradeElement(this);
+      if (super.connectedCallback) {
+        return super.connectedCallback();
+      }
+    };
 
-  return Constructor;
+    disconnectedCallback() {
+      window.componentHandler.downgradeElements(this);
+      if (super.disconnectedCallback) {
+        return super.disconnectedCallback();
+      }
+    };
+
+  }
+
+  return NewConstructor;
 }

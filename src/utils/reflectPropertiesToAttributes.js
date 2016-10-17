@@ -8,6 +8,12 @@ function defineProperties(target, descriptor) {
 export default function reflectPropertiesToAttributes(Constructor, props) {
   var observedAttris = [];
 
+  class NewConstructor extends Constructor {
+    static get observedAttributes() {
+      return observedAttris;
+    }
+  }
+
   for (var i = 0; i < props.length; i++) {
     let propName = props[i].propName;
     let attrName = props[i].attrName || propName;
@@ -27,15 +33,8 @@ export default function reflectPropertiesToAttributes(Constructor, props) {
         this.setAttribute(attrName, val);
       }
     };
-    defineProperties(Constructor.prototype, descriptor);
+    defineProperties(NewConstructor.prototype, descriptor);
   }
 
-  defineProperties(Constructor, {
-    key: 'observedAttributes',
-    get: function get() {
-      return observedAttris;
-    }
-  });
-
-  return Constructor;
+  return NewConstructor;
 }

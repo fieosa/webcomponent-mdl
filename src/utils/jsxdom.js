@@ -29,16 +29,16 @@ function jsxdom(tagName, attributes, ...children) {
 }
 
 jsxdom.Component = function(Constructor) {
-  const _render = Constructor.prototype.attributeChangedCallback;
-
-    Constructor.prototype.attributeChangedCallback = function renderer() {
-      if (_render) {
+  class NewConstructor extends Constructor {
+    attributeChangedCallback() {
+      if (super.attributeChangedCallback) {
         this.innerHTML = '';
-        var cb = _render.apply(this, arguments);
+        var cb = super.attributeChangedCallback.apply(this, arguments);
         if (cb) return cb(this);
       }
-    };
-  return Constructor;
+    }
+  }
+  return NewConstructor;
 }
 
 export default jsxdom;
