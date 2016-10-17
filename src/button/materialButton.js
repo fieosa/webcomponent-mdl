@@ -1,4 +1,6 @@
-export class MaterialButton extends HTMLButtonElement {
+import { reflectPropertiesToAttributes } from '../utils';
+
+class MaterialButton extends HTMLButtonElement {
 
   constructor() {
     super();
@@ -22,66 +24,6 @@ export class MaterialButton extends HTMLButtonElement {
     return ['ripple', 'raised', 'colored', 'primary', 'accent'];
   }
 
-  get ripple() {
-    return this.hasAttribute('ripple');
-  }
-
-  set ripple(val) {
-    if (val) {
-      this.setAttribute('ripple', '');
-    } else {
-      this.removeAttribute('ripple');
-    }
-  }
-
-  get raised() {
-    return this.hasAttribute('raised');
-  }
-
-  set raised(val) {
-    if (val) {
-      this.setAttribute('raised', '');
-    } else {
-      this.removeAttribute('raised');
-    }
-  }
-
-  get colored() {
-    return this.hasAttribute('colored');
-  }
-
-  set colored(val) {
-    if (val) {
-      this.setAttribute('colored', '');
-    } else {
-      this.removeAttribute('colored');
-    }
-  }
-
-  get primary() {
-    return this.hasAttribute('primary');
-  }
-
-  set primary(val) {
-    if (val) {
-      this.setAttribute('primary', '');
-    } else {
-      this.removeAttribute('primary');
-    }
-  }
-
-  get accent() {
-    return this.hasAttribute('accent');
-  }
-
-  set accent(val) {
-    if (val) {
-      this.setAttribute('accent', '');
-    } else {
-      this.removeAttribute('accent');
-    }
-  }
-
   attributeChangedCallback(attrName, oldVal, newVal) {
     this.classList.toggle('mdl-js-ripple-effect', this.ripple);
     this.classList.toggle('mdl-button--raised', this.raised);
@@ -91,3 +33,11 @@ export class MaterialButton extends HTMLButtonElement {
   }
 
 }
+
+export default reflectPropertiesToAttributes(MaterialButton, [
+  { propName: 'ripple' },
+  { propName: 'raised' },
+  { propName: 'colored' },
+  { propName: 'primary' },
+  { propName: 'accent' },
+]);

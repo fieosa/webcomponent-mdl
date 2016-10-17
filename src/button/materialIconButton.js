@@ -1,7 +1,7 @@
-import { MaterialButton } from './materialButton';
+import { default as MaterialButton } from './materialButton';
 import { default as MaterialIcon } from '../icon';
 
-export class MaterialIconButton extends MaterialButton {
+export default class MaterialIconButton extends MaterialButton {
   constructor() {
     super();
   }

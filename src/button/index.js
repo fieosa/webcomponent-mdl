@@ -1,2 +1,2 @@
-export { MaterialButton } from './materialButton';
-export { MaterialIconButton } from './materialIconButton';
+export { default as MaterialButton } from './materialButton';
+export { default as MaterialIconButton } from './materialIconButton';

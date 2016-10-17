@@ -1,3 +1,5 @@
+export { default as reflectPropertiesToAttributes } from './reflectPropertiesToAttributes';
+
 export function mdlComponentUpgrade(Component) {
     const _connectedCallback = Component.prototype.connectedCallback;
     const _disconnectedCallback = Component.prototype.disconnectedCallback;
