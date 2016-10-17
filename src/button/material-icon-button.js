@@ -1,13 +1,10 @@
-import { default as MaterialButton } from './materialButton';
+import { default as MaterialButton } from './material-button';
 import { default as MaterialIcon } from '../icon';
 
 export default class MaterialIconButton extends MaterialButton {
+
   constructor() {
     super();
-  }
-
-  connectedCallback() {
-    super.connectedCallback();
     this.classList.add('mdl-button--icon');
     if (this.name) {
       this.innerHTML = `<mdl-icon>${this.getAttribute('name')}</mdl-icon>`;
@@ -26,7 +23,4 @@ export default class MaterialIconButton extends MaterialButton {
     }
   }
 
-  attributeChangedCallback(attrName, oldVal, newVal) {
-    super.attributeChangedCallback();
-  }
 }

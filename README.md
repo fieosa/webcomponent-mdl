@@ -1,4 +1,4 @@
-# web-component-mdl
+# webcomponent-mdl
 Web component using material lite
 ![alt tag](https://github.com/bfwg/webcomponent-mdl/blob/master/button.png)
 ```html
