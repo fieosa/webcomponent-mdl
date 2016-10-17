@@ -18,14 +18,7 @@ function jsxdom(tagName, attributes, ...children) {
     processChildren(ele, children);
     return ele;
   }
-
-  if (tagName === 'host') {
-    return function(parentNode) {
-      return mutateElement(parentNode);
-    }
-  } else {
-    return mutateElement(document.createElement(tagName));
-  }
+  return mutateElement(tagName.tagName ? tagName : document.createElement(tagName));
 }
 
 jsxdom.Component = function(Constructor) {
@@ -33,8 +26,7 @@ jsxdom.Component = function(Constructor) {
     attributeChangedCallback() {
       if (super.attributeChangedCallback) {
         this.innerHTML = '';
-        var cb = super.attributeChangedCallback.apply(this, arguments);
-        if (cb) return cb(this);
+        return super.attributeChangedCallback.apply(this, arguments);
       }
     }
   }
