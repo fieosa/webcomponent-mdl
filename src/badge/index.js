@@ -1,4 +1,6 @@
-export default class MaterialBadge extends HTMLElement {
+import { reflectPropertiesToAttributes } from '../utils';
+
+class MaterialBadge extends HTMLElement {
 
   constructor() {
     super();
@@ -7,39 +9,6 @@ export default class MaterialBadge extends HTMLElement {
 
   static get observedAttributes() {
     return ['text', 'overlap', 'noBackground'];
-  }
-
-  get text() {
-    return this.getAttribute('text');
-  }
-
-  set text(val) {
-    this.setAttribute('text', val);
-    this.setAttribute('data-badge', val);
-  }
-
-  get overlap() {
-    return this.hasAttribute('overlap');
-  }
-
-  set overlap(val) {
-    if (val) {
-      this.setAttribute('overlap', '');
-    } else {
-      this.removeAttribute('overlap');
-    }
-  }
-
-  get noBackground() {
-    return this.hasAttribute('noBackground');
-  }
-
-  set noBackground(val) {
-    if (val) {
-      this.setAttribute('noBackground', '');
-    } else {
-      this.removeAttribute('noBackground');
-    }
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
@@ -51,3 +20,9 @@ export default class MaterialBadge extends HTMLElement {
   }
 
 }
+
+export default reflectPropertiesToAttributes(MaterialBadge, [
+  { propName: 'text', attrName: 'data-badge', propType: String },
+  { propName: 'overlap' },
+  { propName: 'noBackground' },
+]);
