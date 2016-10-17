@@ -25,4 +25,4 @@ export default reflectPropertiesToAttributes(MaterialBadge, [
   { propName: 'text', attrName: 'data-badge', propType: String },
   { propName: 'overlap' },
   { propName: 'noBackground' },
-]);
+])

@@ -19,8 +19,12 @@ module.exports = {
   devtool: DEBUG ? 'source-map' : false,
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'babel-loader', exclude: /(node_modules)/ }
-    ]
+      {
+        test: /\.(jsx|js)$/,
+        loader: 'babel-loader',
+        exclude: /(node_modules)/,
+      },
+    ],
   },
   plugins: [
 

@@ -15,4 +15,4 @@ class MaterialIconButton extends MaterialButton {
 
 export default reflectPropertiesToAttributes(MaterialIconButton, [
   { propName: 'name', propType: String },
-]);
+])

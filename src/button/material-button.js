@@ -36,4 +36,4 @@ export default reflectPropertiesToAttributes(MaterialButton, [
   { propName: 'colored' },
   { propName: 'primary' },
   { propName: 'accent' },
-]);
+])

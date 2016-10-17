@@ -22,9 +22,6 @@ class MaterialTooltip extends HTMLElement {
 }
 
 export default reflectPropertiesToAttributes(
-  mdlUpgrade(MaterialTooltip),
-  [
-    { propName: 'large' },
-    { propName: 'position', propType: String },
-  ]
-);
+  mdlUpgrade(MaterialTooltip), [
+  { propName: 'name', propType: String }
+])

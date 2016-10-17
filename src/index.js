@@ -1,4 +1,4 @@
-import { mdlComponentUpgrade } from './utils';
+import { mdlUpgrade } from './utils';
 
 import { default as MaterialBadge } from './badge';
 customElements.define('mdl-badge', MaterialBadge);
@@ -15,3 +15,6 @@ customElements.define('mdl-icon', MaterialIcon);
 
 import { default as MaterialTooltip } from './tooltip';
 customElements.define('mdl-tooltip', MaterialTooltip);
+
+import { default as MaterialTextfield } from './textfield';
+customElements.define('mdl-textfield', MaterialTextfield);
