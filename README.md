@@ -1,6 +1,18 @@
 # web-component-mdl
 Web component using material lite
+![alt tag](https://github.com/bfwg/webcomponent-mdl/blob/master/button.png)
+```html
+    <mdl-button ripple raised primary >
+      Go To Baidu
+    </mdl-button>
 
+    <mdl-button ripple raised accent >
+      Go To Google
+    </mdl-button>
+
+    <mdl-icon-button name="mood" ripple raised accent></mdl-icon-button>
+
+```
 # HOW TO TEST
 ```sh
   npm run dev-server
