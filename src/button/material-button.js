@@ -16,11 +16,8 @@ class MaterialButton extends HTMLElement {
     }
   }
 
-  static get observedAttributes() {
-    return ['ripple', 'raised', 'colored', 'primary', 'accent'];
-  }
-
   attributeChangedCallback(attrName, oldVal, newVal) {
+    console.log('button: ', attrName, oldVal, newVal);
     this.classList.toggle('mdl-js-ripple-effect', this.ripple);
     this.classList.toggle('mdl-button--raised', this.raised);
     this.classList.toggle('mdl-button--colored', this.colored);

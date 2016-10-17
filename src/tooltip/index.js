@@ -7,10 +7,6 @@ class MaterialTooltip extends HTMLElement {
     this.classList.add('mdl-tooltip');
   }
 
-  static get observedAttributes() {
-    return ['large', 'position'];
-  }
-
   attributeChangedCallback(attrName, oldVal, newVal) {
     this.classList.toggle('mdl-tooltip--large', this.large);
     if (attrName === 'position') {

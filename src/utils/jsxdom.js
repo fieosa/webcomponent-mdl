@@ -29,15 +29,15 @@ function jsxdom(tagName, attributes, ...children) {
 }
 
 jsxdom.Component = function(Constructor) {
-  const _render = Constructor.prototype.render;
+  const _render = Constructor.prototype.attributeChangedCallback;
 
-  Constructor.prototype.attributeChangedCallback = function renderer() {
-    if (_render) {
-      this.innerHTML = '';
-      var cb = _render.apply(this, arguments);
-      if (cb) return cb(this);
-    }
-  };
+    Constructor.prototype.attributeChangedCallback = function renderer() {
+      if (_render) {
+        this.innerHTML = '';
+        var cb = _render.apply(this, arguments);
+        if (cb) return cb(this);
+      }
+    };
   return Constructor;
 }
 

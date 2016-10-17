@@ -7,12 +7,7 @@ class MaterialTextfield extends HTMLElement {
     this.classList.add('mdl-textfield',  'mdl-js-textfield');
   }
 
-  static get observedAttributes() {
-    return ['disabled', 'error', 'expandable', 'expandableIcon', 'floatingLabel',
-      'inputClassName', 'label', 'maxRows', 'pattern', 'required', 'rows', 'value'];
-  }
-
-  render(attrName, oldVal, newVal) {
+  attributeChangedCallback(attrName, oldVal, newVal) {
     this.classList.toggle('mdl-textfield--floating-label', this.floatingLabel);
     this.classList.toggle('mdl-textfield--expandable', this.expandable);
     return (
