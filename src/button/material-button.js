@@ -2,13 +2,13 @@ import { reflectPropertiesToAttributes } from '../utils';
 
 class MaterialButton extends HTMLElement {
 
-  constructor(self) {
-    self = super(self);
+  constructor() {
+    super();
+    this.classList.add('mdl-button', 'mdl-js-button');
+    this.addEventListener('click', this._onclick.bind(this));
   }
 
   connectedCallback() {
-    this.classList.add('mdl-button', 'mdl-js-button');
-    this.addEventListener('click', this._onclick.bind(this));
   }
 
   _onclick() {
