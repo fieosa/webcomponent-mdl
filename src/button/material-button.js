@@ -4,6 +4,7 @@ class MaterialButton extends HTMLElement {
 
   constructor() {
     super();
+    window.componentHandler.upgradeElement(this);
     this.classList.add('mdl-button', 'mdl-js-button');
     this.addEventListener('click', this._onclick.bind(this));
   }
