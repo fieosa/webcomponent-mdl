@@ -11,13 +11,12 @@ class MaterialButton extends HTMLButtonElement {
     this.addEventListener('click', this._onclick.bind(this));
   }
 
-  _onclick(e) {
+  _onclick() {
     var href = this.getAttribute('href');
     var target = this.getAttribute('target');
     if (href) {
       window.open(href, target);
     }
-    e.preventDefault();
   }
 
   static get observedAttributes() {
