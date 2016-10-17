@@ -1,9 +1,9 @@
 import { reflectPropertiesToAttributes } from '../utils';
 
-class MaterialButton extends HTMLButtonElement {
+class MaterialButton extends HTMLElement {
 
-  constructor() {
-    super();
+  constructor(self) {
+    self = super(self);
   }
 
   connectedCallback() {
