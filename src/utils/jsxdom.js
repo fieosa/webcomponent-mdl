@@ -1,41 +1,26 @@
-export function isArrayLike(item) {
-  return (
-    Array.isArray(item) ||
-      (!!item && item.length && item.length > 0)
-  );
-}
-
-function processChildren(dom, children) {
-  if (typeof children === 'string') {
-    dom.appendChild(document.createTextNode(children));
-  } else if (isArrayLike(children)) {
-    children = [].slice.call(children);
+function processChildren(ele, children) {
+  if (children.constructor === Array) {
     for(var i = 0; i < children.length; i++) {
-      processChildren(dom, children[i]);
+      processChildren(ele, children[i]);
     }
+  } else if (children.constructor === String) {
+    ele.appendChild(document.createTextNode(children));
   } else if (children && children.nodeName) {
-    dom.appendChild(children);
+    ele.appendChild(children);
   } else {
-    console.log('Ignore jsx type: ', children, typeof children);
+    console.error('Ignore jsx type: ', children, typeof children);
   }
 }
 
 export function jsxdom(tag, attributes, ...children) {
-  function mutateElement(ele) {
-    for (var attrName in attributes) {
-      ele.setAttribute(attrName, attributes[attrName]);
-    }
-    processChildren(ele, children);
-    return ele;
+  let ele = tag.nodeName ? tag : document.createElement(tag);
+  // set attr
+  for (var attrName in attributes) {
+    ele.setAttribute(attrName, attributes[attrName]);
   }
-  if (tag.nodeName) {
-    if (children && children.length > 0) {
-      tag.innerHTML = '';
-    }
-    return mutateElement(tag);
-  } else {
-    return mutateElement(document.createElement(tag));
-  }
+  // set children
+  processChildren(ele, children);
+  return ele;
 }
 
 window.jsxdom = jsxdom;
