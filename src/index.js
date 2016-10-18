@@ -28,3 +28,9 @@ customElements.define('mdl-layout', Layout);
 customElements.define('mdl-drawer', Drawer);
 customElements.define('mdl-navigation', Navigation);
 customElements.define('mdl-content', Content);
+
+import { Tabs, TabBar, Tab, TabPanel } from './tabs';
+customElements.define('mdl-tabs', Tabs);
+customElements.define('mdl-tab-bar', TabBar);
+customElements.define('mdl-tab', Tab);
+customElements.define('mdl-tab-panel', TabPanel);

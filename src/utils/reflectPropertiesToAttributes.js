@@ -21,7 +21,7 @@ export default function reflectPropertiesToAttributes(Constructor, props) {
     let descriptor = {
       key: propName,
       get: function get() {
-        return !props[i].propType ? this.hasAttribute(propName) : this.getAttribute(propName);
+        return !props[i].propType || props[i].propType === Boolean ? this.hasAttribute(propName) : this.getAttribute(propName);
       },
       set: function set(val) {
         this.setAttribute(propName, val);

@@ -1,19 +1,17 @@
 import { reflectPropertiesToAttributes } from '../utils';
 
-class TabBar extends HTMLElement {
+class TabPanel extends HTMLElement {
 
   connectedCallback() {
-    this.classList.add('mdl-tabs__tab');
+    this.classList.add('mdl-tabs__panel');
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
     this.classList.toggle('is-active', this.active);
-    <this style="cursor: pointer;"/>
   }
 
 }
 
-export default reflectPropertiesToAttributes(TabBar, [
+export default reflectPropertiesToAttributes(TabPanel, [
   { propName: 'active', propType: Boolean },
-  { propName: 'href', propType: String },
 ])

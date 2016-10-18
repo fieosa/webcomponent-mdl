@@ -12,12 +12,12 @@ class Cell extends HTMLElement {
     this.classList.toggle(`mdl-cell--${this.tablet}-col-tablet`, this.tablet);
     this.classList.toggle(`mdl-cell--${this.align}`, this.align);
     this.classList.toggle(`mdl-cell--${this.offset}-offset`, this.offset);
-    this.classList.toggle(`mdl-cell--${this.offsetDesktop}-offset-desktop`, this.offsetDesktop);
-    this.classList.toggle(`mdl-cell--${this.offsetTablet}-offset-tablet`, this.offsetTablet);
-    this.classList.toggle(`mdl-cell--${this.offsetPhone}-offset-phone`, this.offsetPhone);
-    this.classList.toggle(`mdl-cell--hide-desktop`, this.hideDesktop);
-    this.classList.toggle(`mdl-cell--hide-phone`, this.hidePhone);
-    this.classList.toggle(`mdl-cell--hide-tablet`, this.hideTablet);
+    this.classList.toggle(`mdl-cell--${this.offsetdesktop}-offset-desktop`, this.offsetdesktop);
+    this.classList.toggle(`mdl-cell--${this.offsettablet}-offset-tablet`, this.offsettablet);
+    this.classList.toggle(`mdl-cell--${this.offsetphone}-offset-phone`, this.offsetphone);
+    this.classList.toggle(`mdl-cell--hide-desktop`, this.hidedesktop);
+    this.classList.toggle(`mdl-cell--hide-phone`, this.hidephone);
+    this.classList.toggle(`mdl-cell--hide-tablet`, this.hidetablet);
     if (attrName === 'shadow') makeShadow(this, oldVal, newVal);
   }
 
@@ -31,12 +31,12 @@ export default reflectPropertiesToAttributes(
     { propName: 'phone', propType: Number },
     { propName: 'tablet', propType: Number },
     { propName: 'offset', propType: Number },
-    { propName: 'offsetDesktop', propType: Number },
-    { propName: 'offsetTablet', propType: Number },
-    { propName: 'offsetPhone', propType: Number },
-    { propName: 'hideDesktop', propType: Boolean },
-    { propName: 'hidePhone', propType: Boolean },
-    { propName: 'hideTablet', propType: Boolean },
+    { propName: 'offsetdesktop', propType: Number },
+    { propName: 'offsettablet', propType: Number },
+    { propName: 'offsetphone', propType: Number },
+    { propName: 'hidedesktop', propType: Boolean },
+    { propName: 'hidephone', propType: Boolean },
+    { propName: 'hidetablet', propType: Boolean },
     { propName: 'shadow', propType: Number },
   ]
 )
