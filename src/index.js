@@ -18,3 +18,7 @@ customElements.define('mdl-tooltip', MaterialTooltip);
 
 import { default as MaterialTextfield } from './textfield';
 customElements.define('mdl-textfield', MaterialTextfield);
+
+import { default as Grid, Cell } from './grid';
+customElements.define('mdl-grid', Grid);
+customElements.define('mdl-cell', Cell);
