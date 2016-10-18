@@ -2,8 +2,7 @@ import { reflectPropertiesToAttributes } from '../utils';
 
 class Drawer extends HTMLElement {
 
-  constructor() {
-    super();
+  connectedCallback() {
     this.classList.add('mdl-layout__drawer');
   }
 

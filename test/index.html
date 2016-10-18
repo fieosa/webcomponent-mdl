@@ -15,12 +15,40 @@
       .demo mdl-badge {
         color: rgba(0, 0, 0, 0.24);
       }
+      mdl-header {
+        background: purple;
+      }
+      .demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
+        padding-right: 0;
+      }
     </style>
 
 
 </head>
 <body>
   <mdl-layout>
+
+    <mdl-header waterfall>
+      <mdl-header-row>
+        <span class="mdl-layout-title">Title</span>
+        <mdl-spacer></mdl-spacer>
+        <mdl-navigation>
+          <a href="">Link1</a>
+          <a href="">Link2</a>
+          <a href="">Link3</a>
+          <a href="">Link4</a>
+        </mdl-navigation>
+      </mdl-header-row>
+    <mdl-header-row>
+      <mdl-tab-bar ripple>
+        <mdl-tab href="#starks-panel" active>Starks</mdl-tab>
+        <mdl-tab href="#lannisters-panel">Lannisters</mdl-tab>
+        <mdl-tab href="#targaryens-panel">Targaryens</mdl-tab>
+      </mdl-tab-bar>
+    </mdl-header-row>
+
+    </mdl-header>
+
     <mdl-drawer>
       <span class="mdl-layout-title">Title</span>
       <mdl-navigation>
