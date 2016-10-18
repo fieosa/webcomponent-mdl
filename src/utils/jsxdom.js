@@ -12,10 +12,10 @@ function processChildren(dom, children) {
     for(var i = 0; i < children.length; i++) {
       processChildren(dom, children[i]);
     }
-  } else if (children.nodeName) {
+  } else if (children && children.nodeName) {
     dom.appendChild(children);
   } else {
-    console.log('Wrong jsx type: ', children, typeof children);
+    console.log('Ignore jsx type: ', children, typeof children);
   }
 }
 
