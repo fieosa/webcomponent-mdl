@@ -20,106 +20,116 @@
 
 </head>
 <body>
+  <mdl-layout>
+    <mdl-drawer>
+      <span class="mdl-layout-title">Title</span>
+      <mdl-navigation>
+        <a href="">Link</a>
+        <a href="">Link</a>
+        <a href="">Link</a>
+        <a href="">Link</a>
+      </mdl-navigation>
+    </mdl-drawer>
+    <mdl-content>
+      <div class="demo" style="padding: 64px;">
 
-  <div class="demo" style="margin: 64px;">
+        <mdl-icon>mood</mdl-icon>
+        <mdl-badge text="4"></mdl-badge>
 
-    <mdl-icon>mood</mdl-icon>
-    <mdl-badge text="4"></mdl-badge>
+        </br></br>
 
-    </br></br>
+        <mdl-badge text="4" overlap noBackground>
+          <mdl-icon>account_box</mdl-icon>
+        </mdl-badge>
 
-    <mdl-badge text="4" overlap noBackground>
-      <mdl-icon>account_box</mdl-icon>
-    </mdl-badge>
+        </br></br>
+        <mdl-button
+          href="http://www.baidu.com/"
+          target="_blank"
+          onclick="console.log('clicked baidu');"
+          ripple raised primary
+        >
+          Go To Baidu
+        </mdl-button>
 
-    </br></br>
-    <mdl-button
-      href="http://www.baidu.com/"
-      target="_blank"
-      onclick="console.log('clicked baidu');"
-      ripple raised primary
-    >
-      Go To Baidu
-    </mdl-button>
+        <mdl-button
+          id="test"
+          href="https://google.ca"
+          target="_self"
+          onclick="console.log('clicked google');"
+          ripple raised accent
+        >
+          Go To Google
+        </mdl-button>
 
-    <mdl-button
-      id="test"
-      href="https://google.ca"
-      target="_self"
-      onclick="console.log('clicked google');"
-      ripple raised accent
-    >
-      Go To Google
-    </mdl-button>
+        <mdl-icon-button
+          onclick="console.log('icon google');"
+          name="mood"
+          ripple raised accent
+        >
+        </mdl-icon-button>
 
-    <mdl-icon-button
-      onclick="console.log('icon google');"
-      name="mood"
-      ripple raised accent
-    >
-    </mdl-icon-button>
+        <mdl-icon-button
+          onclick="console.log('icon google');"
+          name="mood"
+          ripple raised accent>
+          <span style="color: blue;">
+            icon button with text
+          </span>
+        </mdl-icon-button>
 
-    <mdl-icon-button
-      onclick="console.log('icon google');"
-      name="mood"
-      ripple raised accent>
-      <span style="color: blue;">
-        icon button with text
-      </span>
-    </mdl-icon-button>
+        <div>
+          <span id="ttl1">Tooltop 1</span>
+          <mdl-tooltip for="ttl1" large position="bottom">this is a tooltip 1.</mdl-tooltip>
+        </div>
 
-    <div>
-      <span id="ttl1">Tooltop 1</span>
-      <mdl-tooltip for="ttl1" large position="bottom">this is a tooltip 1.</mdl-tooltip>
-    </div>
+        <mdl-textfield label="sdome">sksk</mdl-textfield>
 
-    <mdl-textfield label="sdome">sksk</mdl-textfield>
+        <div style={{width: '80%', margin: 'auto'}}>
+          <style>
+            mdl-cell {
+              box-sizing: border-box;
+              background-color: #bdbdbd;
+              height: 50px;
+              padding-left: 8px;
+              padding-top: 4px;
+              color: #fff;
+            }
+          </style>
+            <mdl-grid>
+                <mdl-cell shadow="2" col="1">1</mdl-cell>
+                <mdl-cell shadow="3" col="1">1</mdl-cell>
+                <mdl-cell shadow="4" col="1">1</mdl-cell>
+                <mdl-cell shadow="6" col="1">1</mdl-cell>
+                <mdl-cell shadow="8" col="1">1</mdl-cell>
+                <mdl-cell shadow="16" col="1">1</mdl-cell>
+                <mdl-cell shadow="24" col="1">1</mdl-cell>
+                <mdl-cell shadow="16" col="1">1</mdl-cell>
+                <mdl-cell shadow="8" col="1">1</mdl-cell>
+                <mdl-cell shadow="4" col="1">1</mdl-cell>
+                <mdl-cell shadow="3" col="1">1</mdl-cell>
+                <mdl-cell shadow="2" col="1">1</mdl-cell>
+            </mdl-grid>
+            <mdl-grid>
+                <mdl-cell col="4">4</mdl-cell>
+                <mdl-cell col="4">4</mdl-cell>
+                <mdl-cell col="4">4</mdl-cell>
+            </mdl-grid>
+            <mdl-grid>
+                <mdl-cell col="6">6</mdl-cell>
+                <mdl-cell col="4">4</mdl-cell>
+                <mdl-cell col="2">2</mdl-cell>
+            </mdl-grid>
+            <mdl-grid>
+                <mdl-cell col="6" tablet="8">6 (8 tablet)</mdl-cell>
+                <mdl-cell col="4" tablet="6">4 (6 tablet)</mdl-cell>
+                <mdl-cell col="2" phone="4">2 (4 phone)</mdl-cell>
+            </mdl-grid>
+          </div>
 
-    <div style={{width: '80%', margin: 'auto'}}>
-      <style>
-        mdl-cell {
-          box-sizing: border-box;
-          background-color: #bdbdbd;
-          height: 50px;
-          padding-left: 8px;
-          padding-top: 4px;
-          color: #fff;
-        }
-      </style>
-        <mdl-grid>
-            <mdl-cell shadow="2" col="1">1</mdl-cell>
-            <mdl-cell shadow="3" col="1">1</mdl-cell>
-            <mdl-cell shadow="4" col="1">1</mdl-cell>
-            <mdl-cell shadow="6" col="1">1</mdl-cell>
-            <mdl-cell shadow="8" col="1">1</mdl-cell>
-            <mdl-cell shadow="16" col="1">1</mdl-cell>
-            <mdl-cell shadow="24" col="1">1</mdl-cell>
-            <mdl-cell shadow="16" col="1">1</mdl-cell>
-            <mdl-cell shadow="8" col="1">1</mdl-cell>
-            <mdl-cell shadow="4" col="1">1</mdl-cell>
-            <mdl-cell shadow="3" col="1">1</mdl-cell>
-            <mdl-cell shadow="2" col="1">1</mdl-cell>
-        </mdl-grid>
-        <mdl-grid>
-            <mdl-cell col="4">4</mdl-cell>
-            <mdl-cell col="4">4</mdl-cell>
-            <mdl-cell col="4">4</mdl-cell>
-        </mdl-grid>
-        <mdl-grid>
-            <mdl-cell col="6">6</mdl-cell>
-            <mdl-cell col="4">4</mdl-cell>
-            <mdl-cell col="2">2</mdl-cell>
-        </mdl-grid>
-        <mdl-grid>
-            <mdl-cell col="6" tablet="8">6 (8 tablet)</mdl-cell>
-            <mdl-cell col="4" tablet="6">4 (6 tablet)</mdl-cell>
-            <mdl-cell col="2" phone="4">2 (4 phone)</mdl-cell>
-        </mdl-grid>
-    </div>
-
-
-
-  </div>
+      </div>
+    <mdl-content>
+  </mdl-layout>
 
   <!-- custom elements polyfill -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/document-register-element/1.1.1/document-register-element.js" ></script>
