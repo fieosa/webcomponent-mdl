@@ -1,16 +1,25 @@
+export function isArrayLike(item) {
+  return (
+    Array.isArray(item) ||
+      (!!item && item.length && item.length > 0)
+  );
+}
+
 function processChildren(dom, children) {
   if (typeof children === 'string') {
     dom.appendChild(document.createTextNode(children));
-  } else if (Array.isArray(children)) {
-    children.forEach(function(i) {
-      processChildren(dom, i);
-    });
-  } else if (children) {
+  } else if (isArrayLike(children)) {
+    for(var i = 0; i < children.length; i++) {
+      processChildren(dom, children[i]);
+    }
+  } else if (children.nodeName) {
     dom.appendChild(children);
+  } else {
+    console.log('Wrong jsx type: ', children, typeof children);
   }
 }
 
-function jsxdom(tagName, attributes, ...children) {
+export function jsxdom(tag, attributes, ...children) {
   function mutateElement(ele) {
     for (var attrName in attributes) {
       ele.setAttribute(attrName, attributes[attrName]);
@@ -18,25 +27,15 @@ function jsxdom(tagName, attributes, ...children) {
     processChildren(ele, children);
     return ele;
   }
-  if (tagName.tagName) {
+  if (tag.nodeName) {
     if (children && children.length > 0) {
-      tagName.innerHTML = '';
+      tag.innerHTML = '';
     }
-    return mutateElement(tagName);
+    return mutateElement(tag);
   } else {
-    return mutateElement(document.createElement(tagName));
+    return mutateElement(document.createElement(tag));
   }
 }
 
-jsxdom.CustomElement = function(Constructor) {
-  class NewConstructor extends Constructor {
-    attributeChangedCallback() {
-      if (super.attributeChangedCallback) {
-        return super.attributeChangedCallback.apply(this, arguments);
-      }
-    }
-  }
-  return NewConstructor;
-}
-
-export default jsxdom;
+window.jsxdom = jsxdom;
+window['jsxdom'] = jsxdom;

@@ -10,9 +10,10 @@ class MaterialIconButton extends MaterialButton {
 
   attributeChangedCallback(attrName, oldVal, newVal) {
     super.attributeChangedCallback.apply(this, arguments);
-    if (this.name) {
-      this.innerHTML = `<mdl-icon>${this.name}</mdl-icon>`;
-    }
+    var children = this.children && this.children.length > 0 ? this.children : this.innerHTML;
+    <this>
+      <mdl-icon>{this.name}</mdl-icon>
+    </this>
   }
 
 }

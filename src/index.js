@@ -1,4 +1,4 @@
-import { mdlUpgrade } from './utils';
+import './utils/jsxdom';
 
 import { default as MaterialBadge } from './badge';
 customElements.define('mdl-badge', MaterialBadge);

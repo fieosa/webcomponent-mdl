@@ -1,4 +1,4 @@
-import { jsxdom, mdlUpgrade, reflectPropertiesToAttributes } from '../utils';
+import { mdlUpgrade, reflectPropertiesToAttributes } from '../utils';
 
 class MaterialTextfield extends HTMLElement {
 
@@ -10,34 +10,30 @@ class MaterialTextfield extends HTMLElement {
   attributeChangedCallback(attrName, oldVal, newVal) {
     this.classList.toggle('mdl-textfield--floating-label', this.floatingLabel);
     this.classList.toggle('mdl-textfield--expandable', this.expandable);
-    return (
-      <this style="color: red;">
-        I am a text.
-        <p style="font-size: inherite;">
-        ooohh
-        </p>
-      </this>
-    );
+    <this style="color: red;">
+      I am a text.
+      {this.expandable}
+      <p style="font-size: inherite;">
+      ooohh
+      </p>
+    </this>
   }
 
 }
 
-export default jsxdom.CustomElement(
-  reflectPropertiesToAttributes(
-    mdlUpgrade(MaterialTextfield),
-    [
-      { propName: 'disabled' },
-      { propName: 'error', propType: String },
-      { propName: 'expandable' },
-      { propName: 'expandableIcon', propType: String },
-      { propName: 'floatingLabel' },
-      { propName: 'inputClassName', propType: String },
-      { propName: 'label', propType: String },
-      { propName: 'maxRows', propType: Number },
-      { propName: 'pattern', propType: String },
-      { propName: 'required' },
-      { propName: 'rows', propType: Number },
-      { propName: 'value', propType: String }
-    ]
-  )
+export default reflectPropertiesToAttributes(mdlUpgrade(MaterialTextfield),
+  [
+    { propName: 'disabled' },
+    { propName: 'error', propType: String },
+    { propName: 'expandable' },
+    { propName: 'expandableIcon', propType: String },
+    { propName: 'floatingLabel' },
+    { propName: 'inputClassName', propType: String },
+    { propName: 'label', propType: String },
+    { propName: 'maxRows', propType: Number },
+    { propName: 'pattern', propType: String },
+    { propName: 'required' },
+    { propName: 'rows', propType: Number },
+    { propName: 'value', propType: String }
+  ]
 )
