@@ -2,8 +2,7 @@ import { reflectPropertiesToAttributes } from '../utils';
 
 class MaterialBadge extends HTMLElement {
 
-  constructor() {
-    super();
+  connectedCallback() {
     this.classList.add('mdl-badge');
   }
 
