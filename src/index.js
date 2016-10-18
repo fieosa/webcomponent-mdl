@@ -22,3 +22,9 @@ customElements.define('mdl-textfield', MaterialTextfield);
 import { default as Grid, Cell } from './grid';
 customElements.define('mdl-grid', Grid);
 customElements.define('mdl-cell', Cell);
+
+import { Layout, Drawer, Navigation, Content } from './layout';
+customElements.define('mdl-layout', Layout);
+customElements.define('mdl-drawer', Drawer);
+customElements.define('mdl-navigation', Navigation);
+customElements.define('mdl-content', Content);

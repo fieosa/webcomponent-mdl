@@ -14,19 +14,14 @@ export default function reflectPropertiesToAttributes(Constructor, props) {
     }
   }
 
-  for (var i = 0; i < props.length; i++) {
+  for (let i = 0; i < props.length; i++) {
     let propName = props[i].propName;
     let attrName = props[i].attrName || propName;
-    let propType = props[i].propType;
     observedAttris.push(propName);
     let descriptor = {
       key: propName,
       get: function get() {
-        if (!propType) {
-          return this.hasAttribute(propName);
-        } else {
-          return this.getAttribute(propName);
-        }
+        return !props[i].propType ? this.hasAttribute(propName) : this.getAttribute(propName);
       },
       set: function set(val) {
         this.setAttribute(propName, val);

@@ -2,18 +2,15 @@ import { reflectPropertiesToAttributes } from '../utils';
 
 class Layout extends HTMLElement {
 
-  connectedCallback() {
+  constructor() {
+    super();
     this.classList.add('mdl-layout', 'mdl-js-layout');
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    this.classList.toggle('mdl-grid--no-spacing', this.noSpacing);
-    <this>
-      <div className="mdl-layout__inner-container">
-        {this.childNodes}
-      </div>
-    </this>
+    this.classList.toggle('mdl-layout--fixed-drawer', this.fixedDrawer);
   }
+
 
 }
 
@@ -22,6 +19,6 @@ export default reflectPropertiesToAttributes(
   [
     { propName: 'fixedDrawer', propType: Boolean },
     { propName: 'fixedHeader', propType: Boolean },
-    { propName: 'fixedTabs', propType: Boolean },
+    { propName: 'fixedTabs', propType: Boolean }
   ]
 )

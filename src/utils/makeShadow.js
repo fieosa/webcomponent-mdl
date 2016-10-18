@@ -1,6 +1,8 @@
-const values = [2, 3, 4, 6, 8, 16, 24].map(v => `mdl-shadow--${v}dp`);
 
 export default function makeShadow(element, oldVal, newVal) {
-  if (oldVal && oldVal in values) element.classList.remove(`mdl-shadow--${oldVal}dp`);
-  if (newVal && newVal in values) element.classList.add(`mdl-shadow--${newVal}dp`);
+  const values = [2, 3, 4, 6, 8, 16, 24];
+  let ov = parseInt(oldVal);
+  let nv = parseInt(newVal);
+  if (values.indexOf(ov) !== -1) element.classList.remove(`mdl-shadow--${ov}dp`);
+  if (values.indexOf(nv) !== -1) element.classList.add(`mdl-shadow--${nv}dp`);
 }
