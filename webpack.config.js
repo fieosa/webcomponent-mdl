@@ -8,11 +8,11 @@ module.exports = {
     './src/index.js'
   ],
   output: {
-    path: DEBUG ? 'test/' : 'dist/',    //Path of output file
+    path: DEBUG ? 'test/' : 'dist/',
     filename: DEBUG ? 'webcomponent-mdl.js' : 'webcomponent-mdl.min.js',
   },
   devServer:{
-    contentBase: 'test/',
+    contentBase: 'docs/',
     devtool: 'eval',
     port: 5000,
   },

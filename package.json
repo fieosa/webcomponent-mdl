@@ -7,7 +7,7 @@
     "start": "npm run dev-server",
     "dev-server": "webpack-dev-server --inline --hot",
     "lint": "eslint src scripts",
-    "build": "cross-env NODE_ENV=development webpack",
+    "build": "webpack",
     "build:production": "cross-env NODE_ENV=production webpack"
   },
   "repository": {
