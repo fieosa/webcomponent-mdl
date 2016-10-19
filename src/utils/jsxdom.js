@@ -14,9 +14,14 @@ function processChildren(ele, children) {
 
 export function jsxdom(tag, attributes, ...children) {
   let ele = tag.nodeName ? tag : document.createElement(tag);
+  if (children && children.length) ele.innerHTML = '';
   // set attr
   for (var attrName in attributes) {
-    ele.setAttribute(attrName, attributes[attrName]);
+    if(attrName === 'onclick') {
+      ele.addEventListener('click', attributes[attrName]);
+    } else {
+      ele.setAttribute(attrName, attributes[attrName]);
+    }
   }
   // set children
   processChildren(ele, children);

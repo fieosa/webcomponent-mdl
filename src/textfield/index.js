@@ -6,13 +6,14 @@ class MaterialTextfield extends HTMLElement {
     this.classList.add('mdl-textfield',  'mdl-js-textfield');
   }
 
+
   attributeChangedCallback(attrName, oldVal, newVal) {
     this.classList.toggle('mdl-textfield--floating-label', this.floatingLabel);
     this.classList.toggle('mdl-textfield--expandable', this.expandable);
     <this style="color: red;">
       I am a text.<br/>
       {this.label}
-      <p style="font-size: inherite;">
+      <p onclick={() => console.log(this)} style="font-size: inherite;">
       ooohh
       </p>
     </this>
