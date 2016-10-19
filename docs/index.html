@@ -31,7 +31,7 @@
       }
       iframe { display: block; width: 100%; border: none; }
       .styleguide-demo h1 {
-        margin: 30px 15px 0 15px;
+        margin: 0px 15px 0 15px;
         align: center;
       }
       .styleguide-demo h1:before {
@@ -39,7 +39,6 @@
         display: block;
         width: 100%;
         border-bottom: 1px solid rgba(0,0,0,0.5);
-        margin-top: 15px;
       }
       .styleguide-demo {
         opacity: 0;
@@ -55,9 +54,7 @@
 
   </head>
   <body>
-
     <mdl-layout fixeddrawer>
-
       <mdl-drawer>
         <span class="mdl-layout-title">webcomponent-mdl</span>
         <mdl-navigation id="main-navigation">
@@ -99,6 +96,7 @@
     </mdl-layout>
 
     <!-- custom elements polyfill -->
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/document-register-element/1.1.1/document-register-element.js" ></script>
     <!--  -->
     <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
@@ -106,6 +104,7 @@
       <!-- Script to handle sizing the iFrames -->
     <script>
       'use strict';
+      w3IncludeHTML();
       var navList = document.getElementById('main-navigation');
       var totalDemosPendingLoading = 0;
       sizeDemos();
