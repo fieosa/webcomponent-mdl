@@ -11,6 +11,7 @@ class MaterialIconButton extends MaterialButton {
     super.attributeChangedCallback();
     <this>
       <mdl-icon>{this.name}</mdl-icon>
+      {this.children}
     </this>
   }
 
