@@ -3,4 +3,5 @@ node_modules
 npm-debug.log
 /dist
 test
+webcomponent-mdl.js
 !test/index.html
