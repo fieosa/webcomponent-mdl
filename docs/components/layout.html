@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <title>webcomponent-mdl: Web Components for Material Design Lite</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.min.css">
+
+    <style>
+      .reload-btn {position: absolute; top: 0; right: 0;}
+      body { padding-top: 50px; }
+    </style>
+
+</head>
+<body>
+  <mdl-icon-button
+    class="reload-btn"
+    onclick="location.reload();"
+    name="refresh"
+    ripple>
+  </mdl-icon-button>
+
+    <!-- custom elements demos -->
+    <mdl-layout fixeddrawer>
+
+      <mdl-header style="background-color: #3F51B5;">
+        <mdl-header-row>
+          <span class="mdl-layout-title">Title</span>
+          <mdl-spacer></mdl-spacer>
+          <mdl-navigation>
+            <a href="">Link1</a>
+            <a href="">Link2</a>
+            <a href="">Link3</a>
+            <a href="">Link4</a>
+          </mdl-navigation>
+          </mdl-header-row>
+      </mdl-header>
+
+      <mdl-drawer>
+        <span class="mdl-layout-title">Title</span>
+        <mdl-navigation>
+          <a href="">Link</a>
+          <a href="">Link</a>
+          <a href="">Link</a>
+          <a href="">Link</a>
+        </mdl-navigation>
+      </mdl-drawer>
+      <mdl-content>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+        <p>content</p>
+      <mdl-content>
+    </mdl-layout>
+
+
+  <!-- custom elements polyfill -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/document-register-element/1.1.1/document-register-element.js" ></script>
+  <!--  -->
+  <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+  <script src="/webcomponent-mdl.js"></script>
+
+</body>
+</html>

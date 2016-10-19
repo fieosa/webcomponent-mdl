@@ -9,9 +9,7 @@ class MaterialIconButton extends MaterialButton {
 
   attributeChangedCallback(attrName, oldVal, newVal) {
     super.attributeChangedCallback();
-    var abc = [1, 2].map(v => <span id={v}>test</span>);
     <this>
-      {abc}
       <mdl-icon>{this.name}</mdl-icon>
     </this>
   }
