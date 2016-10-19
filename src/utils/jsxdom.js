@@ -7,7 +7,7 @@
  *       <span><span/>
  *     </p>
  *
- *    1. Recursively call processChildren which the 'children' parameter is an instance of 2-dimensional array.
+ *    1. Recursively call processChildren which the 'children' parameter is an instance of n-dimensional array.
  *       The above example is an array of [[div], [span]] as the children of <p> tag.
  *
  * To support {this.children} syntax:
