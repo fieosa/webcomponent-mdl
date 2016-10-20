@@ -3,18 +3,20 @@ import { reflectPropertiesToAttributes } from '../utils';
 class TabBar extends HTMLElement {
 
   connectedCallback() {
-    if (!this.cssPrefix) {
-      if (this.parentNode.nodeName === 'MDL-HEADER') {
-        this.classList.add('mdl-layout__tab-bar') ;
+    const { cssPrefix, classList, parentNode } = this;
+    if (!cssPrefix) {
+      if (parentNode.nodeName === 'MDL-HEADER') {
+        classList.add('mdl-layout__tab-bar') ;
       } else {
-        this.classList.add('mdl-tabs__tab-bar') ;
+        classList.add('mdl-tabs__tab-bar') ;
       }
     }
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    this.classList.remove('${oldVal}__tab-bar');
-    this.classList.add('${newVal}__tab-bar');
+    const { classList } = this;
+    classList.remove('${oldVal}__tab-bar');
+    classList.add('${newVal}__tab-bar');
   }
 
 }

@@ -8,14 +8,24 @@ class MaterialTextfield extends HTMLElement {
 
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    this.classList.toggle('mdl-textfield--floating-label', this.floatingLabel);
-    this.classList.toggle('mdl-textfield--expandable', this.expandable);
+    const {
+      classList,
+      label,
+      floatingLabel,
+      expandable,
+      childNodes,
+      children,
+    } = this;
+    classList.toggle('mdl-textfield--floating-label', floatingLabel);
+    classList.toggle('mdl-textfield--expandable', expandable);
     <this style="color: red;">
-      {this.childNodes}
+      {/* TODO: support this syntax */}
+      {/* {this.childNodes} */}
       I am a text.<br/>
-      {this.label}
+      {label}
       <p onclick={() => console.log(this)} style="font-size: inherite;">
-      {this.children}
+      {/* TODO: support this syntax */}
+      {/* {this.children} */}
       ooohh
       </p>
     </this>
@@ -23,7 +33,8 @@ class MaterialTextfield extends HTMLElement {
 
 }
 
-export default reflectPropertiesToAttributes(mdlUpgrade(MaterialTextfield),
+export default reflectPropertiesToAttributes(
+  mdlUpgrade(MaterialTextfield),
   [
     { propName: 'disabled', propType: Boolean },
     { propName: 'error', propType: String },

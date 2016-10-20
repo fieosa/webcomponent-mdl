@@ -7,17 +7,31 @@ class Cell extends HTMLElement {
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    this.classList.toggle(`mdl-cell--${this.col}-col`, this.col);
-    this.classList.toggle(`mdl-cell--${this.phone}-col-phone`, this.phone);
-    this.classList.toggle(`mdl-cell--${this.tablet}-col-tablet`, this.tablet);
-    this.classList.toggle(`mdl-cell--${this.align}`, this.align);
-    this.classList.toggle(`mdl-cell--${this.offset}-offset`, this.offset);
-    this.classList.toggle(`mdl-cell--${this.offsetdesktop}-offset-desktop`, this.offsetdesktop);
-    this.classList.toggle(`mdl-cell--${this.offsettablet}-offset-tablet`, this.offsettablet);
-    this.classList.toggle(`mdl-cell--${this.offsetphone}-offset-phone`, this.offsetphone);
-    this.classList.toggle(`mdl-cell--hide-desktop`, this.hidedesktop);
-    this.classList.toggle(`mdl-cell--hide-phone`, this.hidephone);
-    this.classList.toggle(`mdl-cell--hide-tablet`, this.hidetablet);
+    const {
+      classList,
+      col,
+      phone,
+      tablet,
+      align,
+      offset,
+      offsetDesktop,
+      offsetTablet,
+      offsetPhone,
+      hideDesktop,
+      hideTablet,
+      hidePhone,
+    } = this;
+    classList.toggle(`mdl-cell--${col}-col`, col);
+    classList.toggle(`mdl-cell--${phone}-col-phone`, phone);
+    classList.toggle(`mdl-cell--${tablet}-col-tablet`, tablet);
+    classList.toggle(`mdl-cell--${align}`, align);
+    classList.toggle(`mdl-cell--${offset}-offset`, offset);
+    classList.toggle(`mdl-cell--${offsetDesktop}-offset-desktop`, offsetDesktop);
+    classList.toggle(`mdl-cell--${offsetTablet}-offset-tablet`, offsetTablet);
+    classList.toggle(`mdl-cell--${offsetPhone}-offset-phone`, offsetPhone);
+    classList.toggle(`mdl-cell--hide-desktop`, hideDesktop);
+    classList.toggle(`mdl-cell--hide-phone`, hidePhone);
+    classList.toggle(`mdl-cell--hide-tablet`, hideTablet);
     if (attrName === 'shadow') makeShadow(this, oldVal, newVal);
   }
 
@@ -31,12 +45,12 @@ export default reflectPropertiesToAttributes(
     { propName: 'phone', propType: Number },
     { propName: 'tablet', propType: Number },
     { propName: 'offset', propType: Number },
-    { propName: 'offsetdesktop', propType: Number },
-    { propName: 'offsettablet', propType: Number },
-    { propName: 'offsetphone', propType: Number },
-    { propName: 'hidedesktop', propType: Boolean },
-    { propName: 'hidephone', propType: Boolean },
-    { propName: 'hidetablet', propType: Boolean },
+    { propName: 'offsetDesktop', propType: Number },
+    { propName: 'offsetTablet', propType: Number },
+    { propName: 'offsetPhone', propType: Number },
+    { propName: 'hideDesktop', propType: Boolean },
+    { propName: 'hidePhone', propType: Boolean },
+    { propName: 'hideTablet', propType: Boolean },
     { propName: 'shadow', propType: Number },
   ]
 )

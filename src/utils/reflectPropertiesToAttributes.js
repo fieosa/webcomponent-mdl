@@ -1,35 +1,35 @@
-function defineProperties(target, descriptor) {
-  descriptor.enumerable = descriptor.enumerable || false;
-  descriptor.configurable = true;
-  if ("value" in descriptor) descriptor.writable = true;
-  Object.defineProperty(target, descriptor.key, descriptor);
-}
+import {default as defineProperty} from './defineProperty';
+import {default as changeNamingStyle} from './changeNamingStyle';
 
-export default function reflectPropertiesToAttributes(Constructor, props) {
-  var observedAttris = [];
+export default function reflectPropertiesToAttributes(Constructor, props=[]) {
+  let observedAttrs = [];
 
   class NewConstructor extends Constructor {
     static get observedAttributes() {
-      return observedAttris;
+      return observedAttrs;
     }
   }
 
-  for (let i = 0; i < props.length; i++) {
-    let propName = props[i].propName;
-    let attrName = props[i].attrName || propName;
-    observedAttris.push(propName);
+  props.forEach((prop) => {
+    let propName = changeNamingStyle(prop.propName, 'camel');
+    let attrName = changeNamingStyle(prop.attrName || propName, 'dash');
+    let propType = prop.propType;
+    if (propName !== attrName) {
+      observedAttrs.push(propName);
+    }
+    observedAttrs.push(attrName);
     let descriptor = {
       key: propName,
       get: function get() {
-        return !props[i].propType || props[i].propType === Boolean ? this.hasAttribute(propName) : this.getAttribute(propName);
+        return !propType || propType === Boolean ? this.hasAttribute(attrName) : this.getAttribute(attrName);
       },
       set: function set(val) {
         this.setAttribute(propName, val);
         this.setAttribute(attrName, val);
       }
     };
-    defineProperties(NewConstructor.prototype, descriptor);
-  }
+    defineProperty(NewConstructor.prototype, descriptor);
+  });
 
   return NewConstructor;
 }

@@ -18,6 +18,14 @@
  *    1. In processChildren, detect the type of this.childNodes which is an instance of NodeList.
  *    2. Note that NodeList is a list of Node extends from Object.
  *
+ * To support customizing attributes:
+ *    example:
+ *      for (var attrName in attributes) {
+ *        attributeHookFunction(ele, attrName, attrValue);
+ *      }
+ *
+ *    1. Mutate element through attributeHookFunction which passed to this module.
+ *
  */
 
 

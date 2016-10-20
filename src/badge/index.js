@@ -7,8 +7,13 @@ class MaterialBadge extends HTMLElement {
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    this.classList.toggle('mdl-badge--overlap', this.overlap);
-    this.classList.toggle('mdl-badge--no-background', this.noBackground);
+    const {
+      classList,
+      overlap,
+      noBackground,
+    } = this;
+    classList.toggle('mdl-badge--overlap', overlap);
+    classList.toggle('mdl-badge--no-background', noBackground);
     if (attrName === 'text') {
       this.setAttribute('data-badge', newVal);
     }

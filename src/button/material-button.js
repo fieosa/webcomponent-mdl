@@ -1,11 +1,15 @@
-import { reflectPropertiesToAttributes } from '../utils';
+import { reflectPropertiesToAttributes, mdlUpgrade } from '../utils';
 
 class MaterialButton extends HTMLElement {
 
-  constructor() {
-    super();
+  connectedCallback() {
     this.classList.add('mdl-button', 'mdl-js-button');
-    this.addEventListener('click', this._onclick.bind(this));
+    this._onclick = this._onclick.bind(this);
+    this.addEventListener('click', this._onclick);
+  }
+
+  disconnectedCallback() {
+    this.removeEventListener('click', this._onclick);
   }
 
   _onclick() {
@@ -17,19 +21,30 @@ class MaterialButton extends HTMLElement {
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    this.classList.toggle('mdl-js-ripple-effect', this.ripple);
-    this.classList.toggle('mdl-button--raised', this.raised);
-    this.classList.toggle('mdl-button--colored', this.colored);
-    this.classList.toggle('mdl-button--primary', this.primary);
-    this.classList.toggle('mdl-button--accent', this.accent);
+    const {
+      classList,
+      ripple,
+      raised,
+      colored,
+      primary,
+      accent,
+    } = this;
+    classList.toggle('mdl-js-ripple-effect', ripple);
+    classList.toggle('mdl-button--raised', raised);
+    classList.toggle('mdl-button--colored', colored);
+    classList.toggle('mdl-button--primary', primary);
+    classList.toggle('mdl-button--accent', accent);
   }
 
 }
 
-export default reflectPropertiesToAttributes(MaterialButton, [
-  { propName: 'ripple' },
-  { propName: 'raised' },
-  { propName: 'colored' },
-  { propName: 'primary' },
-  { propName: 'accent' },
-])
+export default reflectPropertiesToAttributes(
+  mdlUpgrade(MaterialButton),
+  [
+    { propName: 'ripple' },
+    { propName: 'raised' },
+    { propName: 'colored' },
+    { propName: 'primary' },
+    { propName: 'accent' },
+  ]
+)

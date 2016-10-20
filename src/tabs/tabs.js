@@ -1,4 +1,4 @@
-import { reflectPropertiesToAttributes } from '../utils';
+import { reflectPropertiesToAttributes, mdlUpgrade } from '../utils';
 
 class Tabs extends HTMLElement {
 
@@ -7,12 +7,16 @@ class Tabs extends HTMLElement {
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    this.classList.toggle('mdl-js-ripple-effect', this.ripple);
+    const { classList, ripple } = this;
+    classList.toggle('mdl-js-ripple-effect', ripple);
   }
 
 }
 
-export default reflectPropertiesToAttributes(Tabs, [
-  { propName: 'activetab', propType: Number },
-  { propName: 'ripple', propType: Boolean },
-])
+export default reflectPropertiesToAttributes(
+  Tabs,
+  [
+    { propName: 'activetab', propType: Number },
+    { propName: 'ripple', propType: Boolean },
+  ]
+)

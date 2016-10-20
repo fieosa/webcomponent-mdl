@@ -3,15 +3,12 @@ import { reflectPropertiesToAttributes } from '../utils';
 
 class MaterialIconButton extends MaterialButton {
 
-  constructor() {
-    super();
-  }
-
   attributeChangedCallback(attrName, oldVal, newVal) {
     super.attributeChangedCallback();
     <this>
       <mdl-icon>{this.name}</mdl-icon>
-      {this.children}
+      {/* TODO: support this syntax */}
+      {/* {this.children} */}
     </this>
   }
 
