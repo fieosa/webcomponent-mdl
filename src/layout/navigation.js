@@ -16,14 +16,14 @@ class Navigation extends BaseCustomElement {
   attributeChangedCallback(attrName, oldVal, newVal) {
     const {
       classList,
-      largescreen,
+      largeScreen,
     } = this;
-    classList.toggle('mdl-layout--large-screen-only', largescreen);
+    classList.toggle('mdl-layout--large-screen-only', largeScreen);
   }
 
 
 }
 
 export default reflectPropertiesToAttributes(Navigation, [
-  {propName: 'largescreen', propType: Boolean},
+  {propName: 'largeScreen', propType: Boolean},
 ])

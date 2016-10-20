@@ -9,23 +9,22 @@ class Layout extends BaseCustomElement {
   attributeChangedCallback(attrName, oldVal, newVal) {
     const {
       classList,
-      fixeddrawer,
-      fixedheader,
-      fixedtabs,
+      fixedDrawer,
+      fixedHeader,
+      fixedTabs,
     } = this;
-    classList.toggle('mdl-layout--fixed-drawer', fixeddrawer);
-    classList.toggle('mdl-layout--fixed-header', fixedheader);
-    classList.toggle('mdl-layout--fixed-tabs', fixedtabs);
+    classList.toggle('mdl-layout--fixed-drawer', fixedDrawer);
+    classList.toggle('mdl-layout--fixed-header', fixedHeader);
+    classList.toggle('mdl-layout--fixed-tabs', fixedTabs);
   }
-
 
 }
 
 export default reflectPropertiesToAttributes(
   mdlUpgrade(Layout),
   [
-    { propName: 'fixeddrawer', propType: Boolean },
-    { propName: 'fixedheader', propType: Boolean },
-    { propName: 'fixedtabs', propType: Boolean }
+    { propName: 'fixedDrawer', propType: Boolean },
+    { propName: 'fixedHeader', propType: Boolean },
+    { propName: 'fixedTabs', propType: Boolean }
   ]
 )
