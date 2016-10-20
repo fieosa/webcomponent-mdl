@@ -1,8 +1,8 @@
-import { reflectPropertiesToAttributes, mdlUpgrade } from '../utils';
+import { BaseCustomElement, reflectPropertiesToAttributes, mdlUpgrade } from '../utils';
 
-class MaterialButton extends HTMLElement {
+class MaterialButton extends BaseCustomElement {
 
-  connectedCallback() {
+  createdCallback() {
     this.classList.add('mdl-button', 'mdl-js-button');
     this._onclick = this._onclick.bind(this);
     this.addEventListener('click', this._onclick);

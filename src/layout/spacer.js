@@ -1,6 +1,8 @@
-export default class Spacer extends HTMLElement {
+import { BaseCustomElement } from '../utils';
 
-  connectedCallback() {
+export default class Spacer extends BaseCustomElement {
+
+  createdCallback() {
     this.classList.add('mdl-layout-spacer');
   }
 }

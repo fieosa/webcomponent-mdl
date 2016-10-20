@@ -1,8 +1,8 @@
-import { reflectPropertiesToAttributes, mdlUpgrade } from '../utils';
+import { BaseCustomElement, reflectPropertiesToAttributes, mdlUpgrade } from '../utils';
 
-class Layout extends HTMLElement {
+class Layout extends BaseCustomElement {
 
-  connectedCallback() {
+  createdCallback() {
     this.classList.add('mdl-layout', 'mdl-js-layout');
   }
 

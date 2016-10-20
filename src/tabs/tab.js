@@ -1,8 +1,8 @@
-import { reflectPropertiesToAttributes } from '../utils';
+import { BaseCustomElement, reflectPropertiesToAttributes } from '../utils';
 
-class TabBar extends HTMLElement {
+class TabBar extends BaseCustomElement {
 
-  connectedCallback() {
+  createdCallback() {
     this.classList.add('mdl-tabs__tab');
   }
 

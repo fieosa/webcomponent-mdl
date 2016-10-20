@@ -1,4 +1,5 @@
-/* Implementation of templating syntax for jsx.
+/**
+ * Implementation of templating syntax for jsx.
  *
  * To support tag nesting syntax:
  *   examples:
@@ -43,7 +44,7 @@ function processChildren(ele, children) {
   }
 }
 
-export function jsxdom(tag, attributes, ...children) {
+export default function jsxdom(tag, attributes, ...children) {
   let ele = tag.nodeName ? tag : document.createElement(tag);
   if (children && children.length) ele.innerHTML = '';
   // set attr
@@ -58,6 +59,3 @@ export function jsxdom(tag, attributes, ...children) {
   processChildren(ele, children);
   return ele;
 }
-
-window.jsxdom = jsxdom;
-window['jsxdom'] = jsxdom;

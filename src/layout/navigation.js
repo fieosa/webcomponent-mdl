@@ -1,8 +1,8 @@
-import { reflectPropertiesToAttributes } from '../utils';
+import { BaseCustomElement, reflectPropertiesToAttributes } from '../utils';
 
-class Navigation extends HTMLElement {
+class Navigation extends BaseCustomElement {
 
-  connectedCallback() {
+  createdCallback() {
     const {
       classList,
       children,

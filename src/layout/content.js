@@ -1,6 +1,8 @@
-export default class Content extends HTMLElement {
+import { BaseCustomElement } from '../utils';
 
-  connectedCallback() {
+export default class Content extends BaseCustomElement {
+
+  createdCallback() {
     this.classList.add('mdl-layout__content');
   }
 

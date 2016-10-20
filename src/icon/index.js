@@ -1,6 +1,8 @@
-export default class MaterialIcon extends HTMLElement {
+import { BaseCustomElement } from '../utils';
 
-  connectedCallback() {
+export default class MaterialIcon extends BaseCustomElement {
+
+  createdCallback() {
     this.classList.add('material-icons');
   }
 }

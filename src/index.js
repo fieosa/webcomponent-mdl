@@ -1,39 +1,40 @@
-import './utils/jsxdom';
+import { registerElement, jsxdom } from './utils';
+window.jsxdom = jsxdom;
 
 import { default as MaterialBadge } from './badge';
-customElements.define('mdl-badge', MaterialBadge);
+registerElement(window, 'mdl-badge', MaterialBadge);
 
 import {
   MaterialButton,
   MaterialIconButton
 } from './button';
-customElements.define('mdl-button', MaterialButton);
-customElements.define('mdl-icon-button', MaterialIconButton);
+registerElement(window, 'mdl-button', MaterialButton);
+registerElement(window, 'mdl-icon-button', MaterialIconButton);
 
 import { default as MaterialIcon } from './icon';
-customElements.define('mdl-icon', MaterialIcon);
+registerElement(window, 'mdl-icon', MaterialIcon);
 
 import { default as MaterialTooltip } from './tooltip';
-customElements.define('mdl-tooltip', MaterialTooltip);
+registerElement(window, 'mdl-tooltip', MaterialTooltip);
 
 import { default as MaterialTextfield } from './textfield';
-customElements.define('mdl-textfield', MaterialTextfield);
+registerElement(window, 'mdl-textfield', MaterialTextfield);
 
 import { default as Grid, Cell } from './grid';
-customElements.define('mdl-grid', Grid);
-customElements.define('mdl-cell', Cell);
+registerElement(window, 'mdl-grid', Grid);
+registerElement(window, 'mdl-cell', Cell);
 
 import { Layout, Drawer, Navigation, Content, Header, Spacer, HeaderRow } from './layout';
-customElements.define('mdl-layout', Layout);
-customElements.define('mdl-drawer', Drawer);
-customElements.define('mdl-navigation', Navigation);
-customElements.define('mdl-content', Content);
-customElements.define('mdl-header', Header);
-customElements.define('mdl-spacer', Spacer);
-customElements.define('mdl-header-row', HeaderRow);
+registerElement(window, 'mdl-layout', Layout);
+registerElement(window, 'mdl-drawer', Drawer);
+registerElement(window, 'mdl-navigation', Navigation);
+registerElement(window, 'mdl-content', Content);
+registerElement(window, 'mdl-header', Header);
+registerElement(window, 'mdl-spacer', Spacer);
+registerElement(window, 'mdl-header-row', HeaderRow);
 
 import { Tabs, TabBar, Tab, TabPanel } from './tabs';
-customElements.define('mdl-tabs', Tabs);
-customElements.define('mdl-tab-bar', TabBar);
-customElements.define('mdl-tab', Tab);
-customElements.define('mdl-tab-panel', TabPanel);
+registerElement(window, 'mdl-tabs', Tabs);
+registerElement(window, 'mdl-tab-bar', TabBar);
+registerElement(window, 'mdl-tab', Tab);
+registerElement(window, 'mdl-tab-panel', TabPanel);

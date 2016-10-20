@@ -1,8 +1,8 @@
-import { reflectPropertiesToAttributes, makeShadow } from '../utils';
+import { BaseCustomElement, reflectPropertiesToAttributes, makeShadow } from '../utils';
 
-class Grid extends HTMLElement {
+class Grid extends BaseCustomElement {
 
-  connectedCallback() {
+  createdCallback() {
     this.classList.add('mdl-grid');
   }
 

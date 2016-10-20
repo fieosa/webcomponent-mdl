@@ -1,11 +1,10 @@
-import { mdlUpgrade, reflectPropertiesToAttributes } from '../utils';
+import { BaseCustomElement, reflectPropertiesToAttributes, mdlUpgrade } from '../utils';
 
-class MaterialTextfield extends HTMLElement {
+class MaterialTextfield extends BaseCustomElement {
 
-  connectedCallback() {
+  createdCallback() {
     this.classList.add('mdl-textfield',  'mdl-js-textfield');
   }
-
 
   attributeChangedCallback(attrName, oldVal, newVal) {
     const {

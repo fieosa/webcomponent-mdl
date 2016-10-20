@@ -1,8 +1,8 @@
-import { reflectPropertiesToAttributes, makeShadow } from '../utils';
+import { BaseCustomElement, reflectPropertiesToAttributes, makeShadow } from '../utils';
 
-class Cell extends HTMLElement {
+class Cell extends BaseCustomElement {
 
-  connectedCallback() {
+  createdCallback() {
     this.classList.add('mdl-cell');
   }
 

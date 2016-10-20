@@ -1,6 +1,8 @@
-export default class Drawer extends HTMLElement {
+import { BaseCustomElement } from '../utils';
 
-  connectedCallback() {
+export default class Drawer extends BaseCustomElement {
+
+  createdCallback() {
     this.classList.add('mdl-layout__drawer');
   }
 

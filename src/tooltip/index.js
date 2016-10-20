@@ -1,8 +1,8 @@
-import { mdlUpgrade, reflectPropertiesToAttributes } from '../utils';
+import { BaseCustomElement, reflectPropertiesToAttributes, mdlUpgrade } from '../utils';
 
-class MaterialTooltip extends HTMLElement {
+class MaterialTooltip extends BaseCustomElement {
 
-  connectedCallback() {
+  createdCallback() {
     this.classList.add('mdl-tooltip');
   }
 

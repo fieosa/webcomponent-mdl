@@ -1,8 +1,8 @@
-import { reflectPropertiesToAttributes } from '../utils';
+import { BaseCustomElement, reflectPropertiesToAttributes } from '../utils';
 
-class Header extends HTMLElement {
+class Header extends BaseCustomElement {
 
-  connectedCallback() {
+  createdCallback() {
     this.classList.add('mdl-layout__layout__header');
   }
 
