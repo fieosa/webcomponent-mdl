@@ -31,6 +31,9 @@
 
 
 function processChildren(ele, children) {
+  if (!children) {
+    return;
+  }
   if (children.constructor === Array) {
     for(var i = 0; i < children.length; i++) {
       processChildren(ele, children[i]);
@@ -44,7 +47,6 @@ function processChildren(ele, children) {
 
 export default function jsxdom(tag, attributes, ...children) {
   let ele = tag.nodeName ? tag : document.createElement(tag);
-  if (children && children.length) ele.innerHTML = '';
   // set attr
   for (var attrName in attributes) {
     if(attrName === 'onclick') {

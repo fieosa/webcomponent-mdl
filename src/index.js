@@ -1,4 +1,8 @@
-import { registerElement, jsxdom } from './utils';
+import { registerElement, jsxdom, map } from './utils';
+//
+NodeList.prototype.map = map;
+HTMLCollection.prototype.map = map;
+
 window.jsxdom = jsxdom;
 
 import { default as MaterialBadge } from './badge';
@@ -38,3 +42,12 @@ registerElement(window, 'mdl-tabs', Tabs);
 registerElement(window, 'mdl-tab-bar', TabBar);
 registerElement(window, 'mdl-tab', Tab);
 registerElement(window, 'mdl-tab-panel', TabPanel);
+
+// Card
+import { Card, CardTitle } from './card';
+registerElement(window, 'mdl-card', Card);
+registerElement(window, 'mdl-card-title', CardTitle);
+
+
+
+

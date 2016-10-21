@@ -1,5 +1,5 @@
 import { default as MaterialButton } from './material-button';
-import { reflectPropertiesToAttributes } from '../utils';
+import { reflectPropertiesToAttributes, mdlUpgrade } from '../utils';
 
 class MaterialIconButton extends MaterialButton {
 
@@ -17,6 +17,7 @@ class MaterialIconButton extends MaterialButton {
 
 }
 
-export default reflectPropertiesToAttributes(MaterialIconButton, [
+export default reflectPropertiesToAttributes(
+  mdlUpgrade(MaterialIconButton), [
   { propName: 'name', propType: String },
 ])

@@ -1,4 +1,7 @@
-import { BaseCustomElement, reflectPropertiesToAttributes, mdlUpgrade } from '../utils';
+import {
+  BaseCustomElement,
+  reflectPropertiesToAttributes,
+  mdlUpgrade } from '../utils';
 
 class MaterialButton extends BaseCustomElement {
 
