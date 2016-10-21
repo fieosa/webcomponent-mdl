@@ -35,12 +35,10 @@ function processChildren(ele, children) {
     for(var i = 0; i < children.length; i++) {
       processChildren(ele, children[i]);
     }
-  } else if (children.constructor === String) {
-    ele.appendChild(document.createTextNode(children));
-  } else if (children && children.nodeName) {
+  } else if (children && children.nodeName ) {
     ele.appendChild(children);
   } else {
-    console.error('Ignore jsx type: ', children, typeof children);
+    ele.appendChild(document.createTextNode(children));
   }
 }
 

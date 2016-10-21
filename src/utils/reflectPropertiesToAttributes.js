@@ -1,5 +1,5 @@
 import {default as defineProperty} from './defineProperty';
-import {default as changeNamingStyle} from './changeNamingStyle';
+import {default as changeNamingStyleTo} from './changeNamingStyle';
 
 export default function reflectPropertiesToAttributes(Constructor, props=[]) {
   let observedAttrs = [];
@@ -11,8 +11,8 @@ export default function reflectPropertiesToAttributes(Constructor, props=[]) {
   }
 
   props.forEach((prop) => {
-    let propName = changeNamingStyle(prop.propName, 'camel');
-    let attrName = changeNamingStyle(prop.attrName || propName, 'dash');
+    let propName = changeNamingStyleTo(prop.propName, 'camel');
+    let attrName = changeNamingStyleTo(prop.attrName || propName, 'dash');
     let propType = prop.propType;
     if (propName !== attrName) {
       observedAttrs.push(propName);

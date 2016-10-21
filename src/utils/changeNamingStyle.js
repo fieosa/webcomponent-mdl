@@ -1,4 +1,4 @@
-export default function changeNamingStyle(str, style='camel') {
+export default function changeNamingStyleTo(str, style='camel') {
   return str && str.replace(/(?:^\w|[A-Z]|\b\w|\s+|\-+|\_+)/g, function(match, index) {
     if (/[\s\-\_]+/.test(match)) {
       return '';
