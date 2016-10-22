@@ -52,6 +52,7 @@ registerElement(window, 'mdl-tab', Tab);
 registerElement(window, 'mdl-tab-panel', TabPanel);
 
 // Card
-import { Card, CardTitle } from './card';
+import { Card, CardTitle, CardText } from './card';
 registerElement(window, 'mdl-card', Card);
 registerElement(window, 'mdl-card-title', CardTitle);
+registerElement(window, 'mdl-card-text', CardText);
