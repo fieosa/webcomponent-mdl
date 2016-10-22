@@ -1,0 +1,80 @@
+
+
+<h2 id="demo">Demo</h2>
+<div class="html_demo"><mdl-button
+  onclick="snackbarTest();"
+  ripple raised primary>
+  Show
+</mdl-button>
+<mdl-snackbar
+  timeout="2500"
+  onaction="alert('UNDO')"
+  action-text="UNDO">
+  My message
+</mdl-snackbar>
+<script>
+function snackbarTest() {
+  var snacks = document.getElementsByTagName('mdl-snackbar');
+  snacks[0].active = true;
+}
+</script></div><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">mdl-button</span>
+  <span class="hljs-attr">onclick</span>=<span class="hljs-string">"snackbarTest();"</span>
+  <span class="hljs-attr">ripple</span> <span class="hljs-attr">raised</span> <span class="hljs-attr">primary</span>&gt;</span>
+  Show
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-snackbar</span>
+  <span class="hljs-attr">timeout</span>=<span class="hljs-string">"2500"</span>
+  <span class="hljs-attr">onaction</span>=<span class="hljs-string">"alert('UNDO')"</span>
+  <span class="hljs-attr">action-text</span>=<span class="hljs-string">"UNDO"</span>&gt;</span>
+  My message
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-snackbar</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">snackbarTest</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">var</span> snacks = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">'mdl-snackbar'</span>);
+  snacks[<span class="hljs-number">0</span>].active = <span class="hljs-literal">true</span>;
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre><h2 id="configuration-options">Configuration options</h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Effect</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>message</code></td>
+<td>String</td>
+<td>Specify the message to show. Show textContent If not set</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>action-text</code></td>
+<td>String</td>
+<td>Specify the label of the action button</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>active</code></td>
+<td>Boolean</td>
+<td>Set the snackbar visible</td>
+<td>Required. Should be false when mounting the component</td>
+</tr>
+<tr>
+<td><code>onaction</code></td>
+<td>Function</td>
+<td>Function to call when the action button is clicked</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>timeout</code></td>
+<td>Number</td>
+<td>Defines the time (in ms) to show the snackbar</td>
+<td>Optional. Default 2750</td>
+</tr>
+</tbody>
+</table>
+
+
