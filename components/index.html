@@ -1211,32 +1211,35 @@
 
 <h2 id="demo">Demo</h2>
 <p><style>
-  .html_demo .demo {
+  .html_demo #ttl1,
+  .html_demo #ttl2,
+  .html_demo #ttl3,
+  .html_demo #ttl4 {
     background-color: #FFD740;
     padding: 10px;
     margin: 10px 20px;
   }
 </style></p>
-<div class="html_demo"><span id="ttl1" class="demo">top</span>
+<div class="html_demo"><span id="ttl1">top</span>
 <mdl-tooltip for="ttl1" position="top">top tooltop</mdl-tooltip>
 
-<span id="ttl2" class="demo">large bottom</span>
+<span id="ttl2">large bottom</span>
 <mdl-tooltip for="ttl2" large position="bottom">large bottom tooltop</mdl-tooltip>
 
-<span id="ttl3" class="demo">left</span>
+<span id="ttl3">left</span>
 <mdl-tooltip for="ttl3" position="left">left tooltop</mdl-tooltip>
 
-<span id="ttl4" class="demo">large right</span>
-<mdl-tooltip for="ttl4" large position="right">large right tooltop</mdl-tooltip></div><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ttl1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo"</span>&gt;</span>top<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span id="ttl4">large right</span>
+<mdl-tooltip for="ttl4" large position="right">large right tooltop</mdl-tooltip></div><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ttl1"</span>&gt;</span>top<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">mdl-tooltip</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ttl1"</span> <span class="hljs-attr">position</span>=<span class="hljs-string">"top"</span>&gt;</span>top tooltop<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-tooltip</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ttl2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo"</span>&gt;</span>large bottom<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ttl2"</span>&gt;</span>large bottom<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">mdl-tooltip</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ttl2"</span> <span class="hljs-attr">large</span> <span class="hljs-attr">position</span>=<span class="hljs-string">"bottom"</span>&gt;</span>large bottom tooltop<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-tooltip</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ttl3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo"</span>&gt;</span>left<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ttl3"</span>&gt;</span>left<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">mdl-tooltip</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ttl3"</span> <span class="hljs-attr">position</span>=<span class="hljs-string">"left"</span>&gt;</span>left tooltop<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-tooltip</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ttl4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo"</span>&gt;</span>large right<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ttl4"</span>&gt;</span>large right<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">mdl-tooltip</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ttl4"</span> <span class="hljs-attr">large</span> <span class="hljs-attr">position</span>=<span class="hljs-string">"right"</span>&gt;</span>large right tooltop<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-tooltip</span>&gt;</span></code></pre><h2 id="configuration-options">Configuration options</h2>
 <table>
 <thead>
@@ -1281,8 +1284,6 @@
     </mdl-layout>
 
     <!-- custom elements polyfill -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/document-register-element/1.1.1/document-register-element.js" ></script>
-    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     <script src="../webcomponent-mdl.min.js"></script>
     <script src="../assets/highlight.js"></script>
     <script src="../assets/main.js"></script>
