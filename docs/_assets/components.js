@@ -132,11 +132,11 @@ MaterialComponentsNav.prototype.clickHandler = function(link) {
     var section = window.location.hash.split('/')[0];
     var linkWithoutHash = link.href.split('#')[1];
     if (section !== '#' + linkWithoutHash) {
-      history.pushState(null, 'Material Design Lite', link);
+      history.pushState(null, 'WebComponent-MDL', link);
       // Scroll to top of page
       document.getElementById('content').scrollTop = 0;
       // Track the specific component page view in Google analytics
-      if (ga) {
+      if (window.ga) {
         ga('send', 'pageview', '/components/' + linkWithoutHash);
       }
     }

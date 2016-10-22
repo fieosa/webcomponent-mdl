@@ -8,26 +8,19 @@ const browserSync = require('browser-sync');
 const through = require('through2');
 const swig = require('swig');
 const gulp = require('gulp');
+const ghPagesDeploy = require('gulp-gh-pages');
 const marked = require('marked');
 const highlightjs = require('highlight.js');
 const webpack = require('gulp-webpack');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const pkg = require('./package.json');
-const getWebpackConfig = require('./webpack.config.js');
+const webpackConfig = require('./webpack.config.js');
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 const hostedLibsUrlPrefix = 'https://localhost';
-const banner = ['/**',
-  ' * <%= pkg.name %> - <%= pkg.description %>',
-  ' * @version v<%= pkg.version %>',
-  ' * @license <%= pkg.license %>',
-  ' * @copyright 2016 <%= pkg.license %>.',
-  ' * @link  <%= pkg.homepage %>',
-  ' */',
-  ''].join('\n');
 
 const AUTOPREFIXER_BROWSERS = [
-  'ie >= 10',
+  'ie >= 9',
   'ie_mob >= 10',
   'ff >= 30',
   'chrome >= 34',
@@ -40,8 +33,7 @@ const AUTOPREFIXER_BROWSERS = [
 
 gulp.task('scripts',/* ['lint'],*/ () => {
   return gulp.src('./src/index.js')
-    .pipe(webpack(getWebpackConfig(true)))
-    .pipe($.header(banner, {pkg}))
+    .pipe(webpack(webpackConfig))
     .pipe(gulp.dest('./dist'));
 });
 
@@ -171,21 +163,10 @@ function watch() {
   gulp.watch(['src/**/*.{svg,png,jpg}'], ['images', reload]);
   gulp.watch(['src/**/README.md'], ['pages', reload]);
   gulp.watch(['docs/**/*'], ['pages', 'assets', reload]);
-  gulp.watch(['package.json', 'bower.json', 'LICENSE'], ['metadata']);
 }
 
 // Clean Output Directory
 gulp.task('clean', () => del(['dist', '.publish']));
-
-// Copy package manger and LICENSE files to dist
-gulp.task('metadata', () => {
-  return gulp.src([
-      'package.json',
-      'bower.json',
-      'LICENSE'
-    ])
-    .pipe(gulp.dest('dist'));
-});
 
 // Build Production Files, the Default Task
 gulp.task('default', ['clean'], cb => {
@@ -195,10 +176,10 @@ gulp.task('default', ['clean'], cb => {
 });
 
 // Build production files and microsite
-gulp.task('all', ['clean'], cb => {
+gulp.task('build', ['clean'], cb => {
   runSequence(
     ['scripts'],
-    ['assets', 'pages', 'images', 'metadata'],
+    ['assets', 'pages', 'images'],
     cb);
 });
 
@@ -214,4 +195,12 @@ gulp.task('serve', () => {
   });
 
   watch();
+});
+
+/**
+ * publish the docs from "dist" directory to gh-pages branch.
+ */
+gulp.task('publish:docs', ['build'], () => {
+  return gulp.src("dist/**/*")
+    .pipe(ghPagesDeploy())
 });
