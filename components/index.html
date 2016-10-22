@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="Webcomponents for Material-Design-Lite that helps you build fast, modern mobile web apps.">
+    <title>webcomponent-mdl: Web Components for Material Design Lite</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.deep_purple-amber.min.css">
+    <link rel="stylesheet" href="../assets/vs.css">
+    <link rel="stylesheet" href="../assets/main.css">
+
+  </head>
+  <body>
+    <mdl-layout class="docs-layout" fixed-header>
+
+      <mdl-header>
+        <mdl-header-row>
+          <span class="mdl-layout-title">
+            <a href="../index.html" style="color:white;text-decoration:none;">
+              WebComponent-MDL
+            </a>
+          </span>
+          <mdl-spacer></mdl-spacer>
+          <mdl-navigation ripple>
+            <a href="../started/index.html">Getting Started</a>
+            <a href="../components/index.html">Components</a>
+            <a href="../templates/index.html">Templates</a>
+            <a href="https://github.com/bfwg/webcomponent-mdl">
+              <mdl-icon style="margin-right:7px;">link</mdl-icon>GitHub</a>
+          </mdl-navigation>
+        </mdl-header-row>
+      </mdl-header>
+
+      <mdl-content class="docs-layout-content">
+        <mdl-grid no-spacing class="content" id="content">
+
+          
+<link href="../assets/components.css" rel="stylesheet">
+<script src="../assets/components.js"></script>
+
+<div class="mdl-components mdl-js-components mdl-cell mdl-cell--12-col">
+  <aside class="mdl-components__nav docs-text-styling mdl-shadow--4dp">
+    
+    <a href="#badges-section" class="mdl-components__link mdl-component badges">
+      <div class="mdl-components__link-image"
+           style="background-image: url('../assets/comp_badges.png')">
+      </div>
+      <span class="mdl-components__link-text">Badges</span>
+    </a>
+    
+    <a href="#buttons-section" class="mdl-components__link mdl-component buttons">
+      <div class="mdl-components__link-image"
+           style="background-image: url('../assets/comp_buttons.png')">
+      </div>
+      <span class="mdl-components__link-text">Buttons</span>
+    </a>
+    
+    <a href="#cards-section" class="mdl-components__link mdl-component cards">
+      <div class="mdl-components__link-image"
+           style="background-image: url('../assets/comp_cards.png')">
+      </div>
+      <span class="mdl-components__link-text">Cards</span>
+    </a>
+    
+    <a href="#chips-section" class="mdl-components__link mdl-component chips">
+      <div class="mdl-components__link-image"
+           style="background-image: url('../assets/comp_chips.png')">
+      </div>
+      <span class="mdl-components__link-text">Chips</span>
+    </a>
+    
+    <a href="#dialog-section" class="mdl-components__link mdl-component dialog">
+      <div class="mdl-components__link-image"
+           style="background-image: url('../assets/comp_dialog.png')">
+      </div>
+      <span class="mdl-components__link-text">Dialogs</span>
+    </a>
+    
+    <a href="#layout-section" class="mdl-components__link mdl-component layout">
+      <div class="mdl-components__link-image"
+           style="background-image: url('../assets/comp_layout.png')">
+      </div>
+      <span class="mdl-components__link-text">Layout</span>
+    </a>
+    
+    <a href="#lists-section" class="mdl-components__link mdl-component lists">
+      <div class="mdl-components__link-image"
+           style="background-image: url('../assets/comp_lists.png')">
+      </div>
+      <span class="mdl-components__link-text">Lists</span>
+    </a>
+    
+    <a href="#loading-section" class="mdl-components__link mdl-component loading">
+      <div class="mdl-components__link-image"
+           style="background-image: url('../assets/comp_loading.png')">
+      </div>
+      <span class="mdl-components__link-text">Loading</span>
+    </a>
+    
+    <a href="#menus-section" class="mdl-components__link mdl-component menus">
+      <div class="mdl-components__link-image"
+           style="background-image: url('../assets/comp_menus.png')">
+      </div>
+      <span class="mdl-components__link-text">Menus</span>
+    </a>
+    
+    <a href="#sliders-section" class="mdl-components__link mdl-component sliders">
+      <div class="mdl-components__link-image"
+           style="background-image: url('../assets/comp_sliders.png')">
+      </div>
+      <span class="mdl-components__link-text">Sliders</span>
+    </a>
+    
+    <a href="#snackbar-section" class="mdl-components__link mdl-component snackbar">
+      <div class="mdl-components__link-image"
+           style="background-image: url('../assets/comp_snackbar.png')">
+      </div>
+      <span class="mdl-components__link-text">Snackbar</span>
+    </a>
+    
+    <a href="#toggles-section" class="mdl-components__link mdl-component toggles">
+      <div class="mdl-components__link-image"
+           style="background-image: url('../assets/comp_toggles.png')">
+      </div>
+      <span class="mdl-components__link-text">Toggles</span>
+    </a>
+    
+    <a href="#tables-section" class="mdl-components__link mdl-component tables">
+      <div class="mdl-components__link-image"
+           style="background-image: url('../assets/comp_tables.png')">
+      </div>
+      <span class="mdl-components__link-text">Tables</span>
+    </a>
+    
+    <a href="#textfields-section" class="mdl-components__link mdl-component textfields">
+      <div class="mdl-components__link-image"
+           style="background-image: url('../assets/comp_textfields.png')">
+      </div>
+      <span class="mdl-components__link-text">Text Fields</span>
+    </a>
+    
+    <a href="#tooltips-section" class="mdl-components__link mdl-component tooltips">
+      <div class="mdl-components__link-image"
+           style="background-image: url('../assets/comp_tooltips.png')">
+      </div>
+      <span class="mdl-components__link-text">Tooltips</span>
+    </a>
+    
+  </aside>
+  <main class="mdl-components__pages">
+    <section id="index-section" class="mdl-components-index mdl-components__page">
+      <div class="mdl-components-index-text mdl-grid">
+        <div class="mdl-components-text docs-text-styling about-panel about-panel--text mdl-cell mdl-cell--12-col">
+          <dl class="mdl-components-dl">
+            <dt class="mdl-components-dt">COMPONENTS</dt>
+            <dd class="mdl_components-dd">
+              Webcomponents for Material-Design-Lite that helps you build fast, modern mobile web apps.
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section id="badges-section" class="mdl-components__page mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+        <div class="docs-text-styling component-title">
+          <h3>Badges</h3>
+          <p>Small status descriptors for UI elements.</p>
+        </div>
+
+        
+
+        
+
+          
+          <!-- Add warning, if the component has one -->
+          
+          <div class="docs-text-styling docs-readme">
+            
+            
+
+<h2 id="demo">Demo</h2>
+<p><style>
+  .html_demo mdl-icon,
+  .html_demo mdl-badge {
+    font-size: 24px; 
+  }
+</style></p>
+<div class="html_demo"><mdl-badge text="6" no-background></mdl-badge>
+<mdl-badge text="♥"></mdl-badge>
+<mdl-badge text="♥" overlap>
+  <mdl-icon>mood</mdl-icon>
+</mdl-badge>
+<mdl-badge text="♥" no-background>
+  <mdl-icon>face</mdl-icon>
+</mdl-badge></div><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">mdl-badge</span> <span class="hljs-attr">text</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">no-background</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mdl-badge</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-badge</span> <span class="hljs-attr">text</span>=<span class="hljs-string">"♥"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mdl-badge</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-badge</span> <span class="hljs-attr">text</span>=<span class="hljs-string">"♥"</span> <span class="hljs-attr">overlap</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-icon</span>&gt;</span>mood<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-icon</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-badge</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-badge</span> <span class="hljs-attr">text</span>=<span class="hljs-string">"♥"</span> <span class="hljs-attr">no-background</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-icon</span>&gt;</span>face<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-icon</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-badge</span>&gt;</span></code></pre><h2 id="configuration-options">Configuration options</h2>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>Effect</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>text</code></td>
+<td>Assign string value to badge</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><code>overlap</code></td>
+<td>Makes the badge overlaps its container</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>no-background</code></td>
+<td>Removes the background of the badge</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+
+
+
+          </div>
+        
+      </div>
+    </section>
+    <section id="buttons-section" class="mdl-components__page mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+        <div class="docs-text-styling component-title">
+          <h3>Buttons</h3>
+          <p>Variations on Material Design buttons.</p>
+        </div>
+
+        
+
+        
+
+          
+          <!-- Add warning, if the component has one -->
+          
+          <div class="docs-text-styling docs-readme">
+            
+            
+          </div>
+        
+      </div>
+    </section>
+    <section id="cards-section" class="mdl-components__page mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+        <div class="docs-text-styling component-title">
+          <h3>Cards</h3>
+          <p>Self-contained pieces of paper with data.</p>
+        </div>
+
+        
+
+        
+
+          
+          <!-- Add warning, if the component has one -->
+          
+          <div class="docs-text-styling docs-readme">
+            
+            
+          </div>
+        
+      </div>
+    </section>
+    <section id="chips-section" class="mdl-components__page mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+        <div class="docs-text-styling component-title">
+          <h3>Chips</h3>
+          <p>Represents complex entities in small blocks.</p>
+        </div>
+
+        
+
+        
+
+          
+          <!-- Add warning, if the component has one -->
+          
+          <div class="docs-text-styling docs-readme">
+            
+            
+          </div>
+        
+      </div>
+    </section>
+    <section id="dialog-section" class="mdl-components__page mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+        <div class="docs-text-styling component-title">
+          <h3>Dialogs</h3>
+          <p>Modal windows for dedicated user input.</p>
+        </div>
+
+        
+
+        
+
+          
+          <!-- Add warning, if the component has one -->
+          
+           <div class="mdl-components__warning"><b>Note: </b>Dialogs use the HTML &lt;dialog&gt; element, which currently has very limited cross-browser support. To ensure support across all modern browsers, please consider using a polyfill or creating your own. There is no polyfill included with MDL.</div>
+          
+          <div class="docs-text-styling docs-readme">
+            
+            
+          </div>
+        
+      </div>
+    </section>
+    <section id="layout-section" class="mdl-components__page mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+        <div class="docs-text-styling component-title">
+          <h3>Layout</h3>
+          <p>Building blocks for constructing a page layout.</p>
+        </div>
+
+        
+          <section class="docs-toc docs-text-styling">
+            <nav class="section-content">
+              <ul>
+                
+                  <li><a href="#layout-section/layout">Navigation layouts</a></li>
+                
+                  <li><a href="#layout-section/grid">Grid</a></li>
+                
+                  <li><a href="#layout-section/tabs">Tabs</a></li>
+                
+                  <li><a href="#layout-section/footer">Footer</a></li>
+                
+              </ul>
+            </nav>
+          </section>
+        
+
+        
+
+          
+            <span class="docs-text-styling">
+              <h1 class="mdl-components__classname" id="layout-section/layout">Navigation layouts</h1>
+            </span>
+          
+          <!-- Add warning, if the component has one -->
+          
+          <div class="docs-text-styling docs-readme">
+            
+            
+          </div>
+        
+
+          
+            <span class="docs-text-styling">
+              <h1 class="mdl-components__classname" id="layout-section/grid">Grid</h1>
+            </span>
+          
+          <!-- Add warning, if the component has one -->
+          
+          <div class="docs-text-styling docs-readme">
+            
+            
+          </div>
+        
+
+          
+            <span class="docs-text-styling">
+              <h1 class="mdl-components__classname" id="layout-section/tabs">Tabs</h1>
+            </span>
+          
+          <!-- Add warning, if the component has one -->
+          
+          <div class="docs-text-styling docs-readme">
+            
+            
+          </div>
+        
+
+          
+            <span class="docs-text-styling">
+              <h1 class="mdl-components__classname" id="layout-section/footer">Footer</h1>
+            </span>
+          
+          <!-- Add warning, if the component has one -->
+          
+          <div class="docs-text-styling docs-readme">
+            
+            
+          </div>
+        
+      </div>
+    </section>
+    <section id="lists-section" class="mdl-components__page mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+        <div class="docs-text-styling component-title">
+          <h3>Lists</h3>
+          <p>Customizable scrollable lists.</p>
+        </div>
+
+        
+
+        
+
+          
+          <!-- Add warning, if the component has one -->
+          
+          <div class="docs-text-styling docs-readme">
+            
+            
+          </div>
+        
+      </div>
+    </section>
+    <section id="loading-section" class="mdl-components__page mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+        <div class="docs-text-styling component-title">
+          <h3>Loading</h3>
+          <p>Indicate loading and progress states.</p>
+        </div>
+
+        
+          <section class="docs-toc docs-text-styling">
+            <nav class="section-content">
+              <ul>
+                
+                  <li><a href="#loading-section/progress">Progress bar</a></li>
+                
+                  <li><a href="#loading-section/spinner">Spinner</a></li>
+                
+              </ul>
+            </nav>
+          </section>
+        
+
+        
+
+          
+            <span class="docs-text-styling">
+              <h1 class="mdl-components__classname" id="loading-section/progress">Progress bar</h1>
+            </span>
+          
+          <!-- Add warning, if the component has one -->
+          
+          <div class="docs-text-styling docs-readme">
+            
+            
+          </div>
+        
+
+          
+            <span class="docs-text-styling">
+              <h1 class="mdl-components__classname" id="loading-section/spinner">Spinner</h1>
+            </span>
+          
+          <!-- Add warning, if the component has one -->
+          
+          <div class="docs-text-styling docs-readme">
+            
+            
+          </div>
+        
+      </div>
+    </section>
+    <section id="menus-section" class="mdl-components__page mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+        <div class="docs-text-styling component-title">
+          <h3>Menus</h3>
+          <p>Lists of clickable actions.</p>
+        </div>
+
+        
+
+        
+
+          
+          <!-- Add warning, if the component has one -->
+          
+          <div class="docs-text-styling docs-readme">
+            
+            
+          </div>
+        
+      </div>
+    </section>
+    <section id="sliders-section" class="mdl-components__page mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+        <div class="docs-text-styling component-title">
+          <h3>Sliders</h3>
+          <p>Selecting a value out of a range.</p>
+        </div>
+
+        
+
+        
+
+          
+          <!-- Add warning, if the component has one -->
+          
+          <div class="docs-text-styling docs-readme">
+            
+            
+          </div>
+        
+      </div>
+    </section>
+    <section id="snackbar-section" class="mdl-components__page mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+        <div class="docs-text-styling component-title">
+          <h3>Snackbar</h3>
+          <p>Transient popup notifications.</p>
+        </div>
+
+        
+
+        
+
+          
+          <!-- Add warning, if the component has one -->
+          
+          <div class="docs-text-styling docs-readme">
+            
+            
+          </div>
+        
+      </div>
+    </section>
+    <section id="toggles-section" class="mdl-components__page mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+        <div class="docs-text-styling component-title">
+          <h3>Toggles</h3>
+          <p>Choose between states.</p>
+        </div>
+
+        
+          <section class="docs-toc docs-text-styling">
+            <nav class="section-content">
+              <ul>
+                
+                  <li><a href="#toggles-section/checkbox">Checkbox</a></li>
+                
+                  <li><a href="#toggles-section/radio">Radio button</a></li>
+                
+                  <li><a href="#toggles-section/icon-toggle">Icon toggle</a></li>
+                
+                  <li><a href="#toggles-section/switch">Switch</a></li>
+                
+              </ul>
+            </nav>
+          </section>
+        
+
+        
+
+          
+            <span class="docs-text-styling">
+              <h1 class="mdl-components__classname" id="toggles-section/checkbox">Checkbox</h1>
+            </span>
+          
+          <!-- Add warning, if the component has one -->
+          
+          <div class="docs-text-styling docs-readme">
+            
+            
+          </div>
+        
+
+          
+            <span class="docs-text-styling">
+              <h1 class="mdl-components__classname" id="toggles-section/radio">Radio button</h1>
+            </span>
+          
+          <!-- Add warning, if the component has one -->
+          
+          <div class="docs-text-styling docs-readme">
+            
+            
+          </div>
+        
+
+          
+            <span class="docs-text-styling">
+              <h1 class="mdl-components__classname" id="toggles-section/icon-toggle">Icon toggle</h1>
+            </span>
+          
+          <!-- Add warning, if the component has one -->
+          
+          <div class="docs-text-styling docs-readme">
+            
+            
+          </div>
+        
+
+          
+            <span class="docs-text-styling">
+              <h1 class="mdl-components__classname" id="toggles-section/switch">Switch</h1>
+            </span>
+          
+          <!-- Add warning, if the component has one -->
+          
+          <div class="docs-text-styling docs-readme">
+            
+            
+          </div>
+        
+      </div>
+    </section>
+    <section id="tables-section" class="mdl-components__page mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+        <div class="docs-text-styling component-title">
+          <h3>Tables</h3>
+          <p>Organize data.</p>
+        </div>
+
+        
+
+        
+
+          
+          <!-- Add warning, if the component has one -->
+          
+          <div class="docs-text-styling docs-readme">
+            
+            
+          </div>
+        
+      </div>
+    </section>
+    <section id="textfields-section" class="mdl-components__page mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+        <div class="docs-text-styling component-title">
+          <h3>Text Fields</h3>
+          <p>Textual input components.</p>
+        </div>
+
+        
+
+        
+
+          
+          <!-- Add warning, if the component has one -->
+          
+          <div class="docs-text-styling docs-readme">
+            
+            
+          </div>
+        
+      </div>
+    </section>
+    <section id="tooltips-section" class="mdl-components__page mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+        <div class="docs-text-styling component-title">
+          <h3>Tooltips</h3>
+          <p>Useful information on hover.</p>
+        </div>
+
+        
+
+        
+
+          
+          <!-- Add warning, if the component has one -->
+          
+          <div class="docs-text-styling docs-readme">
+            
+            
+          </div>
+        
+      </div>
+    </section>
+    
+</main>
+</div>
+
+
+
+        </mdl-grid>
+
+      </mdl-content>
+    </mdl-layout>
+
+    <!-- custom elements polyfill -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/document-register-element/1.1.1/document-register-element.js" ></script>
+    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script src="../webcomponent-mdl.min.js"></script>
+    <script src="../assets/highlight.js"></script>
+    <script src="../assets/main.js"></script>
+
+  </body>
+</html>
