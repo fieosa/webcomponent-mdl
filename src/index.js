@@ -1,3 +1,11 @@
+// polyfills
+import './third_party/classList.js';
+import 'document-register-element/build/document-register-element.max.js';
+
+// material-design-lite.js
+import 'material-design-lite';
+
+// utils
 import { registerElement, jsxdom, map } from './utils';
 //
 NodeList.prototype.map = map;
@@ -47,7 +55,3 @@ registerElement(window, 'mdl-tab-panel', TabPanel);
 import { Card, CardTitle } from './card';
 registerElement(window, 'mdl-card', Card);
 registerElement(window, 'mdl-card-title', CardTitle);
-
-
-
-
