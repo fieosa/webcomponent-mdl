@@ -35,7 +35,7 @@ function processChildren(ele, children) {
     for(var i = 0; i < children.length; i++) {
       processChildren(ele, children[i]);
     }
-  } else if (children && children.nodeName ) {
+  } else if (children instanceof Node) {
     ele.appendChild(children);
   } else {
     ele.appendChild(document.createTextNode(children));
@@ -43,11 +43,11 @@ function processChildren(ele, children) {
 }
 
 export default function jsxdom(tag, attributes, ...children) {
-  let ele = tag.nodeName ? tag : document.createElement(tag);
+  let ele = tag instanceof Node ? tag : document.createElement(tag);
   // set attr
   for (var attrName in attributes) {
-    if(attrName === 'onclick') {
-      ele.addEventListener('click', attributes[attrName]);
+    if(attrName in ele) {
+      ele[attrName] = attributes[attrName];
     } else {
       ele.setAttribute(attrName, attributes[attrName]);
     }
