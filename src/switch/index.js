@@ -15,11 +15,10 @@ class MaterialSwitch extends BaseCustomElement {
     </this>
   }
 
-  _onclick(e) {
-    e.preventDefault();
+  _onclick() {
     if (this.disabled) return;
     this.checked = !this.checked;
-    this._input.dispatchEvent(new Event('change'));
+    this._input.dispatchEvent(new Event('change',{ bubbles: true }));
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {

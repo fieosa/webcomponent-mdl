@@ -46,8 +46,9 @@ export default function jsxdom(tag, attributes, ...children) {
   let ele = tag instanceof Node ? tag : document.createElement(tag);
   // set attr
   for (var attrName in attributes) {
-    if(attrName in ele) {
+    if(attrName in ele && attrName.lastIndexOf('on', 0) === 0) {
       ele[attrName] = attributes[attrName];
+      // ele.addEventListener(attrName, attributes[attrName]);
     } else {
       ele.setAttribute(attrName, attributes[attrName]);
     }

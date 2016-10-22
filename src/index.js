@@ -58,3 +58,9 @@ registerElement(window, 'mdl-card-title', CardTitle);
 
 import { default as MaterialSwitch } from './switch';
 registerElement(window, 'mdl-switch', MaterialSwitch);
+
+import { default as MaterialSnackbar } from './snackbar';
+registerElement(window, 'mdl-snackbar', MaterialSnackbar);
+
+import { default as MaterialSlider } from './slider';
+registerElement(window, 'mdl-slider', MaterialSlider);
