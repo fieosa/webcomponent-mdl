@@ -8,8 +8,7 @@ class Tabs extends BaseCustomElement {
 
   attributeChangedCallback(attrName, oldVal, newVal) {
     this.classList.add('mdl-tabs', 'mdl-js-tabs');
-    const { classList, ripple } = this;
-    classList.toggle('mdl-js-ripple-effect', ripple);
+    this.classList.toggle('mdl-js-ripple-effect', this.ripple);
   }
 
 }

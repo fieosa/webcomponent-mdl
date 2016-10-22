@@ -7,21 +7,13 @@ class MaterialTextfield extends BaseCustomElement {
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    const {
-      classList,
-      label,
-      floatingLabel,
-      expandable,
-      childNodes,
-      children,
-    } = this;
-    classList.toggle('mdl-textfield--floating-label', floatingLabel);
-    classList.toggle('mdl-textfield--expandable', expandable);
+    this.classList.toggle('mdl-textfield--floating-label', this.floatingLabel);
+    this.classList.toggle('mdl-textfield--expandable', this.expandable);
     <this style="color: red;">
       {/* TODO: support this syntax */}
       {/* {this.childNodes} */}
       I am a text.<br/>
-      {label}
+      {this.label}
       <p onclick={() => console.log(this)} style="font-size: inherite;">
       {/* TODO: support this syntax */}
       {/* {this.children} */}

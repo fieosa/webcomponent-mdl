@@ -7,15 +7,9 @@ class Layout extends BaseCustomElement {
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    const {
-      classList,
-      fixedDrawer,
-      fixedHeader,
-      fixedTabs,
-    } = this;
-    classList.toggle('mdl-layout--fixed-drawer', fixedDrawer);
-    classList.toggle('mdl-layout--fixed-header', fixedHeader);
-    classList.toggle('mdl-layout--fixed-tabs', fixedTabs);
+    this.classList.toggle('mdl-layout--fixed-drawer', this.fixedDrawer);
+    this.classList.toggle('mdl-layout--fixed-header', this.fixedHeader);
+    this.classList.toggle('mdl-layout--fixed-tabs', this.fixedTabs);
   }
 
 }

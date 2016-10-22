@@ -7,9 +7,8 @@ class TabBar extends BaseCustomElement {
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    const { classList, style, active } = this;
-    classList.toggle('is-active', active);
-    style.cursor = 'pointer';
+    this.classList.toggle('is-active', this.active);
+    this.style.cursor = 'pointer';
   }
 
 }

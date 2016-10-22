@@ -7,8 +7,7 @@ class TabPanel extends BaseCustomElement {
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    const { classList, active } = this;
-    classList.toggle('is-active', active);
+    this.classList.toggle('is-active', this.active);
   }
 
 }

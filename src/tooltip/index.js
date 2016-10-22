@@ -7,11 +7,10 @@ class MaterialTooltip extends BaseCustomElement {
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    const { classList, large } = this;
-    classList.toggle('mdl-tooltip--large', large);
+    this.classList.toggle('mdl-tooltip--large', this.large);
     if (attrName === 'position') {
-      oldVal && classList.remove(`mdl-tooltip--${oldVal}`);
-      newVal && classList.add(`mdl-tooltip--${newVal}`);
+      oldVal && this.classList.remove(`mdl-tooltip--${oldVal}`);
+      newVal && this.classList.add(`mdl-tooltip--${newVal}`);
     }
   }
 

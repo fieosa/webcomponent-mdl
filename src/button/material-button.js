@@ -24,19 +24,11 @@ class MaterialButton extends BaseCustomElement {
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    const {
-      classList,
-      ripple,
-      raised,
-      colored,
-      primary,
-      accent,
-    } = this;
-    classList.toggle('mdl-js-ripple-effect', ripple);
-    classList.toggle('mdl-button--raised', raised);
-    classList.toggle('mdl-button--colored', colored);
-    classList.toggle('mdl-button--primary', primary);
-    classList.toggle('mdl-button--accent', accent);
+    this.classList.toggle('mdl-js-ripple-effect', this.ripple);
+    this.classList.toggle('mdl-button--raised', this.raised);
+    this.classList.toggle('mdl-button--colored', this.colored);
+    this.classList.toggle('mdl-button--primary', this.primary);
+    this.classList.toggle('mdl-button--accent', this.accent);
   }
 
 }

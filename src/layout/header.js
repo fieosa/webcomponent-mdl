@@ -7,19 +7,11 @@ class Header extends BaseCustomElement {
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    const {
-      classList,
-      scroll,
-      seamed,
-      transparent,
-      waterfall,
-      hideTop,
-    } = this;
-    classList.toggle('mdl-layout__header--scroll', scroll);
-    classList.toggle('mdl-layout__header--seamed', seamed);
-    classList.toggle('mdl-layout__header--transparent', transparent);
-    classList.toggle('mdl-layout__header--waterfall', waterfall);
-    classList.toggle('mdl-layout__header--waterfall-hide-top', hideTop);
+    this.classList.toggle('mdl-layout__header--scroll', this.scroll);
+    this.classList.toggle('mdl-layout__header--seamed', this.seamed);
+    this.classList.toggle('mdl-layout__header--transparent', this.transparent);
+    this.classList.toggle('mdl-layout__header--waterfall', this.waterfall);
+    this.classList.toggle('mdl-layout__header--waterfall-hide-top', this.hideTop);
   }
 
 }

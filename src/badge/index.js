@@ -7,13 +7,8 @@ class MaterialBadge extends BaseCustomElement {
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    const {
-      classList,
-      overlap,
-      noBackground,
-    } = this;
-    classList.toggle('mdl-badge--overlap', overlap);
-    classList.toggle('mdl-badge--no-background', noBackground);
+    this.classList.toggle('mdl-badge--overlap', this.overlap);
+    this.classList.toggle('mdl-badge--no-background', this.noBackground);
     if (attrName === 'text') {
       this.setAttribute('data-badge', newVal);
     }
