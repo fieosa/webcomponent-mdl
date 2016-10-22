@@ -1,6 +1,6 @@
 # webcomponent-mdl
-Web component using material lite
-![alt tag](https://github.com/bfwg/webcomponent-mdl/blob/master/button.png)
+Web component using material-design-lite
+![alt tag](https://github.com/fieosa/webcomponent-mdl/blob/master/button.png)
 ```html
     <mdl-button ripple raised primary >
       Go To Baidu

@@ -1,14 +1,14 @@
 {
   "name": "webcomponent-mdl",
   "version": "0.1.0",
-  "description": "Web component using material lite",
+  "description": "Web component using material-design-lite",
   "license": "MIT",
   "author": "webcomponent-mdl",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bfwg/webcomponent-mdl.git"
+    "url": "git+https://github.com/fieosa/webcomponent-mdl.git"
   },
-  "homepage": "https://github.com/bfwg/webcomponent-mdl",
+  "homepage": "https://github.com/fieosa/webcomponent-mdl",
   "main": "dist/webcomponent-mdl.min.js",
   "devDependencies": {
     "babel-core": "^6.17.0",
