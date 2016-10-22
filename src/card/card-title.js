@@ -7,11 +7,15 @@ import {
 class CardTitle extends BaseCustomElement {
 
 
-  createdCallback() {
+  createdCallback(children) {
     this.classList.add('mdl-card__title');
     <this>
-      {this.childNodes.map(ele => {
-        return <h2 class="mdl-card__title-text">{ele}</h2>
+      {children.map(ele => {
+        if (ele.nodeType === 3) {
+          return <h2 class="mdl-card__title-text">{ele}</h2>
+        } else {
+          return ele;
+        }
       })}
     </this>
   }

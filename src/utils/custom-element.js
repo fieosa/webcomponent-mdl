@@ -17,7 +17,7 @@ function createBaseCustomElementClass(win) {
      */
     constructor(self) {
       self = super(self);
-      self.createdCallback();
+      self.createdCallback(this.getChildren());
       return self;
     }
 
@@ -55,6 +55,10 @@ function createBaseCustomElementClass(win) {
     /** The Custom Elements V0 sibling to `disconnectedCallback`. */
     detachedCallback() {
       this.disconnectedCallback();
+    }
+
+    getChildren() {
+      return [].slice.call(this.childNodes);
     }
   }
 

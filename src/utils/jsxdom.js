@@ -31,9 +31,6 @@
 
 
 function processChildren(ele, children) {
-  if (!children) {
-    return;
-  }
   if (children.constructor === Array) {
     for(var i = 0; i < children.length; i++) {
       processChildren(ele, children[i]);
