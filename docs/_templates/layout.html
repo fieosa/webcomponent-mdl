@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="Webcomponents for Material-Design-Lite that helps you build fast, modern mobile web apps.">
+    <title>webcomponent-mdl: Web Components for Material Design Lite</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.deep_purple-amber.min.css">
+    <link rel="stylesheet" href="{{page.include_prefix}}assets/vs.css">
+    <link rel="stylesheet" href="{{page.include_prefix}}assets/main.css">
+
+  </head>
+  <body>
+    <mdl-layout class="docs-layout" fixed-header>
+
+      <mdl-header>
+        <mdl-header-row>
+          <span class="mdl-layout-title">
+            <a href="{{page.include_prefix}}index.html" style="color:white;text-decoration:none;">
+              WebComponent-MDL
+            </a>
+          </span>
+          <mdl-spacer></mdl-spacer>
+          <mdl-navigation ripple>
+            <a href="{{page.include_prefix}}started/index.html">Getting Started</a>
+            <a href="{{page.include_prefix}}components/index.html">Components</a>
+            <a href="{{page.include_prefix}}templates/index.html">Templates</a>
+            <a href="https://github.com/bfwg/webcomponent-mdl">
+              <mdl-icon style="margin-right:7px;">link</mdl-icon>GitHub</a>
+          </mdl-navigation>
+        </mdl-header-row>
+      </mdl-header>
+
+      <mdl-content class="docs-layout-content">
+        <mdl-grid no-spacing class="content" id="content">
+
+          {% block content %}
+            {{content|safe}}
+          {% endblock %}
+
+        </mdl-grid>
+
+      </mdl-content>
+    </mdl-layout>
+
+    <!-- custom elements polyfill -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/document-register-element/1.1.1/document-register-element.js" ></script>
+    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script src="{{page.include_prefix}}webcomponent-mdl.min.js"></script>
+    <script src="{{page.include_prefix}}assets/highlight.js"></script>
+    <script src="{{page.include_prefix}}assets/main.js"></script>
+
+  </body>
+</html>

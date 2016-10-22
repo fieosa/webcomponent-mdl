@@ -1,6 +1,12 @@
-.DS_Store
 node_modules
 npm-debug.log
-/dist
-test
-!test/index.html
+.tmp
+gulp-cache
+.DS_Store
+docs/out
+.publish
+dist
+webcomponent-mdl.js
+webcomponent-mdl.min.js
+webcomponent-mdl.js.map
+webcomponent-mdl.min.js.map

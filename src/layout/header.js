@@ -3,7 +3,7 @@ import { BaseCustomElement, reflectPropertiesToAttributes } from '../utils';
 class Header extends BaseCustomElement {
 
   createdCallback() {
-    this.classList.add('mdl-layout__layout__header');
+    this.classList.add('mdl-layout__header');
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
