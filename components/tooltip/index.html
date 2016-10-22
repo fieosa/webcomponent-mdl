@@ -1,0 +1,57 @@
+
+
+<h2 id="demo">Demo</h2>
+<p><style>
+  .html_demo .demo {
+    background-color: #FFD740;
+    padding: 10px;
+    margin: 10px 20px;
+  }
+</style></p>
+<div class="html_demo"><span id="ttl1" class="demo">top</span>
+<mdl-tooltip for="ttl1" position="top">top tooltop</mdl-tooltip>
+
+<span id="ttl2" class="demo">large bottom</span>
+<mdl-tooltip for="ttl2" large position="bottom">large bottom tooltop</mdl-tooltip>
+
+<span id="ttl3" class="demo">left</span>
+<mdl-tooltip for="ttl3" position="left">left tooltop</mdl-tooltip>
+
+<span id="ttl4" class="demo">large right</span>
+<mdl-tooltip for="ttl4" large position="right">large right tooltop</mdl-tooltip></div><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ttl1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo"</span>&gt;</span>top<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-tooltip</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ttl1"</span> <span class="hljs-attr">position</span>=<span class="hljs-string">"top"</span>&gt;</span>top tooltop<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-tooltip</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ttl2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo"</span>&gt;</span>large bottom<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-tooltip</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ttl2"</span> <span class="hljs-attr">large</span> <span class="hljs-attr">position</span>=<span class="hljs-string">"bottom"</span>&gt;</span>large bottom tooltop<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-tooltip</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ttl3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo"</span>&gt;</span>left<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-tooltip</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ttl3"</span> <span class="hljs-attr">position</span>=<span class="hljs-string">"left"</span>&gt;</span>left tooltop<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-tooltip</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ttl4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo"</span>&gt;</span>large right<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-tooltip</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ttl4"</span> <span class="hljs-attr">large</span> <span class="hljs-attr">position</span>=<span class="hljs-string">"right"</span>&gt;</span>large right tooltop<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-tooltip</span>&gt;</span></code></pre><h2 id="configuration-options">Configuration options</h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Effect</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>large</code></td>
+<td>Boolean</td>
+<td>Defines a large tooltip</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td>String[left, right, top, bottom]</td>
+<td>Specify the position of the tooltip</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+
+

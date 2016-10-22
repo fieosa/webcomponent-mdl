@@ -186,7 +186,7 @@
 <p><style>
   .html_demo mdl-icon,
   .html_demo mdl-badge {
-    font-size: 24px; 
+    font-size: 24px;
   }
 </style></p>
 <div class="html_demo"><mdl-badge text="6" no-background></mdl-badge>
@@ -207,7 +207,7 @@
 <table>
 <thead>
 <tr>
-<th>attribute</th>
+<th>Attribute</th>
 <th>Effect</th>
 <th>Remarks</th>
 </tr>
@@ -254,6 +254,116 @@
           <div class="docs-text-styling docs-readme">
             
             
+
+<h2 id="demo">Demo</h2>
+<div class="html_demo"><mdl-button
+  href="http://www.baidu.com/"
+  target="_blank"
+  onclick="console.log('clicked baidu');"
+  ripple raised primary>
+  Go To Baidu
+</mdl-button>
+<mdl-button
+  href="https://google.ca"
+  target="_self"
+  onclick="alert('clicked google');"
+  ripple raised accent>
+  Go To Google
+</mdl-button>
+
+<mdl-icon-button
+  onclick="console.log('icon google');"
+  name="mood"
+  ripple raised accent>
+</mdl-icon-button></div><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">mdl-button</span>
+  <span class="hljs-attr">href</span>=<span class="hljs-string">"http://www.baidu.com/"</span>
+  <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>
+  <span class="hljs-attr">onclick</span>=<span class="hljs-string">"console.log('clicked baidu');"</span>
+  <span class="hljs-attr">ripple</span> <span class="hljs-attr">raised</span> <span class="hljs-attr">primary</span>&gt;</span>
+  Go To Baidu
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-button</span>
+  <span class="hljs-attr">href</span>=<span class="hljs-string">"https://google.ca"</span>
+  <span class="hljs-attr">target</span>=<span class="hljs-string">"_self"</span>
+  <span class="hljs-attr">onclick</span>=<span class="hljs-string">"alert('clicked google');"</span>
+  <span class="hljs-attr">ripple</span> <span class="hljs-attr">raised</span> <span class="hljs-attr">accent</span>&gt;</span>
+  Go To Google
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-icon-button</span>
+  <span class="hljs-attr">onclick</span>=<span class="hljs-string">"console.log('icon google');"</span>
+  <span class="hljs-attr">name</span>=<span class="hljs-string">"mood"</span>
+  <span class="hljs-attr">ripple</span> <span class="hljs-attr">raised</span> <span class="hljs-attr">accent</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-icon-button</span>&gt;</span></code></pre><h2 id="configuration-options">Configuration options</h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Effect</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>href</code></td>
+<td>String</td>
+<td>Same as a tag</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>target</code></td>
+<td>String</td>
+<td>Same as a tag</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>onclick</code></td>
+<td>Function</td>
+<td>Same as a tag</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>accent</code></td>
+<td>Boolean</td>
+<td>Applies &quot;accent&quot; colors</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>colored</code></td>
+<td>Boolean</td>
+<td>Applies &quot;colored&quot; colors</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>String</td>
+<td>Set the icon name&quot;</td>
+<td>Optional, works only with &quot;IconButton&quot;</td>
+</tr>
+<tr>
+<td><code>primary</code></td>
+<td>Boolean</td>
+<td>Applies &quot;primary&quot; colors</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>raised</code></td>
+<td>Boolean</td>
+<td>Applies &quot;raised&quot; button style</td>
+<td>Optional, doesn\&#39;t work with &quot;FABButton&quot;</td>
+</tr>
+<tr>
+<td><code>ripple</code></td>
+<td>Boolean</td>
+<td>Applies &quot;ripple&quot; click effect</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+
+
+
           </div>
         
       </div>
@@ -275,6 +385,44 @@
           <div class="docs-text-styling docs-readme">
             
             
+
+<h2 id="demo">Demo</h2>
+<p><style>
+  .html_demo mdl-card {
+  }
+</style></p>
+<div class="html_demo"><mdl-card shadow="8">
+  <mdl-card-title>
+    Title
+  </mdl-card-title>
+</mdl-card></div><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">mdl-card</span> <span class="hljs-attr">shadow</span>=<span class="hljs-string">"8"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-card-title</span>&gt;</span>
+    Title
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-card-title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-card</span>&gt;</span></code></pre><h2 id="configuration-options">Configuration options</h2>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Effect</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mdl-card</td>
+<td><code>shadow</code></td>
+<td>Number</td>
+<td>Defines the shadow depth</td>
+<td>Optional, Default 0. Must be between 0 and 6</td>
+</tr>
+</tbody>
+</table>
+
+
+
           </div>
         
       </div>
@@ -360,6 +508,112 @@
           <div class="docs-text-styling docs-readme">
             
             
+
+<h2 id="demo">Demo</h2>
+<p><style>
+  .html_demo .mdl-layout__container {
+    height: 300px;
+    position: relative;
+  }
+</style></p>
+<div class="html_demo"><mdl-layout fixed-drawer>
+
+  <mdl-header style="background-color: #3F51B5;">
+    <mdl-header-row>
+      <span class="mdl-layout-title">Title</span>
+      <mdl-spacer></mdl-spacer>
+      <mdl-navigation>
+        <a href="">Link1</a>
+        <a href="">Link2</a>
+        <a href="">Link3</a>
+        <a href="">Link4</a>
+      </mdl-navigation>
+      </mdl-header-row>
+  </mdl-header>
+
+  <mdl-drawer>
+    <span class="mdl-layout-title">Title</span>
+    <mdl-navigation>
+      <a href="">Link</a>
+      <a href="">Link</a>
+      <a href="">Link</a>
+      <a href="">Link</a>
+    </mdl-navigation>
+  </mdl-drawer>
+  <mdl-content>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+  <mdl-content>
+</mdl-layout></div><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">mdl-layout</span> <span class="hljs-attr">fixed-drawer</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-header</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-color: #3F51B5;"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-header-row</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mdl-layout-title"</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mdl-spacer</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mdl-spacer</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mdl-navigation</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Link1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Link2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Link3<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Link4<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-navigation</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-header-row</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-header</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-drawer</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mdl-layout-title"</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-navigation</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>Link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-navigation</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-drawer</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-content</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>content<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>content<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>content<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>content<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>content<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>content<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>content<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>content<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-content</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-layout</span>&gt;</span></code></pre><h2 id="configuration-options">Configuration options</h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Effect</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fixed-header</code></td>
+<td>Fixed header fixed to screen</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>fixed-drawer</code></td>
+<td>Fixed drawer fixed to screen</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>fixed-tabs</code></td>
+<td>Fixed tabs fixed to screen</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+
+
+
           </div>
         
 
@@ -373,6 +627,189 @@
           <div class="docs-text-styling docs-readme">
             
             
+
+<h2 id="demo">Demo</h2>
+<p><style>
+  .html_demo mdl-cell {
+    box-sizing: border-box;
+    background-color: #bdbdbd;
+    height: 30px;
+    padding-left: 8px;
+    padding-top: 4px;
+    color: #fff;
+  }
+</style></p>
+<div class="html_demo"><mdl-grid>
+    <mdl-cell shadow="2" col="1">1</mdl-cell>
+    <mdl-cell shadow="3" col="1">1</mdl-cell>
+    <mdl-cell shadow="4" col="1">1</mdl-cell>
+    <mdl-cell shadow="6" col="1">1</mdl-cell>
+    <mdl-cell shadow="8" col="1">1</mdl-cell>
+    <mdl-cell shadow="16" col="1">1</mdl-cell>
+    <mdl-cell shadow="24" col="1">1</mdl-cell>
+    <mdl-cell shadow="16" col="1">1</mdl-cell>
+    <mdl-cell shadow="8" col="1">1</mdl-cell>
+    <mdl-cell shadow="4" col="1">1</mdl-cell>
+    <mdl-cell shadow="3" col="1">1</mdl-cell>
+    <mdl-cell shadow="2" col="1">1</mdl-cell>
+</mdl-grid>
+<mdl-grid>
+    <mdl-cell col="4">4</mdl-cell>
+    <mdl-cell col="4">4</mdl-cell>
+    <mdl-cell col="4">4</mdl-cell>
+</mdl-grid>
+<mdl-grid>
+    <mdl-cell col="6">6</mdl-cell>
+    <mdl-cell col="4">4</mdl-cell>
+    <mdl-cell col="2">2</mdl-cell>
+</mdl-grid>
+<mdl-grid>
+    <mdl-cell col="6" tablet="8">6 (8 tablet)</mdl-cell>
+    <mdl-cell col="4" tablet="6">4 (6 tablet)</mdl-cell>
+    <mdl-cell col="2" phone="4">2 (4 phone)</mdl-cell>
+</mdl-grid></div><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">mdl-grid</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-cell</span> <span class="hljs-attr">shadow</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">col</span>=<span class="hljs-string">"1"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-cell</span> <span class="hljs-attr">shadow</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">col</span>=<span class="hljs-string">"1"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-cell</span> <span class="hljs-attr">shadow</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">col</span>=<span class="hljs-string">"1"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-cell</span> <span class="hljs-attr">shadow</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">col</span>=<span class="hljs-string">"1"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-cell</span> <span class="hljs-attr">shadow</span>=<span class="hljs-string">"8"</span> <span class="hljs-attr">col</span>=<span class="hljs-string">"1"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-cell</span> <span class="hljs-attr">shadow</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">col</span>=<span class="hljs-string">"1"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-cell</span> <span class="hljs-attr">shadow</span>=<span class="hljs-string">"24"</span> <span class="hljs-attr">col</span>=<span class="hljs-string">"1"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-cell</span> <span class="hljs-attr">shadow</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">col</span>=<span class="hljs-string">"1"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-cell</span> <span class="hljs-attr">shadow</span>=<span class="hljs-string">"8"</span> <span class="hljs-attr">col</span>=<span class="hljs-string">"1"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-cell</span> <span class="hljs-attr">shadow</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">col</span>=<span class="hljs-string">"1"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-cell</span> <span class="hljs-attr">shadow</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">col</span>=<span class="hljs-string">"1"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-cell</span> <span class="hljs-attr">shadow</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">col</span>=<span class="hljs-string">"1"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-cell</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-grid</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-grid</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-cell</span> <span class="hljs-attr">col</span>=<span class="hljs-string">"4"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-cell</span> <span class="hljs-attr">col</span>=<span class="hljs-string">"4"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-cell</span> <span class="hljs-attr">col</span>=<span class="hljs-string">"4"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-cell</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-grid</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-grid</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-cell</span> <span class="hljs-attr">col</span>=<span class="hljs-string">"6"</span>&gt;</span>6<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-cell</span> <span class="hljs-attr">col</span>=<span class="hljs-string">"4"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-cell</span> <span class="hljs-attr">col</span>=<span class="hljs-string">"2"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-cell</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-grid</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-grid</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-cell</span> <span class="hljs-attr">col</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">tablet</span>=<span class="hljs-string">"8"</span>&gt;</span>6 (8 tablet)<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-cell</span> <span class="hljs-attr">col</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">tablet</span>=<span class="hljs-string">"6"</span>&gt;</span>4 (6 tablet)<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-cell</span> <span class="hljs-attr">col</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">phone</span>=<span class="hljs-string">"4"</span>&gt;</span>2 (4 phone)<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-cell</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-grid</span>&gt;</span></code></pre><h2 id="configuration-options">Configuration options</h2>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Effect</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mdl-grid</td>
+<td><code>no-spacing</code></td>
+<td>Boolean</td>
+<td>Removes the margins between the cells.</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>mdl-grid</td>
+<td><code>shadow</code></td>
+<td>Number</td>
+<td>Defines the shadow depth</td>
+<td>Optional, Default 0. Must be between 0 and 6</td>
+</tr>
+<tr>
+<td>mdl-cell</td>
+<td><code>align</code></td>
+<td>String[top, middle, bottom, stretch]</td>
+<td>Set the cell alignment</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>mdl-cell</td>
+<td><code>col</code></td>
+<td>Number[1..12]</td>
+<td>Set the column size</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>mdl-cell</td>
+<td><code>hide-desktop</code></td>
+<td>Boolean</td>
+<td>Hide the cell in desktop mode</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>mdl-cell</td>
+<td><code>hide-phone</code></td>
+<td>Boolean</td>
+<td>Hide the cell in phone mode</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>mdl-cell</td>
+<td><code>hide-tablet</code></td>
+<td>Boolean</td>
+<td>Hide the cell in tablet mode</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>mdl-cell</td>
+<td><code>offset</code></td>
+<td>Number[1..7]</td>
+<td>Adds N columns of whitespace before the cell</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>mdl-cell</td>
+<td><code>offset-desktop</code></td>
+<td>Number[1..7]</td>
+<td>Adds N columns of whitespace before the cell in desktop mode</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>mdl-cell</td>
+<td><code>offset-phone</code></td>
+<td>Number[1..7]</td>
+<td>Adds N columns of whitespace before the cell in phone mode</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>mdl-cell</td>
+<td><code>offset-tablet</code></td>
+<td>Number[1..7]</td>
+<td>Adds N columns of whitespace before the cell in tablet mode</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>mdl-cell</td>
+<td><code>phone</code></td>
+<td>Number[1..12]</td>
+<td>Set the column size in phone mode</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>mdl-cell</td>
+<td><code>tablet</code></td>
+<td>Number[1..12]</td>
+<td>Set the column size in tablet mode</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>mdl-cell</td>
+<td><code>shadow</code></td>
+<td>Number</td>
+<td>Defines the shadow depth</td>
+<td>Optional, Default 0. Must be between 0 and 6</td>
+</tr>
+</tbody>
+</table>
+
+
+
           </div>
         
 
@@ -386,6 +823,101 @@
           <div class="docs-text-styling docs-readme">
             
             
+
+<h2 id="demo">Demo</h2>
+<p><style>
+  .html_demo mdl-tabs {
+    height: 250px;
+  }
+</style></p>
+<div class="html_demo"><mdl-tabs ripple>
+  <mdl-tab-bar>
+    <mdl-tab href="#starks-panel" active>Starks</mdl-tab>
+    <mdl-tab href="#lannisters-panel">Lannisters</mdl-tab>
+    <mdl-tab href="#targaryens-panel">Targaryens</mdl-tab>
+  </mdl-tab-bar>
+
+  <mdl-tab-panel id="starks-panel" active>
+    <ul>
+      <li>Eddard</li>
+      <li>Catelyn</li>
+      <li>Robb</li>
+      <li>Sansa</li>
+      <li>Brandon</li>
+      <li>Arya</li>
+      <li>Rickon</li>
+    </ul>
+  </mdl-tab-panel>
+  <mdl-tab-panel id="lannisters-panel">
+    <ul>
+      <li>Tywin</li>
+      <li>Cersei</li>
+      <li>Jamie</li>
+      <li>Tyrion</li>
+    </ul>
+  </mdl-tab-panel>
+  <mdl-tab-panel id="targaryens-panel">
+    <ul>
+      <li>Viserys</li>
+      <li>Daenerys</li>
+    </ul>
+  </mdl-tab-panel>
+</mdl-tabs></div><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">mdl-tabs</span> <span class="hljs-attr">ripple</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-tab-bar</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-tab</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#starks-panel"</span> <span class="hljs-attr">active</span>&gt;</span>Starks<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-tab</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-tab</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#lannisters-panel"</span>&gt;</span>Lannisters<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-tab</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-tab</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#targaryens-panel"</span>&gt;</span>Targaryens<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-tab</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-tab-bar</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-tab-panel</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"starks-panel"</span> <span class="hljs-attr">active</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Eddard<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Catelyn<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Robb<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Sansa<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Brandon<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Arya<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Rickon<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-tab-panel</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-tab-panel</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"lannisters-panel"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Tywin<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Cersei<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Jamie<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Tyrion<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-tab-panel</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-tab-panel</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"targaryens-panel"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Viserys<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Daenerys<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-tab-panel</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-tabs</span>&gt;</span></code></pre><h2 id="configuration-options">Configuration options</h2>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Effect</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mdl-tabs</td>
+<td><code>ripple</code></td>
+<td>Boolean</td>
+<td>Applies ripples effect on tabs</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+
+
+
           </div>
         
 
@@ -676,6 +1208,63 @@
           <div class="docs-text-styling docs-readme">
             
             
+
+<h2 id="demo">Demo</h2>
+<p><style>
+  .html_demo .demo {
+    background-color: #FFD740;
+    padding: 10px;
+    margin: 10px 20px;
+  }
+</style></p>
+<div class="html_demo"><span id="ttl1" class="demo">top</span>
+<mdl-tooltip for="ttl1" position="top">top tooltop</mdl-tooltip>
+
+<span id="ttl2" class="demo">large bottom</span>
+<mdl-tooltip for="ttl2" large position="bottom">large bottom tooltop</mdl-tooltip>
+
+<span id="ttl3" class="demo">left</span>
+<mdl-tooltip for="ttl3" position="left">left tooltop</mdl-tooltip>
+
+<span id="ttl4" class="demo">large right</span>
+<mdl-tooltip for="ttl4" large position="right">large right tooltop</mdl-tooltip></div><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ttl1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo"</span>&gt;</span>top<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-tooltip</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ttl1"</span> <span class="hljs-attr">position</span>=<span class="hljs-string">"top"</span>&gt;</span>top tooltop<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-tooltip</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ttl2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo"</span>&gt;</span>large bottom<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-tooltip</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ttl2"</span> <span class="hljs-attr">large</span> <span class="hljs-attr">position</span>=<span class="hljs-string">"bottom"</span>&gt;</span>large bottom tooltop<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-tooltip</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ttl3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo"</span>&gt;</span>left<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-tooltip</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ttl3"</span> <span class="hljs-attr">position</span>=<span class="hljs-string">"left"</span>&gt;</span>left tooltop<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-tooltip</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ttl4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo"</span>&gt;</span>large right<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-tooltip</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"ttl4"</span> <span class="hljs-attr">large</span> <span class="hljs-attr">position</span>=<span class="hljs-string">"right"</span>&gt;</span>large right tooltop<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-tooltip</span>&gt;</span></code></pre><h2 id="configuration-options">Configuration options</h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Effect</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>large</code></td>
+<td>Boolean</td>
+<td>Defines a large tooltip</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td>String[left, right, top, bottom]</td>
+<td>Specify the position of the tooltip</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+
+
+
           </div>
         
       </div>

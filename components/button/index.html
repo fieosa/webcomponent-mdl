@@ -1,0 +1,110 @@
+
+
+<h2 id="demo">Demo</h2>
+<div class="html_demo"><mdl-button
+  href="http://www.baidu.com/"
+  target="_blank"
+  onclick="console.log('clicked baidu');"
+  ripple raised primary>
+  Go To Baidu
+</mdl-button>
+<mdl-button
+  href="https://google.ca"
+  target="_self"
+  onclick="alert('clicked google');"
+  ripple raised accent>
+  Go To Google
+</mdl-button>
+
+<mdl-icon-button
+  onclick="console.log('icon google');"
+  name="mood"
+  ripple raised accent>
+</mdl-icon-button></div><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">mdl-button</span>
+  <span class="hljs-attr">href</span>=<span class="hljs-string">"http://www.baidu.com/"</span>
+  <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>
+  <span class="hljs-attr">onclick</span>=<span class="hljs-string">"console.log('clicked baidu');"</span>
+  <span class="hljs-attr">ripple</span> <span class="hljs-attr">raised</span> <span class="hljs-attr">primary</span>&gt;</span>
+  Go To Baidu
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-button</span>
+  <span class="hljs-attr">href</span>=<span class="hljs-string">"https://google.ca"</span>
+  <span class="hljs-attr">target</span>=<span class="hljs-string">"_self"</span>
+  <span class="hljs-attr">onclick</span>=<span class="hljs-string">"alert('clicked google');"</span>
+  <span class="hljs-attr">ripple</span> <span class="hljs-attr">raised</span> <span class="hljs-attr">accent</span>&gt;</span>
+  Go To Google
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-icon-button</span>
+  <span class="hljs-attr">onclick</span>=<span class="hljs-string">"console.log('icon google');"</span>
+  <span class="hljs-attr">name</span>=<span class="hljs-string">"mood"</span>
+  <span class="hljs-attr">ripple</span> <span class="hljs-attr">raised</span> <span class="hljs-attr">accent</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-icon-button</span>&gt;</span></code></pre><h2 id="configuration-options">Configuration options</h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Effect</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>href</code></td>
+<td>String</td>
+<td>Same as a tag</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>target</code></td>
+<td>String</td>
+<td>Same as a tag</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>onclick</code></td>
+<td>Function</td>
+<td>Same as a tag</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>accent</code></td>
+<td>Boolean</td>
+<td>Applies &quot;accent&quot; colors</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>colored</code></td>
+<td>Boolean</td>
+<td>Applies &quot;colored&quot; colors</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>String</td>
+<td>Set the icon name&quot;</td>
+<td>Optional, works only with &quot;IconButton&quot;</td>
+</tr>
+<tr>
+<td><code>primary</code></td>
+<td>Boolean</td>
+<td>Applies &quot;primary&quot; colors</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>raised</code></td>
+<td>Boolean</td>
+<td>Applies &quot;raised&quot; button style</td>
+<td>Optional, doesn\&#39;t work with &quot;FABButton&quot;</td>
+</tr>
+<tr>
+<td><code>ripple</code></td>
+<td>Boolean</td>
+<td>Applies &quot;ripple&quot; click effect</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+
+
