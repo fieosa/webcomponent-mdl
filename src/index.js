@@ -77,3 +77,6 @@ registerElement(window, 'mdl-progress', MaterialProgress);
 import { MaterialMenu, MaterialMenuItem } from './menu';
 registerElement(window, 'mdl-menu', MaterialMenu);
 registerElement(window, 'mdl-menu-item', MaterialMenuItem);
+
+import { Table } from './data-table';
+registerElement(window, 'mdl-table', Table);

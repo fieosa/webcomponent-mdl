@@ -100,4 +100,6 @@
 
 | Element | Attribute | Type | Effect | Remarks |
 |---------|-----------|------|--------|---------|
-| mdl-card | `shadow` | Number | Defines the shadow depth | Optional, Default 0. Must be between 0 and 6 |
+| mdl-card | `shadow` | Number | Defines the shadow depth | Optional, Default 0. Must be between 0 and 24 |
+| mdl-title | `expand` | Boolean | Defines title to expand | Optional, Default false |
+| mdl-card-actions | `border` | Boolean | Defines actions has a line border on Top | Optional, Default false |
