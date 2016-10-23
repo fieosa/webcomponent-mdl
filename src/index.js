@@ -70,3 +70,6 @@ registerElement(window, 'mdl-slider', MaterialSlider);
 
 import { default as MaterialSpinner } from './spinner';
 registerElement(window, 'mdl-spinner', MaterialSpinner);
+
+import { default as MaterialProgress } from './progress';
+registerElement(window, 'mdl-progress', MaterialProgress);
