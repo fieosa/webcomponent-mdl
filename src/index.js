@@ -56,3 +56,12 @@ import { Card, CardTitle, CardText } from './card';
 registerElement(window, 'mdl-card', Card);
 registerElement(window, 'mdl-card-title', CardTitle);
 registerElement(window, 'mdl-card-text', CardText);
+
+import { default as MaterialSwitch } from './switch';
+registerElement(window, 'mdl-switch', MaterialSwitch);
+
+import { default as MaterialSnackbar } from './snackbar';
+registerElement(window, 'mdl-snackbar', MaterialSnackbar);
+
+import { default as MaterialSlider } from './slider';
+registerElement(window, 'mdl-slider', MaterialSlider);
