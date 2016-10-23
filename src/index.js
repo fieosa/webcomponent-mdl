@@ -77,3 +77,9 @@ registerElement(window, 'mdl-progress', MaterialProgress);
 import { MaterialMenu, MaterialMenuItem } from './menu';
 registerElement(window, 'mdl-menu', MaterialMenu);
 registerElement(window, 'mdl-menu-item', MaterialMenuItem);
+
+import { MaterialList, MaterialListItem, MaterialListItemAction, MaterialListItemContent } from './list';
+registerElement(window, 'mdl-list', MaterialList);
+registerElement(window, 'mdl-list-item', MaterialListItem);
+registerElement(window, 'mdl-list-item-action', MaterialListItemAction);
+registerElement(window, 'mdl-list-item-content', MaterialListItemContent);
