@@ -4,7 +4,6 @@ const fs = require('fs');
 const path = require('path');
 const del = require('del');
 const runSequence = require('run-sequence');
-const browserSync = require('browser-sync');
 const through = require('through2');
 const swig = require('swig');
 const gulp = require('gulp');
@@ -15,8 +14,8 @@ const webpack = require('gulp-webpack');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const pkg = require('./package.json');
 const webpackConfig = require('./webpack.config.js');
+const connect = require('gulp-connect');
 const $ = gulpLoadPlugins();
-const reload = browserSync.reload;
 const hostedLibsUrlPrefix = 'https://localhost';
 
 const AUTOPREFIXER_BROWSERS = [
@@ -159,10 +158,10 @@ gulp.task('assets', () => {
  * Defines the list of resources to watch for changes.
  */
 function watch() {
-  gulp.watch(['src/**/*.js'], ['scripts', reload]);
-  gulp.watch(['src/**/*.{svg,png,jpg}'], ['images', reload]);
-  gulp.watch(['src/**/README.md'], ['pages', reload]);
-  gulp.watch(['docs/**/*'], ['pages', 'assets', reload]);
+  gulp.watch(['src/**/*.js'], ['scripts']);
+  gulp.watch(['src/**/*.{svg,png,jpg}'], ['images']);
+  gulp.watch(['src/**/README.md'], ['pages']);
+  gulp.watch(['docs/**/*'], ['pages', 'assets']);
 }
 
 // Clean Output Directory
@@ -187,13 +186,11 @@ gulp.task('build', ['clean'], cb => {
  * Serves the landing page from "out" directory.
  */
 gulp.task('serve', () => {
-  browserSync({
-    notify: false,
-    server: {
-      baseDir: ['dist']
-    }
+  connect.server({
+    root: 'dist',
+    port: 3000,
+    livereload: true
   });
-
   watch();
 });
 

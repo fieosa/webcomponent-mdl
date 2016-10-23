@@ -7,8 +7,7 @@ class MaterialButton extends BaseCustomElement {
 
   createdCallback() {
     this.classList.add('mdl-button', 'mdl-js-button');
-    this._onclick = this._onclick.bind(this);
-    this.addEventListener('click', this._onclick);
+    this.addEventListener('click', this._onclick.bind(this));
   }
 
   disconnectedCallback() {
