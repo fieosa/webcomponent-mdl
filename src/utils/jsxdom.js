@@ -31,13 +31,13 @@
 
 
 function processChildren(ele, children) {
-  if (children.constructor === Array) {
+  if (children && children.constructor === Array) {
     for(var i = 0; i < children.length; i++) {
       processChildren(ele, children[i]);
     }
   } else if (children instanceof Node) {
     ele.appendChild(children);
-  } else {
+  } else if (!!children) {
     ele.appendChild(document.createTextNode(children));
   }
 }
