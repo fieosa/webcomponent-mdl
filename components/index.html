@@ -1525,6 +1525,161 @@ function snackbarTest() {
           <div class="docs-text-styling docs-readme">
             
             
+
+<h4 id="text-numeric">Text Numeric</h4>
+<div class="html_demo"><!-- Simple textfield -->
+<mdl-textfield
+  label="Text...">
+</mdl-textfield>
+
+<!-- Numeric textfield -->
+<mdl-textfield
+  pattern="-?[0-9]*(\.[0-9]+)?"
+  error="Input is not a number!"
+  label="Number...">
+</mdl-textfield></div><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- Simple textfield --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-textfield</span>
+  <span class="hljs-attr">label</span>=<span class="hljs-string">"Text..."</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-textfield</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Numeric textfield --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-textfield</span>
+  <span class="hljs-attr">pattern</span>=<span class="hljs-string">"-?[0-9]*(\.[0-9]+)?"</span>
+  <span class="hljs-attr">error</span>=<span class="hljs-string">"Input is not a number!"</span>
+  <span class="hljs-attr">label</span>=<span class="hljs-string">"Number..."</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-textfield</span>&gt;</span></code></pre><hr>
+<h4 id="text-with-floating-label-numeric-with-floating-label">Text with floating label    Numeric with floating label</h4>
+<div class="html_demo"><!-- Textfield with floating label -->
+<mdl-textfield
+  label="Text..."
+  floating-label>
+</mdl-textfield>
+
+<!-- Numeric Textfield with floating label -->
+<mdl-textfield
+  pattern="-?[0-9]*(\.[0-9]+)?"
+  error="Input is not a number!"
+  label="Number..."
+  floating-label>
+</mdl-textfield></div><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- Textfield with floating label --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-textfield</span>
+  <span class="hljs-attr">label</span>=<span class="hljs-string">"Text..."</span>
+  <span class="hljs-attr">floating-label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-textfield</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Numeric Textfield with floating label --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-textfield</span>
+  <span class="hljs-attr">pattern</span>=<span class="hljs-string">"-?[0-9]*(\.[0-9]+)?"</span>
+  <span class="hljs-attr">error</span>=<span class="hljs-string">"Input is not a number!"</span>
+  <span class="hljs-attr">label</span>=<span class="hljs-string">"Number..."</span>
+  <span class="hljs-attr">floating-label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-textfield</span>&gt;</span></code></pre><hr>
+<h4 id="multiple-line-expanding">Multiple line    Expanding</h4>
+<div class="html_demo"><!-- Floating Multiline Textfield -->
+<mdl-textfield
+  rows= "3"
+  label="Text lines...">
+</mdl-textfield>
+
+<!-- Expandable Textfield -->
+<mdl-textfield
+  expandable
+  expandable-icon="search"
+  label="Expandable Input">
+</mdl-textfield></div><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- Floating Multiline Textfield --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-textfield</span>
+  <span class="hljs-attr">rows</span>= <span class="hljs-string">"3"</span>
+  <span class="hljs-attr">label</span>=<span class="hljs-string">"Text lines..."</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-textfield</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Expandable Textfield --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-textfield</span>
+  <span class="hljs-attr">expandable</span>
+  <span class="hljs-attr">expandable-icon</span>=<span class="hljs-string">"search"</span>
+  <span class="hljs-attr">label</span>=<span class="hljs-string">"Expandable Input"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-textfield</span>&gt;</span></code></pre><hr>
+<h2 id="configuration-options">Configuration options</h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Effect</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>disabled</code></td>
+<td>Boolean</td>
+<td>Applies the disabled state</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>error</code></td>
+<td>String</td>
+<td>Specifies the error message</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>expandable</code></td>
+<td>Boolean</td>
+<td>Set the textfield as expandable</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>expandable-icon</code></td>
+<td>String</td>
+<td>Set the icon for the expandable textfield</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>floating-label</code></td>
+<td>Boolean</td>
+<td>Applies the floating label effect</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>String</td>
+<td>Defines the input label</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><code>maxrows</code></td>
+<td>Number</td>
+<td>Defines the max rows (multilines)</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>pattern</code></td>
+<td>String</td>
+<td>Defines the pattern to validate the value</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>required</code></td>
+<td>Boolean</td>
+<td>Set the textfield as required</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>rows</code></td>
+<td>Number</td>
+<td>Defines the number of rows (multiline)</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td>String or Number</td>
+<td>Defines the &#39;current&#39; value</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+
+
+
           </div>
         
       </div>
