@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.deep_purple-amber.min.css">
-    <link rel="stylesheet" href="../assets/vs.css">
+    <link rel="stylesheet" href="../assets/github-gist.css">
     <link rel="stylesheet" href="../assets/main.css">
 
   </head>
@@ -387,22 +387,182 @@
             
 
 <h2 id="demo">Demo</h2>
-<p><style>
-  .html_demo mdl-card {
+<div class="html_demo"><!-- Wide card with share menu button -->
+<style>
+  .demo-card-wide.mdl-card {
+    width: 512px;
   }
-</style></p>
-<div class="html_demo"><mdl-card shadow="8">
+  .demo-card-wide mdl-card-title {
+    height: 176px;
+    background: url('../assets/welcome_card.jpg');
+  }
+  .demo-card-wide mdl-card-title h2 {
+    color: #fff;
+  }
+  .demo-card-wide mdl-card-title a {
+    display: flex;
+    align-self: flex-end;
+    line-height: 32px;
+  }
+  .demo-card-wide > .mdl-card__menu {
+    color: #fff;
+  }
+</style>
+<mdl-card class="demo-card-wide" shadow="4">
   <mdl-card-title>
-    Welcom to
-    <a href="google.com">WC</a>
-    !
+    Welcom to&nbsp;<a href="https://github.com/FIEOSA">FIEOSA</a>&nbsp;!
   </mdl-card-title>
-</mdl-card></div><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">mdl-card</span> <span class="hljs-attr">shadow</span>=<span class="hljs-string">"8"</span>&gt;</span>
+  <mdl-card-text>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Mauris sagittis pellentesque lacus eleifend lacinia...
+  </mdl-card-text>
+  <mdl-card-actions border">
+    <mdl-button colored ripple>
+      Get Started
+    </mdl-icon-button>
+  </mdl-card-actions>
+  <mdl-card-menu>
+    <mdl-icon-button ripple>
+      <mdl-icon>share</mdl-icon>
+    </mdl-icon-button ripple>
+  </mdl-card-menu>
+
+</mdl-card></div><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- Wide card with share menu button --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+  <span class="hljs-selector-class">.demo-card-wide</span><span class="hljs-selector-class">.mdl-card</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">512px</span>;
+  }
+  <span class="hljs-selector-class">.demo-card-wide</span> <span class="hljs-selector-tag">mdl-card-title</span> {
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">176px</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'../assets/welcome_card.jpg'</span>);
+  }
+  <span class="hljs-selector-class">.demo-card-wide</span> <span class="hljs-selector-tag">mdl-card-title</span> <span class="hljs-selector-tag">h2</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+  }
+  <span class="hljs-selector-class">.demo-card-wide</span> <span class="hljs-selector-tag">mdl-card-title</span> <span class="hljs-selector-tag">a</span> {
+    <span class="hljs-attribute">display</span>: flex;
+    <span class="hljs-attribute">align-self</span>: flex-end;
+    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">32px</span>;
+  }
+  <span class="hljs-selector-class">.demo-card-wide</span> &gt; <span class="hljs-selector-class">.mdl-card__menu</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-card</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-card-wide"</span> <span class="hljs-attr">shadow</span>=<span class="hljs-string">"4"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mdl-card-title</span>&gt;</span>
-    Welcom to
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"google.com"</span>&gt;</span>WC<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    !
+    Welcom to&amp;nbsp;<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://github.com/FIEOSA"</span>&gt;</span>FIEOSA<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>&amp;nbsp;!
   <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-card-title</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-card-text</span>&gt;</span>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Mauris sagittis pellentesque lacus eleifend lacinia...
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-card-text</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-card-actions</span> <span class="hljs-attr">border</span>"&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-button</span> <span class="hljs-attr">colored</span> <span class="hljs-attr">ripple</span>&gt;</span>
+      Get Started
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-icon-button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-card-actions</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-card-menu</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-icon-button</span> <span class="hljs-attr">ripple</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mdl-icon</span>&gt;</span>share<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-icon</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-icon-button</span> <span class="hljs-attr">ripple</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-card-menu</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-card</span>&gt;</span></code></pre><div class="html_demo"><!-- Wide card with share menu button -->
+<style>
+  .demo-card-event.mdl-card {
+    width: 256px;
+    height: 256px;
+    background: #3E4EB8;
+  }
+  .demo-card-event > mdl-card-actions {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  .demo-card-event > mdl-card-title {
+    align-items: flex-start;
+  }
+  .demo-card-event > mdl-card-title > h4 {
+    color: #fff;
+    margin-top: 0;
+  }
+  .demo-card-event > mdl-card-actions {
+    display: flex;
+    box-sizing:border-box;
+    align-items: center;
+  }
+  .demo-card-event > mdl-card-actions > mdl-icon {
+    padding-right: 10px;
+  }
+  .demo-card-event > mdl-card-title,
+  .demo-card-event > mdl-card-actions,
+  .demo-card-event > mdl-card-actions > mdl-button {
+    color: #fff;
+  }
+</style>
+<mdl-card class="demo-card-event" shadow="2">
+  <mdl-card-title expand>
+    <h4>
+      Featured event:<br>
+      May 24, 2016<br>
+      7-11pm
+    </h4>
+  </mdl-card-title>
+  <mdl-card-actions border>
+    <mdl-button ripple>
+      Add to Calendar
+    </mdl-button>
+    <mdl-spacer></mdl-spacer>
+    <mdl-icon>
+      event
+    </mdl-icon>
+  </mdl-card-actions>
+</mdl-card></div><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- Wide card with share menu button --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+  <span class="hljs-selector-class">.demo-card-event</span><span class="hljs-selector-class">.mdl-card</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">256px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">256px</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-number">#3E4EB8</span>;
+  }
+  <span class="hljs-selector-class">.demo-card-event</span> &gt; <span class="hljs-selector-tag">mdl-card-actions</span> {
+    <span class="hljs-attribute">border-color</span>: <span class="hljs-built_in">rgba</span>(255, 255, 255, 0.2);
+  }
+  <span class="hljs-selector-class">.demo-card-event</span> &gt; <span class="hljs-selector-tag">mdl-card-title</span> {
+    <span class="hljs-attribute">align-items</span>: flex-start;
+  }
+  <span class="hljs-selector-class">.demo-card-event</span> &gt; <span class="hljs-selector-tag">mdl-card-title</span> &gt; <span class="hljs-selector-tag">h4</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+    <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
+  }
+  <span class="hljs-selector-class">.demo-card-event</span> &gt; <span class="hljs-selector-tag">mdl-card-actions</span> {
+    <span class="hljs-attribute">display</span>: flex;
+    <span class="hljs-attribute">box-sizing</span>:border-box;
+    <span class="hljs-attribute">align-items</span>: center;
+  }
+  <span class="hljs-selector-class">.demo-card-event</span> &gt; <span class="hljs-selector-tag">mdl-card-actions</span> &gt; <span class="hljs-selector-tag">mdl-icon</span> {
+    <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">10px</span>;
+  }
+  <span class="hljs-selector-class">.demo-card-event</span> &gt; <span class="hljs-selector-tag">mdl-card-title</span>,
+  <span class="hljs-selector-class">.demo-card-event</span> &gt; <span class="hljs-selector-tag">mdl-card-actions</span>,
+  <span class="hljs-selector-class">.demo-card-event</span> &gt; <span class="hljs-selector-tag">mdl-card-actions</span> &gt; <span class="hljs-selector-tag">mdl-button</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-card</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-card-event"</span> <span class="hljs-attr">shadow</span>=<span class="hljs-string">"2"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-card-title</span> <span class="hljs-attr">expand</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>
+      Featured event:<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+      May 24, 2016<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+      7-11pm
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-card-title</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-card-actions</span> <span class="hljs-attr">border</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-button</span> <span class="hljs-attr">ripple</span>&gt;</span>
+      Add to Calendar
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-spacer</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mdl-spacer</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-icon</span>&gt;</span>
+      event
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-icon</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-card-actions</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-card</span>&gt;</span></code></pre><h2 id="configuration-options">Configuration options</h2>
 <table>
 <thead>
