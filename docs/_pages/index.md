@@ -25,7 +25,7 @@ include_prefix: ./
 
 
 <div class="center">
-<p><img src="../assets/webcomponentlogo.svg" alt="webcomponent logo"></p>
+<p><img src="./assets/webcomponentlogo.svg" alt="webcomponent logo"></p>
 <h1>WebComponent-MDL</h1>
 <h2>Custom Web Components for Material Design Lite</h2>
 <iframe src="https://ghbtns.com/github-btn.html?user=FIEOSA&repo=webcomponent-mdl&type=star&count=true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
