@@ -73,3 +73,7 @@ registerElement(window, 'mdl-spinner', MaterialSpinner);
 
 import { default as MaterialProgress } from './progress';
 registerElement(window, 'mdl-progress', MaterialProgress);
+
+import { MaterialMenu, MaterialMenuItem } from './menu';
+registerElement(window, 'mdl-menu', MaterialMenu);
+registerElement(window, 'mdl-menu-item', MaterialMenuItem);

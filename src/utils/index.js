@@ -5,4 +5,5 @@ export { default as makeShadow } from './makeShadow';
 export { default as defineProperty } from './defineProperty';
 export { default as changeNamingStyleTo } from './changeNamingStyle';
 export { default as map } from './map';
-export { registerElement, BaseCustomElement } from './custom-element.js';
+export { registerElement, BaseCustomElement } from './custom-element';
+export { default as basicClassCreator } from './basicClassCreator';
