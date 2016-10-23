@@ -17,9 +17,9 @@ class MaterialListItem extends BaseCustomElement {
 }
 
 export default reflectPropertiesToAttributes(
-  ListItem,
+  MaterialListItem,
   [
     { propName: 'twoLine', propType: Boolean },
     { propName: 'threeLine', propType: Boolean },
   ]
-)
+);

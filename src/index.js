@@ -6,12 +6,12 @@ import 'document-register-element/build/document-register-element.max.js';
 import 'material-design-lite';
 
 // utils
-import { registerElement, jsxdom, map } from './utils';
+import { registerElement, createJsxdom, map } from './utils';
 //
 NodeList.prototype.map = map;
 HTMLCollection.prototype.map = map;
 
-window.jsxdom = jsxdom;
+window.jsxdom = createJsxdom();
 
 import { default as MaterialBadge } from './badge';
 registerElement(window, 'mdl-badge', MaterialBadge);

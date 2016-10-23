@@ -9,10 +9,19 @@ class MaterialSwitch extends BaseCustomElement {
   createdCallback(children) {
     this.classList.add('mdl-switch', 'mdl-js-switch');
     this._input = <input type="checkbox" class="mdl-switch__input"/>;
-    <this onclick={this._onclick}>
+    this._onclick = this._onclick.bind(this);
+    <this>
       <this._input/>
       <span class="mdl-switch__label">{children}</span>
     </this>
+  }
+
+  connectedCallback() {
+    this.addEventListener('click', this._onclick);
+  }
+
+  disconnectedCallback() {
+    this.removeEventListener('click', this._onclick);
   }
 
   _onclick() {

@@ -1,8 +1,4 @@
-import {
-  BaseCustomElement,
-  reflectPropertiesToAttributes,
-  mdlUpgrade
-} from '../utils';
+import { BaseCustomElement } from '../utils';
 
 export default (defaultClassName) => {
   class baseComponent extends BaseCustomElement {
@@ -10,7 +6,5 @@ export default (defaultClassName) => {
       this.classList.add(defaultClassName);
     }
   }
-  return reflectPropertiesToAttributes(mdlUpgrade(baseComponent), []);
+  return baseComponent;
 };
-
-

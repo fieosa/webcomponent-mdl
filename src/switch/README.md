@@ -1,7 +1,7 @@
 ## Demo
 
 ```html_demo
-<mdl-switch onchange="alert(event.target.checked);""></mdl-switch>
+<mdl-switch onchange="alert(event.target.checked);"></mdl-switch>
 <mdl-switch ripple checked>checked</mdl-switch>
 <mdl-switch disabled>disabled</mdl-switch>
 <mdl-switch disabled checked>disabled checked</mdl-switch>

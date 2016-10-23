@@ -1,4 +1,4 @@
-export { default as jsxdom } from './jsxdom';
+export { default as createJsxdom } from './jsxdom';
 export { default as reflectPropertiesToAttributes } from './reflectPropertiesToAttributes';
 export { default as mdlUpgrade } from './mdlUpgrade';
 export { default as makeShadow } from './makeShadow';

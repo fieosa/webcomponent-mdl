@@ -1,4 +1,4 @@
-import { basicClassCreator } from '../utils/basicClassCreator';
+import { basicClassCreator } from '../utils';
 
 export const MaterialList = basicClassCreator('mdl-list');
 export { default as MaterialListItem } from './list-item';
