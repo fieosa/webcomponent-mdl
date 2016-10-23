@@ -67,3 +67,6 @@ registerElement(window, 'mdl-snackbar', MaterialSnackbar);
 
 import { default as MaterialSlider } from './slider';
 registerElement(window, 'mdl-slider', MaterialSlider);
+
+import { default as MaterialSpinner } from './spinner';
+registerElement(window, 'mdl-spinner', MaterialSpinner);
