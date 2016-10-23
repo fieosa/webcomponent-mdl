@@ -137,7 +137,7 @@ gulp.task('assets', () => {
   return gulp.src([
       'docs/_assets/**/*',
       'node_modules/highlight.js/lib/highlight.js',
-      'node_modules/highlight.js/styles/vs.css',
+      'node_modules/highlight.js/styles/github-gist.css',
     ])
     .pipe($.if(/\.js/i, $.replace('$$version$$', pkg.version)))
     .pipe($.if(/\.js/i, $.replace('$$hosted_libs_prefix$$', hostedLibsUrlPrefix)))

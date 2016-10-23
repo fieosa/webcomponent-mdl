@@ -52,9 +52,12 @@ registerElement(window, 'mdl-tab', Tab);
 registerElement(window, 'mdl-tab-panel', TabPanel);
 
 // Card
-import { Card, CardTitle } from './card';
+import { Card, CardTitle, CardText, CardMenu, CardActions } from './card';
 registerElement(window, 'mdl-card', Card);
 registerElement(window, 'mdl-card-title', CardTitle);
+registerElement(window, 'mdl-card-text', CardText);
+registerElement(window, 'mdl-card-menu', CardMenu);
+registerElement(window, 'mdl-card-actions', CardActions);
 
 import { default as MaterialSwitch } from './switch';
 registerElement(window, 'mdl-switch', MaterialSwitch);

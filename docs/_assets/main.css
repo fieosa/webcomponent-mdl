@@ -757,10 +757,12 @@ _:-ms-input-placeholder, :root .snippet-group .snippet-demos .snippet-demo-paddi
   color: #00BCD4;
 }
 .docs-layout code,
+
+/* heightlight */
 .docs-layout pre {
   width: 100%;
   display: inline-block;
-  background-color: rgba(0,0,0,0.06);
+  background: rgb(245, 242, 240);
   border-radius: 3px;
   font-size: 85%;
   white-space: pre-wrap;
