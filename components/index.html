@@ -1155,6 +1155,67 @@
           <div class="docs-text-styling docs-readme">
             
             
+
+<h2 id="demo">Demo</h2>
+<p><style>
+  .html_demo mdl-progress {
+    margin: 10px 0;
+  }
+</style></p>
+<div class="html_demo"><!-- Simple Progress Bar -->
+<mdl-progress progress="44">
+</mdl-progress>
+
+<!-- Progress Bar with Indeterminate Progress -->
+<mdl-progress indeterminate>
+</mdl-progress>
+
+<!-- Progress Bar with Buffering -->
+<mdl-progress progress="33" buffer="87">
+</mdl-progress></div><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- Simple Progress Bar --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-progress</span> <span class="hljs-attr">progress</span>=<span class="hljs-string">"44"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-progress</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Progress Bar with Indeterminate Progress --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-progress</span> <span class="hljs-attr">indeterminate</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-progress</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Progress Bar with Buffering --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-progress</span> <span class="hljs-attr">progress</span>=<span class="hljs-string">"33"</span> <span class="hljs-attr">buffer</span>=<span class="hljs-string">"87"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-progress</span>&gt;</span></code></pre><h2 id="configuration-options">Configuration options</h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Effect</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>buffer</code></td>
+<td>Number</td>
+<td>Specify the buffer</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>indeterminate</code></td>
+<td>Boolean</td>
+<td>Set as indeterminate</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>progress</code></td>
+<td>Number</td>
+<td>Specify the progress value</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+
+
+
           </div>
         
 
@@ -1168,6 +1229,42 @@
           <div class="docs-text-styling docs-readme">
             
             
+
+<h2 id="demo">Demo</h2>
+<div class="html_demo"><!-- Simple spinner -->
+<mdl-spinner>
+</mdl-spinner>
+
+<!-- Single color spinner -->
+<mdl-spinner single-color>
+</mdl-spinner></div><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- Simple spinner --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-spinner</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-spinner</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Single color spinner --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-spinner</span> <span class="hljs-attr">single-color</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-spinner</span>&gt;</span></code></pre><h2 id="configuration-options">Configuration options</h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Effect</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>single-color</code></td>
+<td>Boolean</td>
+<td>Use the primary color instead of a multi color spinner</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+
+
+
           </div>
         
       </div>
