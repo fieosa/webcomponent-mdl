@@ -4,7 +4,7 @@ import {
   mdlUpgrade
 } from '../utils';
 
-export default (displayName, defaultClassName) => {
+export default (defaultClassName) => {
   class baseComponent extends BaseCustomElement {
     createdCallback(children) {
       this.classList.add(defaultClassName);

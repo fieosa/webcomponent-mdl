@@ -22,11 +22,13 @@ class CardTitle extends BaseCustomElement {
 
 
   attributeChangedCallback(attrName, oldVal, newVal) {
+    this.classList.toggle('mdl-card--expand', this.expand);
   }
 
 }
 
 export default reflectPropertiesToAttributes(
   mdlUpgrade(CardTitle), [
+    { propName: 'expand', propType: Boolean },
   ]
 )
