@@ -1,13 +1,17 @@
 ## Demo
 
+```html_demo
+<!-- Wide card with share menu button -->
 <style>
   .demo-card-wide.mdl-card {
     width: 512px;
   }
   .demo-card-wide mdl-card-title {
-    color: #fff;
     height: 176px;
-    background-color: rgb(155,78,183);
+    background: url('../assets/welcome_card.jpg');
+  }
+  .demo-card-wide mdl-card-title h2 {
+    color: #fff;
   }
   .demo-card-wide mdl-card-title a {
     display: flex;
@@ -18,7 +22,6 @@
     color: #fff;
   }
 </style>
-```html_demo
 <mdl-card class="demo-card-wide" shadow="8">
   <mdl-card-title>
     Welcom to&nbsp;<a href="https://github.com/FIEOSA">FIEOSA</a>&nbsp;!
