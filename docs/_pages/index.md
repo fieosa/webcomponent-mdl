@@ -1,7 +1,7 @@
 ---
 layout: layout
 title: WebComponent-MDL
-include_prefix: ../
+include_prefix: ./
 ---
 <style>
   .center {
