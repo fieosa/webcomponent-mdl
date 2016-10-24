@@ -101,3 +101,14 @@ registerElement(window, 'mdl-radio', MaterialRadio);
 
 import { default as MaterialCheckbox } from './checkbox';
 registerElement(window, 'mdl-checkbox', MaterialCheckbox);
+
+import {
+  MaterialDialog,
+  MaterialDialogActions,
+  MaterialDialogContent,
+  MaterialDialogTitle,
+} from './dialog';
+registerElement(window, 'mdl-dialog', MaterialDialog);
+registerElement(window, 'mdl-dialog-actions', MaterialDialogActions);
+registerElement(window, 'mdl-dialog-content', MaterialDialogContent);
+registerElement(window, 'mdl-dialog-title', MaterialDialogTitle);

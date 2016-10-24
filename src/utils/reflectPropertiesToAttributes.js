@@ -24,6 +24,7 @@ export default function reflectPropertiesToAttributes(Constructor, props=[]) {
         return !propType || propType === Boolean ? this.hasAttribute(attrName) : this.getAttribute(attrName);
       },
       set: function set(val) {
+        if (this[propName] === val) return;
         if ((!propType || propType === Boolean) && !val) {
           this.removeAttribute(propName);
           this.removeAttribute(attrName);
