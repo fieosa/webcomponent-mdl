@@ -95,3 +95,6 @@ registerElement(window, 'mdl-list-item-avatar', MaterialListItemAvatar);
 
 import { default as MaterialIconToggle } from './icon-toggle';
 registerElement(window, 'mdl-icon-toggle', MaterialIconToggle);
+
+import { default as MaterialRadio } from './radio';
+registerElement(window, 'mdl-radio', MaterialRadio);
