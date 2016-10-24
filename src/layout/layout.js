@@ -3,7 +3,9 @@ import { BaseCustomElement, reflectPropertiesToAttributes, mdlUpgrade } from '..
 class Layout extends BaseCustomElement {
 
   createdCallback() {
-    this.classList.add('mdl-layout', 'mdl-js-layout');
+    // // Error on safari.
+    // this.classList.add('mdl-js-layout');
+    this.classList.add('mdl-layout');
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {

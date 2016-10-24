@@ -7,7 +7,7 @@ import {
 
 class MaterialTable extends BaseCustomElement {
 
-  createdCallback(children) {
+  createdCallback() {
     this._table = this.getElementsByTagName('table')[0];
     let th = this._table.getElementsByTagName('th');
     let td = this._table.getElementsByTagName('td');

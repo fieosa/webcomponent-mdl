@@ -6,13 +6,14 @@ import {
 
 class MaterialCheckbox extends BaseCustomElement {
 
-  createdCallback(children) {
+  createdCallback() {
     this.classList.add('mdl-checkbox', 'mdl-js-checkbox');
     this._input = <input type="checkbox" class="mdl-checkbox__input"/>;
+    this._label = <span class="mdl-checkbox__label">{this.label}</span>;
     this._onclick = this._onclick.bind(this);
     <this>
       {this._input}
-      <span class="mdl-checkbox__label">{children}</span>
+      {this._label}
     </this>
   }
 
@@ -27,13 +28,16 @@ class MaterialCheckbox extends BaseCustomElement {
   _onclick() {
     if (this.disabled) return;
     this.checked = !this.checked;
-    this._input.dispatchEvent(new Event('change',{ bubbles: true }));
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
     this.classList.toggle('mdl-js-ripple-effect', this.ripple);
-    this._input.checked = this.checked;
     this._input.disabled = this.disabled;
+    this._label.textContent = this.label;
+    if (attrName === 'checked') {
+      this._input.checked = this.checked;
+      this._input.dispatchEvent(new Event('change',{ bubbles: true }));
+    }
   }
 
 }
@@ -44,5 +48,6 @@ export default reflectPropertiesToAttributes(
     { propName: 'ripple', propType: Boolean },
     { propName: 'disabled', propType: Boolean },
     { propName: 'checked', propType: Boolean },
+    { propName: 'label', propType: String },
   ]
 );

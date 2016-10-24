@@ -2,13 +2,10 @@ import { BaseCustomElement, reflectPropertiesToAttributes } from '../utils';
 
 class MaterialFooterDropdown extends BaseCustomElement {
 
-  createdCallback(children) {
+  createdCallback() {
     this.size = this.size || 'mega';
-    <this>
-      <input class={`mdl-${this.size}-footer__heading-checkbox`} type="checkbox" checked />
-      <h1 class={`mdl-${this.size}-footer__heading`}>{this.title}</h1>
-      {children}
-    </this>
+    this.insertBefore(<h1 class={`mdl-${this.size}-footer__heading`}>{this.title}</h1>, this.firstChild );
+    this.insertBefore(<input class={`mdl-${this.size}-footer__heading-checkbox`} type="checkbox" checked />, this.firstChild );
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {

@@ -2,14 +2,14 @@ import { BaseCustomElement, reflectPropertiesToAttributes } from '../utils';
 
 class MaterialFooter extends BaseCustomElement {
 
-  createdCallback(children) {
+  createdCallback() {
     this.size = this.size || 'mega';
-    this._footerContainer = <footer>{children}</footer>;
-    <this>{this._footerContainer}</this>
+    this.style.display = 'block';
+    this.attributeChangedCallback();
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    this._footerContainer.classList.add(`mdl-${this.size}-footer`);
+    this.classList.add(`mdl-${this.size}-footer`);
   }
 
 }

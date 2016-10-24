@@ -2,13 +2,16 @@ import { BaseCustomElement, basicClassCreator, reflectPropertiesToAttributes } f
 
 class Chip extends BaseCustomElement {
 
-  createdCallback(children) {
+  createdCallback() {
     this.classList.add('mdl-chip');
-    const hasContact = children.some((ele, index) => {
-      return ele.nodeName === 'MDL-CHIP-CONTACT';
-    });
-    if (hasContact) {
-      this.classList.add('mdl-chip--contact');
+  }
+
+  connectedCallback() {
+    for (let i = 0; i < this.children.length; i++) {
+      if (this.children[i].nodeName === 'MDL-CHIP-CONTACT') {
+        this.classList.add('mdl-chip--contact');
+        break;
+      }
     }
   }
 
