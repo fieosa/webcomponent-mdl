@@ -17,7 +17,7 @@ function createBaseCustomElementClass(win) {
      */
     constructor(self) {
       self = super(self);
-      self.createdCallback(this.getChildren());
+      self.createdCallback(self.getChildren());
       return self;
     }
 
