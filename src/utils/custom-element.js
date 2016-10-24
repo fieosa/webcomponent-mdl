@@ -74,10 +74,10 @@ export const BaseCustomElement = createBaseCustomElementClass(window);
  * @param {string} name Name of the custom element
  * @param {function(new:./base-element.BaseElement, !Element)} implementationClass
  */
-export function registerElement(win, name, implementationClass) {
+export function registerElement(win, name, implementationClass, option) {
   const supportsCustomElementsV1 = 'customElements' in win;
   if (supportsCustomElementsV1) {
-    win['customElements'].define(name, implementationClass);
+    win['customElements'].define(name, implementationClass, option);
   } else {
     win.document.registerElement(name, {
       prototype: klass.prototype,

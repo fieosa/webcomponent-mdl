@@ -78,6 +78,9 @@ import { MaterialMenu, MaterialMenuItem } from './menu';
 registerElement(window, 'mdl-menu', MaterialMenu);
 registerElement(window, 'mdl-menu-item', MaterialMenuItem);
 
+import { default as MaterialTable } from './data-table';
+customElements.define('mdl-table', MaterialTable);
+
 import {
   MaterialList,
   MaterialListItem,
