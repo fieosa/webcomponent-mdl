@@ -4,7 +4,6 @@
 <mdl-checkbox>Checkbox</mdl-checkbox>
 <mdl-checkbox checked>Checkbox</mdl-checkbox>
 <mdl-checkbox disabled>Checkbox</mdl-checkbox>
-</div>
 ```
 
 ## Configuration options
