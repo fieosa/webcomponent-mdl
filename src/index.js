@@ -93,5 +93,5 @@ registerElement(window, 'mdl-list-item-content', MaterialListItemContent);
 registerElement(window, 'mdl-list-item-subtitle', MaterialListItemSubtitle);
 registerElement(window, 'mdl-list-item-avatar', MaterialListItemAvatar);
 
-import { default as MaterialIconToggle } from './progress';
+import { default as MaterialIconToggle } from './icon-toggle';
 registerElement(window, 'mdl-icon-toggle', MaterialIconToggle);
