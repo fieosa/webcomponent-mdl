@@ -4,15 +4,15 @@ import {
   mdlUpgrade,
 } from '../utils';
 
-class MaterialSwitch extends BaseCustomElement {
+class MaterialRadio extends BaseCustomElement {
 
   createdCallback(children) {
-    this.classList.add('mdl-switch', 'mdl-js-switch');
-    this._input = <input type="checkbox" class="mdl-switch__input"/>;
+    this.classList.add('mdl-radio', 'mdl-js-radio');
+    this._input = <input type="radio" class="mdl-radio__button"/>;
     this._onclick = this._onclick.bind(this);
     <this>
-      <this._input/>
-      <span class="mdl-switch__label">{children}</span>
+      {this._input}
+      <span class="mdl-radio__label">{children}</span>
     </this>
   }
 
@@ -26,7 +26,7 @@ class MaterialSwitch extends BaseCustomElement {
 
   _onclick() {
     if (this.disabled) return;
-    this.checked = !this.checked;
+    this._input.checked = true;
     this._input.dispatchEvent(new Event('change',{ bubbles: true }));
   }
 
@@ -34,15 +34,19 @@ class MaterialSwitch extends BaseCustomElement {
     this.classList.toggle('mdl-js-ripple-effect', this.ripple);
     this._input.checked = this.checked;
     this._input.disabled = this.disabled;
+    this._input.value = this.value;
+    this._input.name = this.name;
   }
 
 }
 
 export default reflectPropertiesToAttributes(
-  mdlUpgrade(MaterialSwitch),
+  mdlUpgrade(MaterialRadio),
   [
-    { propName: 'checked', propType: Boolean },
-    { propName: 'disabled', propType: Boolean },
     { propName: 'ripple', propType: Boolean },
+    { propName: 'disabled', propType: Boolean },
+    { propName: 'checked', propType: Boolean },
+    { propName: 'name', propType: String },
+    { propName: 'value', propType: String },
   ]
-)
+);

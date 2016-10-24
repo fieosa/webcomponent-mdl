@@ -1,21 +1,22 @@
 import { BaseCustomElement, reflectPropertiesToAttributes } from '../utils';
 
-class MaterialFooter extends BaseCustomElement {
+class MaterialFooterLinkList extends BaseCustomElement {
 
   createdCallback(children) {
     this.size = this.size || 'mega';
-    this._footerContainer = <footer>{children}</footer>;
-    <this>{this._footerContainer}</this>
+    this._listContainer = <ul>{children}</ul>;
+    <this>{this._listContainer}</this>
+    this.attributeChangedCallback();
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    this._footerContainer.classList.add(`mdl-${this.size}-footer`);
+    this._listContainer.classList.add(`mdl-${this.size}-footer__link-list`);
   }
 
 }
 
 export default reflectPropertiesToAttributes(
-  MaterialFooter,
+  MaterialFooterLinkList,
   [
     { propName: 'size', propType: String }, // ['mini', 'mega']
   ]

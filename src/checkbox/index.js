@@ -4,15 +4,15 @@ import {
   mdlUpgrade,
 } from '../utils';
 
-class MaterialSwitch extends BaseCustomElement {
+class MaterialCheckbox extends BaseCustomElement {
 
   createdCallback(children) {
-    this.classList.add('mdl-switch', 'mdl-js-switch');
-    this._input = <input type="checkbox" class="mdl-switch__input"/>;
+    this.classList.add('mdl-checkbox', 'mdl-js-checkbox');
+    this._input = <input type="checkbox" class="mdl-checkbox__input"/>;
     this._onclick = this._onclick.bind(this);
     <this>
-      <this._input/>
-      <span class="mdl-switch__label">{children}</span>
+      {this._input}
+      <span class="mdl-checkbox__label">{children}</span>
     </this>
   }
 
@@ -39,10 +39,10 @@ class MaterialSwitch extends BaseCustomElement {
 }
 
 export default reflectPropertiesToAttributes(
-  mdlUpgrade(MaterialSwitch),
+  mdlUpgrade(MaterialCheckbox),
   [
-    { propName: 'checked', propType: Boolean },
-    { propName: 'disabled', propType: Boolean },
     { propName: 'ripple', propType: Boolean },
+    { propName: 'disabled', propType: Boolean },
+    { propName: 'checked', propType: Boolean },
   ]
-)
+);

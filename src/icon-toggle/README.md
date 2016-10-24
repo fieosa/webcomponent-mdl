@@ -1,10 +1,25 @@
 ## Demo
 
 ```html_demo
-<mdl-switch onchange="alert(event.target.checked);"></mdl-switch>
-<mdl-switch ripple checked>checked</mdl-switch>
-<mdl-switch disabled>disabled</mdl-switch>
-<mdl-switch disabled checked>disabled checked</mdl-switch>
+<!-- onchange -->
+<div>
+  <mdl-icon-toggle onchange="alert(event.target.checked);">format_bold</mdl-switch>
+</div>
+
+<!-- ripple -->
+<div>
+<mdl-icon-toggle ripple>format_italic</mdl-icon-toggle>
+</div>
+
+<!-- checked -->
+<div>
+<mdl-icon-toggle checked>face</mdl-icon-toggle>
+</div>
+
+<!-- disabled -->
+<div>
+<mdl-icon-toggle disabled>mood</mdl-icon-toggle>
+</div>
 ```
 
 ## Configuration options
