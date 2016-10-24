@@ -78,8 +78,17 @@ import { MaterialMenu, MaterialMenuItem } from './menu';
 registerElement(window, 'mdl-menu', MaterialMenu);
 registerElement(window, 'mdl-menu-item', MaterialMenuItem);
 
-import { MaterialList, MaterialListItem, MaterialListItemAction, MaterialListItemContent } from './list';
+import {
+  MaterialList,
+  MaterialListItem,
+  MaterialListItemAction,
+  MaterialListItemContent ,
+  MaterialListItemSubtitle,
+  MaterialListItemAvatar,
+} from './list';
 registerElement(window, 'mdl-list', MaterialList);
 registerElement(window, 'mdl-list-item', MaterialListItem);
 registerElement(window, 'mdl-list-item-action', MaterialListItemAction);
 registerElement(window, 'mdl-list-item-content', MaterialListItemContent);
+registerElement(window, 'mdl-list-item-subtitle', MaterialListItemSubtitle);
+registerElement(window, 'mdl-list-item-avatar', MaterialListItemAvatar);

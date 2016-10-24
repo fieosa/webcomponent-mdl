@@ -1,9 +1,9 @@
 import { BaseCustomElement } from '../utils';
 
-export default (defaultClassName) => {
+export default (...defaultClassName) => {
   class baseComponent extends BaseCustomElement {
     createdCallback(children) {
-      this.classList.add(defaultClassName);
+      this.classList.add(...defaultClassName);
     }
   }
   return baseComponent;

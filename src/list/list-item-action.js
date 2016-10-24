@@ -5,12 +5,19 @@ import {
 
 class MaterialListItemAction extends BaseCustomElement {
 
-  createdCallback() {
+  createdCallback(children) {
     this.classList.add('mdl-list__item-secondary-content');
+    this._info = <span class="mdl-list__item-secondary-info"></span>;
+    <this>
+      <this._info/>
+      <span class="mdl-list__item-secondary-action">
+        {children}
+      </span>
+    </this>
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    // this.classList.toggle('mdl-list__item--two-line', this.twoLine && !threeLine);
+    this._info.textContent = this.info;
   }
 
 }
@@ -18,6 +25,6 @@ class MaterialListItemAction extends BaseCustomElement {
 export default reflectPropertiesToAttributes(
   MaterialListItemAction,
   [
-    { propName: 'twoLine', propType: Boolean },
+    { propName: 'info', propType: String },
   ]
 );
