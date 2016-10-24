@@ -112,3 +112,16 @@ registerElement(window, 'mdl-dialog', MaterialDialog);
 registerElement(window, 'mdl-dialog-actions', MaterialDialogActions);
 registerElement(window, 'mdl-dialog-content', MaterialDialogContent);
 registerElement(window, 'mdl-dialog-title', MaterialDialogTitle);
+
+import {
+  MaterialFooter,
+  MaterialFooterSection,
+  MaterialFooterDropdown,
+  MaterialFooterLinkList,
+  MaterialLogo,
+} from './footer';
+registerElement(window, 'mdl-footer', MaterialFooter);
+registerElement(window, 'mdl-footer-section', MaterialFooterSection);
+registerElement(window, 'mdl-footer-drop-down', MaterialFooterDropdown);
+registerElement(window, 'mdl-footer-link-list', MaterialFooterLinkList);
+registerElement(window, 'mdl-logo', MaterialLogo);
