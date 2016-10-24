@@ -1,6 +1,6 @@
 // polyfills
-import 'classlist.js/classList.js';
-import 'document-register-element/build/document-register-element.max.js';
+import 'dom4';
+import 'document-register-element';
 
 // material-design-lite.js
 import 'material-design-lite';
