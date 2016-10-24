@@ -1,0 +1,111 @@
+
+
+<h2 id="demo">Demo</h2>
+<div class="html_demo"><!-- Basic Chip -->
+<mdl-chip>
+    <span class="mdl-chip__text">Basic Chip</span>
+</mdl-chip>
+
+<!-- Deletable Chip -->
+<mdl-chip deletable>
+  <mdl-chip-text>Deletable Chip</mdl-chip-text>
+  <mdl-chip-action>
+    <mdl-icon>cancel</mdl-icon>
+  </mdl-chip-action>
+</mdl-chip>
+
+<!-- Button Chip -->
+<mdl-chip tabindex="0">
+  <mdl-chip-text>Button Chip</mdl-chip-text>
+</mdl-chip></div><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- Basic Chip --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-chip</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mdl-chip__text"</span>&gt;</span>Basic Chip<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-chip</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Deletable Chip --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-chip</span> <span class="hljs-attr">deletable</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-chip-text</span>&gt;</span>Deletable Chip<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-chip-text</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-chip-action</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-icon</span>&gt;</span>cancel<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-icon</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-chip-action</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-chip</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Button Chip --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-chip</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"0"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-chip-text</span>&gt;</span>Button Chip<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-chip-text</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-chip</span>&gt;</span></code></pre><div class="html_demo"><!-- Contact Chip -->
+<mdl-chip>
+  <mdl-chip-contact class="mdl-color--teal mdl-color-text--white">A</mdl-chip-contact>
+  <mdl-chip-text>Contact Chip</mdl-chip-text>
+</mdl-chip>
+
+<!-- Deletable Contact Chip -->
+<mdl-chip deletable>
+  <mdl-chip-contact style="background: url('/assets/chip_contact.jpg') 0 0 / cover"></mdl-chip-contact>
+  <mdl-chip-text>Deletable Contact Chip</mdl-chip-text>
+  <mdl-chip-action>
+    <mdl-icon>cancel</mdl-icon>
+  </mdl-chip-action>
+</mdl-chip></div><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- Contact Chip --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-chip</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-chip-contact</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mdl-color--teal mdl-color-text--white"</span>&gt;</span>A<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-chip-contact</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-chip-text</span>&gt;</span>Contact Chip<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-chip-text</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-chip</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Deletable Contact Chip --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-chip</span> <span class="hljs-attr">deletable</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-chip-contact</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background: url('/assets/chip_contact.jpg') 0 0 / cover"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mdl-chip-contact</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-chip-text</span>&gt;</span>Deletable Contact Chip<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-chip-text</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-chip-action</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-icon</span>&gt;</span>cancel<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-icon</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-chip-action</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-chip</span>&gt;</span></code></pre><h2 id="configuration-options">Configuration options</h2>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Effect</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mdl-chip</td>
+<td><code>deletable</code></td>
+<td>Boolean</td>
+<td>Set when delete button exists</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>mdl-chip</td>
+<td><code>tabindex</code></td>
+<td>String</td>
+<td>If you need interactivity, set tabindex to any string</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>mdl-chip-contact</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>mdl-chip-text</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>mdl-chip-action</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
