@@ -1,7 +1,7 @@
 ## Demo
 
 ```html_demo
-<mdl-table shadow="4">
+<mdl-table shadow="4" selectable>
   <table>
     <thead>
       <tr>
@@ -35,6 +35,5 @@
 
 | Element | Attribute | Type | Effect | Remarks |
 |---------|-----------|------|--------|---------|
-| `mdl-table` | shadow | Number | Defines the shadow depth | Optional, Default 0. Must be between 0 and 24 |
-| `mdl-table` | selectable | Boolean | Defines if the table is selectable | Optional, Default false |
-
+| mdl-table | `shadow` | Number | Defines the shadow depth | Optional, Default 0. Must be between 0 and 24 |
+| mdl-table | `selectable` | Boolean | Defines if the table is selectable | Optional, Default false |
