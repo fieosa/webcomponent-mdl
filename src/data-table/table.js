@@ -5,19 +5,22 @@ import {
   makeShadow
 } from '../utils';
 
-class Table extends BaseCustomElement {
+export class Table extends BaseCustomElement {
 
   createdCallback(children) {
-    this.classList.add('mdl-data-table', 'mdl-js-data-table');
-    console.log(this.prototype);
-  }
-
-  disconnectedCallback() {
+    let table = this.getElementsByTagName('table');
+    let th = this.getElementsByTagName('th');
+    let td = this.getElementsByTagName('td');
+    table[0].classList = ['mdl-data-table mdl-js-data-table'];
+    th[0].classList = ['mdl-data-table__cell--non-numeric'];
+    for (let i = 0; i < td.length; i++) {
+      td[i].classList = ['mdl-data-table__cell--non-numeric'];
+    }
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    this.classList.toggle('mdl-data-table--selectable', this.selectable);
     if (attrName === 'shadow') makeShadow(this, oldVal, newVal);
+    this.classList.toggle('mdl-data-table--selectable', this.selectable);
   }
 
 }

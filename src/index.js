@@ -1,6 +1,5 @@
 // polyfills
 import 'classlist.js/classList.js';
-import 'document-register-element/build/document-register-element.max.js';
 
 // material-design-lite.js
 import 'material-design-lite';
@@ -79,4 +78,6 @@ registerElement(window, 'mdl-menu', MaterialMenu);
 registerElement(window, 'mdl-menu-item', MaterialMenuItem);
 
 import { Table } from './data-table';
-registerElement(window, 'mdl-table', Table);
+customElements.define('mdl-table', Table);
+
+
