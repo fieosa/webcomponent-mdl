@@ -29,7 +29,7 @@
 
 <!-- Deletable Contact Chip -->
 <mdl-chip deletable>
-  <mdl-chip-contact style="background: url('/assets/chip_contact.jpg') 0 0 / cover"></mdl-chip-contact>
+  <mdl-chip-contact style="background: url('../assets/chip_contact.jpg') 0 0 / cover"></mdl-chip-contact>
   <mdl-chip-text>Deletable Contact Chip</mdl-chip-text>
   <mdl-chip-action>
     <mdl-icon>cancel</mdl-icon>
