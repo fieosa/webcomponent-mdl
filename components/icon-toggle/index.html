@@ -1,0 +1,78 @@
+
+
+<h2 id="demo">Demo</h2>
+<div class="html_demo"><!-- onchange -->
+<div>
+  <mdl-icon-toggle onchange="alert(event.target.checked);">format_bold</mdl-switch>
+</div>
+
+<!-- ripple -->
+<div>
+<mdl-icon-toggle ripple>format_italic</mdl-icon-toggle>
+</div>
+
+<!-- checked -->
+<div>
+<mdl-icon-toggle checked>face</mdl-icon-toggle>
+</div>
+
+<!-- disabled -->
+<div>
+<mdl-icon-toggle disabled>mood</mdl-icon-toggle>
+</div></div><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- onchange --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-icon-toggle</span> <span class="hljs-attr">onchange</span>=<span class="hljs-string">"alert(event.target.checked);"</span>&gt;</span>format_bold<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-switch</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- ripple --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-icon-toggle</span> <span class="hljs-attr">ripple</span>&gt;</span>format_italic<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-icon-toggle</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- checked --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-icon-toggle</span> <span class="hljs-attr">checked</span>&gt;</span>face<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-icon-toggle</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- disabled --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-icon-toggle</span> <span class="hljs-attr">disabled</span>&gt;</span>mood<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-icon-toggle</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><h2 id="configuration-options">Configuration options</h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Effect</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>checked</code></td>
+<td>Boolean</td>
+<td>Defines the checkbox as &quot;checked&quot;</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>disabled</code></td>
+<td>Boolean</td>
+<td>Defines the checkbox as &quot;disabled&quot;</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>ripple</code></td>
+<td>Boolean</td>
+<td>Applies the ripple effect</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>onchange</code></td>
+<td>Function</td>
+<td>Callback to receive the change event</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+
+
