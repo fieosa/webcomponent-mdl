@@ -98,3 +98,6 @@ registerElement(window, 'mdl-icon-toggle', MaterialIconToggle);
 
 import { default as MaterialRadio } from './radio';
 registerElement(window, 'mdl-radio', MaterialRadio);
+
+import { default as MaterialCheckbox } from './checkbox';
+registerElement(window, 'mdl-checkbox', MaterialCheckbox);
