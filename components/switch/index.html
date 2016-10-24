@@ -2,12 +2,12 @@
 
 <h2 id="demo">Demo</h2>
 <div class="html_demo"><mdl-switch onchange="alert(event.target.checked);"></mdl-switch>
-<mdl-switch ripple checked>checked</mdl-switch>
-<mdl-switch disabled>disabled</mdl-switch>
-<mdl-switch disabled checked>disabled checked</mdl-switch></div><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">mdl-switch</span> <span class="hljs-attr">onchange</span>=<span class="hljs-string">"alert(event.target.checked);"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mdl-switch</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">mdl-switch</span> <span class="hljs-attr">ripple</span> <span class="hljs-attr">checked</span>&gt;</span>checked<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-switch</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">mdl-switch</span> <span class="hljs-attr">disabled</span>&gt;</span>disabled<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-switch</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">mdl-switch</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">checked</span>&gt;</span>disabled checked<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-switch</span>&gt;</span></code></pre><h2 id="configuration-options">Configuration options</h2>
+<mdl-switch ripple checked label="checked"></mdl-switch>
+<mdl-switch disabled label="disabled"></mdl-switch>
+<mdl-switch disabled checked label="disabled checked"></mdl-switch></div><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">mdl-switch</span> <span class="hljs-attr">onchange</span>=<span class="hljs-string">"alert(event.target.checked);"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mdl-switch</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-switch</span> <span class="hljs-attr">ripple</span> <span class="hljs-attr">checked</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"checked"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mdl-switch</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-switch</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"disabled"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mdl-switch</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-switch</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">checked</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"disabled checked"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mdl-switch</span>&gt;</span></code></pre><h2 id="configuration-options">Configuration options</h2>
 <table>
 <thead>
 <tr>
@@ -18,6 +18,12 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><code>label</code></td>
+<td>String</td>
+<td>Defines the label of the radio</td>
+<td>Optional</td>
+</tr>
 <tr>
 <td><code>checked</code></td>
 <td>Boolean</td>
