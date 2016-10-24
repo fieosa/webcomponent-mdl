@@ -633,6 +633,101 @@
           <div class="docs-text-styling docs-readme">
             
             
+
+<h2 id="demo">Demo</h2>
+<div class="html_demo"><mdl-button ripple raised primary onclick="showDialog()">Show Dialog</mdl-button>
+<mdl-dialog>
+  <mdl-dialog-title>
+    <h4>Allow data collection?</h4>
+  </mdl-dialog-title>
+  <mdl-dialog-content>
+    <p>
+      Allowing us to collect data will let us get you the information you want faster.
+    </p>
+  </mdl-dialog-content>
+  <mdl-dialog-actions>
+    <mdl-button class="close">Disagree</mdl-button>
+    <mdl-button primary raised>Agree</mdl-button>
+  </mdl-dialog-actions>
+</mdl-dialog>
+
+<script>
+  function showDialog() {
+    var dialog = document.querySelector('mdl-dialog');
+    dialog.open = true;
+    dialog.querySelector('.close').addEventListener('click', function() {
+      dialog.open = false;
+    });
+  }
+</script></div><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">mdl-button</span> <span class="hljs-attr">ripple</span> <span class="hljs-attr">raised</span> <span class="hljs-attr">primary</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"showDialog()"</span>&gt;</span>Show Dialog<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mdl-dialog</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-dialog-title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>Allow data collection?<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-dialog-title</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-dialog-content</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+      Allowing us to collect data will let us get you the information you want faster.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-dialog-content</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-dialog-actions</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"close"</span>&gt;</span>Disagree<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-button</span> <span class="hljs-attr">primary</span> <span class="hljs-attr">raised</span>&gt;</span>Agree<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-dialog-actions</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-dialog</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showDialog</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> dialog = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'mdl-dialog'</span>);
+    dialog.open = <span class="hljs-literal">true</span>;
+    dialog.querySelector(<span class="hljs-string">'.close'</span>).addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      dialog.open = <span class="hljs-literal">false</span>;
+    });
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre><h2 id="configuration-options">Configuration options</h2>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Effect</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mdl-dialog</td>
+<td><code>open</code></td>
+<td>Boolean</td>
+<td>Set the open state of the dialog</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>mdl-dialog-title</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>mdl-dialog-content</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>mdl-dialog-actions</td>
+<td><code>full-width</code></td>
+<td>Boolean</td>
+<td>Apply the full-width effect to all children of dialog actions</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+
+
+
           </div>
         
       </div>
@@ -1097,6 +1192,128 @@
           <div class="docs-text-styling docs-readme">
             
             
+
+<h2 id="demo">Demo</h2>
+<div class="html_demo"><mdl-footer size="mega">
+  <mdl-footer-section type="middle">
+    <mdl-footer-drop-down title="Features">
+      <mdl-footer-link-list>
+        <a href="#">About</a>
+        <a href="#">Terms</a>
+        <a href="#">Partners</a>
+        <a href="#">Updates</a>
+      </mdl-footer-link-list>
+    </mdl-footer-drop-down>
+    <mdl-footer-drop-down title="Details">
+      <mdl-footer-link-list>
+        <a href="#">Specs</a>
+        <a href="#">Tools</a>
+        <a href="#">Resources</a>
+      </mdl-footer-link-list>
+    </mdl-footer-drop-down>
+    <mdl-footer-drop-down title="Technology">
+      <mdl-footer-link-list>
+        <a href="#">How it works</a>
+        <a href="#">Patterns</a>
+        <a href="#">Usage</a>
+        <a href="#">Products</a>
+        <a href="#">Contracts</a>
+      </mdl-footer-link-list>
+    </mdl-footer-drop-down>
+    <mdl-footer-drop-down title="FAQ">
+      <mdl-footer-link-list>
+        <a href="#">Questions</a>
+        <a href="#">Answers</a>
+        <a href="#">Contact Us</a>
+      </mdl-footer-link-list>
+    </mdl-footer-drop-down>
+  </mdl-footer-section>
+  <mdl-footer-section type="bottom">
+    <mdl-logo>Title</mdl-logo>
+    <mdl-footer-link-list>
+      <a href="#">Help</a>
+      <a href="#">Privacy & Terms</a>
+    </mdl-footer-link-list>
+  </mdl-footer-section>
+</mdl-footer></div><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">mdl-footer</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"mega"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-footer-section</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"middle"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-footer-drop-down</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Features"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mdl-footer-link-list</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Terms<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Partners<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Updates<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-footer-link-list</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-footer-drop-down</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-footer-drop-down</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Details"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mdl-footer-link-list</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Specs<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Tools<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Resources<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-footer-link-list</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-footer-drop-down</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-footer-drop-down</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Technology"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mdl-footer-link-list</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>How it works<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Patterns<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Usage<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Products<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Contracts<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-footer-link-list</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-footer-drop-down</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-footer-drop-down</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"FAQ"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mdl-footer-link-list</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Questions<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Answers<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Contact Us<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-footer-link-list</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-footer-drop-down</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-footer-section</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mdl-footer-section</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"bottom"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-logo</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-logo</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mdl-footer-link-list</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Help<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Privacy &amp; Terms<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-footer-link-list</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mdl-footer-section</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mdl-footer</span>&gt;</span></code></pre><h2 id="configuration-options">Configuration options</h2>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Effect</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mdl-footer</td>
+<td>size</td>
+<td>String (mini, mega)</td>
+<td>Set the size of the footer</td>
+<td>Optional, default &quot;mega&quot;</td>
+</tr>
+<tr>
+<td>mdl-footer-section</td>
+<td>type</td>
+<td>String (top, middle, bottom, left, right)</td>
+<td>Set the section type</td>
+<td>Optional, default left</td>
+</tr>
+<tr>
+<td>mdl-footer-drop-down</td>
+<td>title</td>
+<td>String</td>
+<td>Set the &quot;logo&quot; name</td>
+<td>Required</td>
+</tr>
+</tbody>
+</table>
+
+
+
           </div>
         
       </div>
