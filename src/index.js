@@ -125,3 +125,14 @@ registerElement(window, 'mdl-footer-section', MaterialFooterSection);
 registerElement(window, 'mdl-footer-drop-down', MaterialFooterDropdown);
 registerElement(window, 'mdl-footer-link-list', MaterialFooterLinkList);
 registerElement(window, 'mdl-logo', MaterialLogo);
+
+import {
+  MaterialChip,
+  MaterialChipContact,
+  MaterialChipAction,
+  MaterialChipText,
+} from './chip';
+registerElement(window, 'mdl-chip', MaterialChip);
+registerElement(window, 'mdl-chip-contact', MaterialChipContact);
+registerElement(window, 'mdl-chip-text', MaterialChipText);
+registerElement(window, 'mdl-chip-action', MaterialChipAction);
