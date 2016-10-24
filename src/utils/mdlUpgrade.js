@@ -3,13 +3,13 @@ export default function mdlUpgrade(Constructor) {
   class NewConstructor extends Constructor {
 
     connectedCallback() {
+      // super.connectedCallback();
       window.componentHandler.upgradeElement(this);
-      return super.connectedCallback();
     };
 
     disconnectedCallback() {
+      super.disconnectedCallback();
       window.componentHandler.downgradeElements(this);
-      return super.disconnectedCallback();
     };
 
   }
