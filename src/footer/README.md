@@ -50,6 +50,7 @@
 
 | Element | Attribute | Type | Effect | Remarks |
 |---------|-----------|------|--------|---------|
-| mdl-footer | size | String (mini, mega) | Set the size of the footer | Optional, default "mega" |
-| mdl-footer-section | type | String (top, middle, bottom, left, right) | Set the section type  | Optional, default left |
-| mdl-footer-drop-down | title | String | Set the "logo" name | Required |
+| mdl-footer | `size` | String (mini, mega) | Set the size of the footer | Optional, default "mega" |
+| mdl-footer-section | `type` | String (top, middle, bottom, left, right) | Set the section type  | Optional, default left |
+| mdl-footer-drop-down | `title` | String | Set the "logo" name | Required |
+| mdl-logo |  |  |  |  |
