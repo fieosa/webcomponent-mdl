@@ -2,7 +2,7 @@ import { BaseCustomElement, basicClassCreator, reflectPropertiesToAttributes } f
 
 class Chip extends BaseCustomElement {
 
-  createdCallback(children) {
+  createdCallback() {
     this.classList.add('mdl-chip');
   }
 

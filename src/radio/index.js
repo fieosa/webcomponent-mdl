@@ -6,13 +6,13 @@ import {
 
 class MaterialRadio extends BaseCustomElement {
 
-  createdCallback(children) {
+  createdCallback() {
     this.classList.add('mdl-radio', 'mdl-js-radio');
     this._input = <input type="radio" class="mdl-radio__button"/>;
     this._onclick = this._onclick.bind(this);
     <this>
       {this._input}
-      <span class="mdl-radio__label">{children}</span>
+      <span class="mdl-radio__label">{this.label}</span>
     </this>
   }
 
@@ -48,5 +48,6 @@ export default reflectPropertiesToAttributes(
     { propName: 'checked', propType: Boolean },
     { propName: 'name', propType: String },
     { propName: 'value', propType: String },
+    { propName: 'label', propType: String },
   ]
 );

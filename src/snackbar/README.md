@@ -9,8 +9,8 @@
 <mdl-snackbar
   timeout="2500"
   onaction="alert('UNDO')"
+  message="My message"
   action-text="UNDO">
-  My message
 </mdl-snackbar>
 <script>
 function snackbarTest() {

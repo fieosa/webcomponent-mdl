@@ -2,7 +2,7 @@ import { BaseCustomElement, reflectPropertiesToAttributes, mdlUpgrade } from '..
 
 class MaterialTextfield extends BaseCustomElement {
 
-  createdCallback(children) {
+  createdCallback() {
     this.classList.add('mdl-textfield',  'mdl-js-textfield');
     this._inputTag = !!this.rows || +this.maxrows > 1 ? 'textarea' : 'input';
     const customId = this.id || `textfield-${this.label.replace(/[^a-z0-9]/gi, '')}`;
@@ -20,14 +20,12 @@ class MaterialTextfield extends BaseCustomElement {
           {this._labelContainer}
           {this._errorContainer}
         </div>
-        {children}
       </this>
     } else {
       <this>
         {this._input}
         {this._labelContainer}
         {this._errorContainer}
-        {children}
       </this>
     }
   }

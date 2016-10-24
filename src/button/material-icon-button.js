@@ -6,13 +6,13 @@ class MaterialIconButton extends MaterialButton {
   createdCallback() {
     super.createdCallback();
     this.classList.add('mdl-button--icon');
+    <this>
+      <mdl-icon>{this.name}</mdl-icon>
+    </this>
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
     super.attributeChangedCallback();
-    <this>
-      <mdl-icon>{this.name}</mdl-icon>
-    </this>
   }
 
 }

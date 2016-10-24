@@ -21,10 +21,15 @@
   .demo-card-wide > .mdl-card__menu {
     color: #fff;
   }
+  .demo-card-wide mdl-card-title-text {
+    color: white;
+  }
 </style>
 <mdl-card class="demo-card-wide" shadow="4">
   <mdl-card-title>
-    Welcom to&nbsp;<a href="https://github.com/FIEOSA">FIEOSA</a>&nbsp;!
+    <mdl-card-title-text>
+      Welcom to&nbsp;<a href="https://github.com/FIEOSA">FIEOSA</a>&nbsp;!
+    </mdl-card-title-text>
   </mdl-card-title>
   <mdl-card-text>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.

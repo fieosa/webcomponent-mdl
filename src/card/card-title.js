@@ -7,7 +7,7 @@ import {
 class CardTitle extends BaseCustomElement {
 
 
-  createdCallback(children) {
+  createdCallback() {
     this.classList.add('mdl-card__title');
   }
 

@@ -6,13 +6,13 @@ import {
 
 class MaterialSwitch extends BaseCustomElement {
 
-  createdCallback(children) {
+  createdCallback() {
     this.classList.add('mdl-switch', 'mdl-js-switch');
     this._input = <input type="checkbox" class="mdl-switch__input"/>;
     this._onclick = this._onclick.bind(this);
     <this>
       <this._input/>
-      <span class="mdl-switch__label">{children}</span>
+      <span class="mdl-switch__label">{this.label}</span>
     </this>
   }
 
@@ -27,13 +27,15 @@ class MaterialSwitch extends BaseCustomElement {
   _onclick() {
     if (this.disabled) return;
     this.checked = !this.checked;
-    this._input.dispatchEvent(new Event('change',{ bubbles: true }));
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
     this.classList.toggle('mdl-js-ripple-effect', this.ripple);
-    this._input.checked = this.checked;
     this._input.disabled = this.disabled;
+    if (attrName === 'checked') {
+      this._input.checked = this.checked;
+      this._input.dispatchEvent(new Event('change',{ bubbles: true }));
+    }
   }
 
 }
@@ -44,5 +46,6 @@ export default reflectPropertiesToAttributes(
     { propName: 'checked', propType: Boolean },
     { propName: 'disabled', propType: Boolean },
     { propName: 'ripple', propType: Boolean },
+    { propName: 'label', propType: String },
   ]
 )

@@ -7,7 +7,7 @@ import {
 class CardActions extends BaseCustomElement {
 
 
-  createdCallback(children) {
+  createdCallback() {
     this.classList.add('mdl-card__actions');
   }
 

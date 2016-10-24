@@ -8,15 +8,24 @@ import {
 class Menu extends BaseCustomElement {
 
   createdCallback() {
-    this.classList.add('mdl-menu', 'mdl-js-menu');
+    this._ul = <ul class="mdl-menu mdl-js-menu"></ul>;
+  }
+
+  connectedCallback() {
+    const children = this.getChildren();
+    for (let i = 0; i < children.length; i++) {
+      this._ul.appendChild(children[i]);
+    }
+    this.innerHTML = '';
+    this.appendChild(this._ul);
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    this.setAttribute('data-mdl-for', this.target);
-    this.classList.remove(this._alignClass);
+    this._ul.setAttribute('data-mdl-for', this.target);
+    this._ul.classList.remove(this._alignClass);
     this._alignClass = `mdl-menu--${this.valign || 'bottom'}-${this.align || 'left'}`;
-    this.classList.add(this._alignClass);
-    this.classList.toggle('mdl-js-ripple-effect', this.ripple);
+    this._ul.classList.add(this._alignClass);
+    this._ul.classList.toggle('mdl-js-ripple-effect', this.ripple);
   }
 
 }
