@@ -37,23 +37,27 @@ function processChildren(ele, children) {
     }
   } else if (children instanceof Node) {
     ele.appendChild(children);
-  } else if (!!children) {
+  } else if (children) {
     ele.appendChild(document.createTextNode(children));
   }
 }
 
-export default function jsxdom(tag, attributes, ...children) {
-  let ele = tag instanceof Node ? tag : document.createElement(tag);
-  // set attr
-  for (var attrName in attributes) {
-    if(attrName in ele && attrName.lastIndexOf('on', 0) === 0) {
-      ele[attrName] = attributes[attrName];
-      // ele.addEventListener(attrName, attributes[attrName]);
-    } else {
-      ele.setAttribute(attrName, attributes[attrName]);
+export default function createJsxdom(attributeHookFunction) {
+  return function jsxdom(tag, attributes, ...children) {
+    let ele = tag instanceof Node ? tag : document.createElement(tag);
+    // set attr
+    for (var attrName in attributes) {
+      if (attributeHookFunction && attributeHookFunction(ele, children, attrName, attributes[attrName])) {
+        continue;
+      }
+      if (attrName in ele) {
+        ele[attrName] = attributes[attrName];
+      } else {
+        ele.setAttribute(attrName, attributes[attrName]);
+      }
     }
+    // set children
+    processChildren(ele, children);
+    return ele;
   }
-  // set children
-  processChildren(ele, children);
-  return ele;
-}
+};

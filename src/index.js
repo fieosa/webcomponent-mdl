@@ -6,12 +6,12 @@ import 'document-register-element/build/document-register-element.max.js';
 import 'material-design-lite';
 
 // utils
-import { registerElement, jsxdom, map } from './utils';
+import { registerElement, createJsxdom, map } from './utils';
 //
 NodeList.prototype.map = map;
 HTMLCollection.prototype.map = map;
 
-window.jsxdom = jsxdom;
+window.jsxdom = createJsxdom();
 
 import { default as MaterialBadge } from './badge';
 registerElement(window, 'mdl-badge', MaterialBadge);
@@ -77,3 +77,18 @@ registerElement(window, 'mdl-progress', MaterialProgress);
 import { MaterialMenu, MaterialMenuItem } from './menu';
 registerElement(window, 'mdl-menu', MaterialMenu);
 registerElement(window, 'mdl-menu-item', MaterialMenuItem);
+
+import {
+  MaterialList,
+  MaterialListItem,
+  MaterialListItemAction,
+  MaterialListItemContent ,
+  MaterialListItemSubtitle,
+  MaterialListItemAvatar,
+} from './list';
+registerElement(window, 'mdl-list', MaterialList);
+registerElement(window, 'mdl-list-item', MaterialListItem);
+registerElement(window, 'mdl-list-item-action', MaterialListItemAction);
+registerElement(window, 'mdl-list-item-content', MaterialListItemContent);
+registerElement(window, 'mdl-list-item-subtitle', MaterialListItemSubtitle);
+registerElement(window, 'mdl-list-item-avatar', MaterialListItemAvatar);
