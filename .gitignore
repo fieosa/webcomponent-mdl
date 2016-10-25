@@ -5,8 +5,6 @@ gulp-cache
 .DS_Store
 docs/out
 .publish
-dist
-webcomponent-mdl.js
-webcomponent-mdl.min.js
-webcomponent-mdl.js.map
-webcomponent-mdl.min.js.map
+dist/*
+!dist/webcomponent-mdl.min.js
+!dist/webcomponent-mdl.min.js.map
