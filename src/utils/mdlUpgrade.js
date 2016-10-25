@@ -3,7 +3,7 @@ export default function mdlUpgrade(Constructor) {
   class NewConstructor extends Constructor {
 
     connectedCallback() {
-      // super.connectedCallback();
+      super.connectedCallback();
       window.componentHandler.upgradeElement(this);
     };
 

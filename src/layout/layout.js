@@ -3,9 +3,7 @@ import { BaseCustomElement, reflectPropertiesToAttributes, mdlUpgrade } from '..
 class Layout extends BaseCustomElement {
 
   createdCallback() {
-    // // Error on safari.
-    // this.classList.add('mdl-js-layout');
-    this.classList.add('mdl-layout');
+    this.classList.add('mdl-layout', 'mdl-js-layout');
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
@@ -17,7 +15,7 @@ class Layout extends BaseCustomElement {
 }
 
 export default reflectPropertiesToAttributes(
-  mdlUpgrade(Layout),
+  Layout,
   [
     { propName: 'fixedDrawer', propType: Boolean },
     { propName: 'fixedHeader', propType: Boolean },

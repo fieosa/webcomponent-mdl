@@ -179,7 +179,7 @@ mdl-components-dd {
 
   .mdl-components .mdl-components__nav {
     position: fixed;
-    top: 56px;
+    top: 55px;
     left: 0;
     display: block;
     flex-wrap: nowrap;
