@@ -39,7 +39,6 @@
     "gulp-webpack": "^1.5.0",
     "highlight.js": "^9.7.0",
     "marked": "^0.3.6",
-    "material-design-lite": "^1.2.1",
     "run-sequence": "^1.0.2",
     "swig": "^1.4.2",
     "through2": "^2.0.0",

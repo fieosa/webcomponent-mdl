@@ -2,9 +2,6 @@
 import 'dom4';
 import 'document-register-element';
 
-// material-design-lite.js
-import 'material-design-lite';
-
 // utils
 import { registerElement, createJsxdom } from './utils';
 // jsx syntax support

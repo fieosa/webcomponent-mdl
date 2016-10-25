@@ -35,7 +35,7 @@
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Mauris sagittis pellentesque lacus eleifend lacinia...
   </mdl-card-text>
-  <mdl-card-actions border">
+  <mdl-card-actions border>
     <mdl-button colored ripple>
       Get Started
     </mdl-icon-button>
@@ -43,7 +43,7 @@
   <mdl-card-menu>
     <mdl-icon-button ripple>
       <mdl-icon>share</mdl-icon>
-    </mdl-icon-button ripple>
+    </mdl-icon-button>
   </mdl-card-menu>
 
 </mdl-card>

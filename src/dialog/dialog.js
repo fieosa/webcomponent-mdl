@@ -5,6 +5,7 @@ class MaterialDialog extends BaseCustomElement {
   createdCallback(children) {
     this._dialog = <dialog>{children}</dialog>;
     this._dialog.classList.add('mdl-dialog');
+    <this>{this._dialog}</this>
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
