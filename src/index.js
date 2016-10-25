@@ -6,11 +6,8 @@ import 'document-register-element';
 import 'material-design-lite';
 
 // utils
-import { registerElement, createJsxdom, map } from './utils';
-//
-// NodeList.prototype.map = map;
-// HTMLCollection.prototype.map = map;
-
+import { registerElement, createJsxdom } from './utils';
+// jsx syntax support
 window.jsxdom = createJsxdom();
 
 import { default as MaterialBadge } from './badge';
