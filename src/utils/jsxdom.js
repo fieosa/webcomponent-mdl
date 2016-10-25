@@ -33,6 +33,10 @@
 function processChildren(ele, children) {
   if (children && children.constructor === Array) {
     for(var i = 0; i < children.length; i++) {
+      // When looping {this.children} or {this.childNodes}, remove itself
+      if (children[i] && children[i].parentNode) {
+        children[i].remove();
+      }
       processChildren(ele, children[i]);
     }
   } else if (children instanceof Node) {

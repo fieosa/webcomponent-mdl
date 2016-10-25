@@ -8,30 +8,21 @@ import {
 class Menu extends BaseCustomElement {
 
   createdCallback() {
-    this._ul = <ul class="mdl-menu mdl-js-menu"></ul>;
-  }
-
-  connectedCallback() {
-    const children = this.getChildren();
-    for (let i = 0; i < children.length; i++) {
-      this._ul.appendChild(children[i]);
-    }
-    this.innerHTML = '';
-    this.appendChild(this._ul);
+    this.classList.add('mdl-menu', 'mdl-js-menu');
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    this._ul.setAttribute('data-mdl-for', this.target);
-    this._ul.classList.remove(this._alignClass);
+    this.setAttribute('data-mdl-for', this.target);
+    this.classList.remove(this._alignClass);
     this._alignClass = `mdl-menu--${this.valign || 'bottom'}-${this.align || 'left'}`;
-    this._ul.classList.add(this._alignClass);
-    this._ul.classList.toggle('mdl-js-ripple-effect', this.ripple);
+    this.classList.add(this._alignClass);
+    this.classList.toggle('mdl-js-ripple-effect', this.ripple);
   }
 
 }
 
 export const MaterialMenu = reflectPropertiesToAttributes(
-  mdlUpgrade(Menu),
+  Menu,
   [
     { propName: 'align', propType: String }, // ['left', 'right']
     { propName: 'ripple', propType: Boolean },

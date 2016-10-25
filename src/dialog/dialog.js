@@ -2,18 +2,9 @@ import { BaseCustomElement, reflectPropertiesToAttributes } from '../utils';
 
 class MaterialDialog extends BaseCustomElement {
 
-  createdCallback() {
-    this._dialog = <dialog></dialog>;
+  createdCallback(children) {
+    this._dialog = <dialog>{children}</dialog>;
     this._dialog.classList.add('mdl-dialog');
-  }
-
-  connectedCallback() {
-    const children = this.getChildren();
-    for (let i = 0; i < children.length; i++) {
-      this._dialog.appendChild(children[i]);
-    }
-    this.innerHTML = '';
-    this.appendChild(this._dialog);
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
