@@ -3,6 +3,12 @@
 
 WebComponent-MDL is a set of custom components build on top of [Material Design Lite][google-mdl-url]<sup>v1.2.1</sup>
 
+## Browser Support
+
+| IE9 | IE10 | IE11 | Chrome | Opera | Firefox | Safari | Chrome (Android) | Mobile Safari |
+|-----|------|------|--------|-------|---------|--------|------------------|---------------|
+| B   | A    | A    | A      | A     | A       | A      | A                | A             |
+
 ## Requirements
 This project is using [Material Design Lite][google-mdl-url] CSS library, add these lines to your html page.
 ```html
