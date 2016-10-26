@@ -7,31 +7,17 @@ class Cell extends BaseCustomElement {
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    const {
-      classList,
-      col,
-      phone,
-      tablet,
-      align,
-      offset,
-      offsetDesktop,
-      offsetTablet,
-      offsetPhone,
-      hideDesktop,
-      hideTablet,
-      hidePhone,
-    } = this;
-    classList.toggle(`mdl-cell--${col}-col`, col);
-    classList.toggle(`mdl-cell--${phone}-col-phone`, phone);
-    classList.toggle(`mdl-cell--${tablet}-col-tablet`, tablet);
-    classList.toggle(`mdl-cell--${align}`, align);
-    classList.toggle(`mdl-cell--${offset}-offset`, offset);
-    classList.toggle(`mdl-cell--${offsetDesktop}-offset-desktop`, offsetDesktop);
-    classList.toggle(`mdl-cell--${offsetTablet}-offset-tablet`, offsetTablet);
-    classList.toggle(`mdl-cell--${offsetPhone}-offset-phone`, offsetPhone);
-    classList.toggle(`mdl-cell--hide-desktop`, hideDesktop);
-    classList.toggle(`mdl-cell--hide-phone`, hidePhone);
-    classList.toggle(`mdl-cell--hide-tablet`, hideTablet);
+    this.classList.toggle(`mdl-cell--${this.col}-col`, this.col);
+    this.classList.toggle(`mdl-cell--${this.phone}-col-phone`, this.phone);
+    this.classList.toggle(`mdl-cell--${this.tablet}-col-tablet`, this.tablet);
+    this.classList.toggle(`mdl-cell--${this.align}`, this.align);
+    this.classList.toggle(`mdl-cell--${this.offset}-offset`, this.offset);
+    this.classList.toggle(`mdl-cell--${this.offsetDesktop}-offset-desktop`, this.offsetDesktop);
+    this.classList.toggle(`mdl-cell--${this.offsetTablet}-offset-tablet`, this.offsetTablet);
+    this.classList.toggle(`mdl-cell--${this.offsetPhone}-offset-phone`, this.offsetPhone);
+    this.classList.toggle(`mdl-cell--hide-desktop`, this.hideDesktop);
+    this.classList.toggle(`mdl-cell--hide-phone`, this.hidePhone);
+    this.classList.toggle(`mdl-cell--hide-tablet`, this.hideTablet);
     if (attrName === 'shadow') makeShadow(this, oldVal, newVal);
   }
 

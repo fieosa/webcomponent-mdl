@@ -7,11 +7,7 @@ class Grid extends BaseCustomElement {
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    const {
-      classList,
-      noSpacing,
-    } = this;
-    classList.toggle('mdl-grid--no-spacing', noSpacing);
+    this.classList.toggle('mdl-grid--no-spacing', this.noSpacing);
     if (attrName === 'shadow') makeShadow(this, oldVal, newVal);
   }
 
