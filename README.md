@@ -18,10 +18,31 @@ This project is using [Material Design Lite][google-mdl-url] CSS library, add th
 <script src="path/to/your/webcomponent-mdl.min.js"></script>
 ```
 
-## Usage
+### Usage
 
-* Clone this repository.
-* Run `npm install` and `gulp build` to get the minified library file in `/dist/webcomponent-mdl.min.js`.
+`npm install webcomponent-mdl` will put [dist/webcomponent-mdl.min.js](dist/webcomponent-mdl.min.js) inside `node_modules/webcomponent-mdl/` of your project.
+
+If you're working with a tool like Browserify, Webpack, RequireJS, etc, you can
+import the script.
+
+```js
+import 'webcomponent-mdl' // ES2015
+// or
+require('webcomponent-mdl') // CommonJS
+// or
+define(['webcomponent-mdl'], function() {}) // AMD
+```
+
+If you're not using a module system, just place
+`node_modules/webcomponent-mdl/dist/webcomponent-mdl.min.js`
+somewhere where it will be served by your server, then put
+
+```html
+<script src="/path/to/webcomponent-mdl.min.js"></script>
+```
+
+in your head element and you should be good to go.
+
 
 ## Develop
 
