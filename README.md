@@ -10,12 +10,31 @@ WebComponent-MDL is a set of custom components build on top of [Material Design 
 | B   | A    | A    | A      | A     | A       | A      | A                | A             |
 
 ## Requirements
-This project is using [Material Design Lite][google-mdl-url] CSS library, add these lines to your html page.
+This project is using [Material Design Lite][google-mdl-url] CSS library. </br>
+#### Basic html template:
 ```html
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.deep_purple-amber.min.css">
-<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
-<script src="path/to/your/webcomponent-mdl.min.js"></script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Icon fonts required by Material-design-lite. -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Main css required by Material-design-lite. -->
+    <!-- How to customize css theme ? Please check https://getmdl.io/customize/index.html -->
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.deep_purple-amber.min.css">
+  </head>
+
+  <body>
+    <!-- My content -->
+    <div>
+    </div>
+
+    <!-- Put js files at the end of <body> -->
+    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <!-- Path to dist/webcomponent-mdl.min.js . Please check 'Usage' below-->
+    <script src="path/to/your/webcomponent-mdl.min.js"></script>
+    
+  </body>
+</html>
 ```
 
 ### Usage
