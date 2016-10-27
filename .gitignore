@@ -6,5 +6,6 @@ gulp-cache
 docs/out
 .publish
 dist/*
+test/*
 !dist/webcomponent-mdl.min.js
 !dist/webcomponent-mdl.min.js.map
